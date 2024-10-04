@@ -48,27 +48,48 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
 
 -   ### User stories
 
-    -   #### First Time Customer Goals
-
-        1. As a First Time Customer, I want to easily understand the main products sold by the ecommerce company
-        2. As a First Time Customer, I want to be able to easily navigate throughout the site to find products.
-        3. As a First Time Customer, I want to look for reviewss to understand what their customers think of them and see if they are trusted and provide a good level of service. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
-
-    -   #### Returning Customer Goals
-
-        1. As a Returning Customer, I want to explore and find new and inspiring dried fruit and nuts to buy.
-        2. As a Returning Customer, I want to be able to buy products form the store and get them delivered.
-        3. As a Returning Customer, I want to be able to find out more about the nutritional benefits of the products the store sells.
-
-    -   #### Frequent Customer Goals
-        1. As a Frequent Customer, I want to be able to find products easily through search options.
-        2. As a Frequent Customer, I want to sign up and create my own account.
-        3. As a Frequent Customer, I want to sign up to the Newsletter so that I am emailed information about any new products.
-
-    -   #### Site Owner Goals
-        1. As a Site Owner, I want the website to be attractive to customers and entice them to buy products easily.
-        2. As a Site Owner, I want to establish a reular customer base who return and make regular purchases.
-        3. As a Site Owner, I want products to be stocked in high street shops and keep track of stock held by partners.
+| **USER STORY #** | **As a/an** | **I want to be able to...** | **So that I can...** |
+| --- | --- | --- | --- |
+| **VIEWING & NAVIGATION** |   |   |
+| 1 | First time user | Navigate around the site | View a list of products  |
+| 2 | First time user | Easily and quickly understand the main purpose and products of the 'Keep it Sweet' company | Be sure I am in the right place for my needs  |
+| 3 | First time user | View and search specific categories of products | Quickly access a range of products I may be interested in.  |
+| 4 | First time user | View individual product details | Identify the price, description, product reviews, product image, product ingredients  |
+| 5 | First time user | View the total amount of products in my shopping bag | Keep track of spending  |
+| 5 | First time user | View customer reviews of previous Keep it Sweet's customers | Feel safe in the knowledge that I will be treated well as a customer and feel confident about my purchase.  |
+| **REGISTRATION & USER ACCOUNTS** |   |   |
+| # | First time user | Easily register for an account | Have a personal account and be able to view my profile |
+| # | First time user | Recieve an email after the above registration process| Have feedback that my registration was successful |
+| # | Returning user | Easily log in and log out of my account| Access my personal information |
+| # | Returning/ frequent user | Have a personalised user profile | Access my stored information, order history, order confirmations (and wishlist/ faves list) |
+| **SORTING & SEARCHING** |   |   |
+| # | First time user | Sort the list of available products | Easily identify categorically and subcategorically sorted products |
+| # | First time user | Search for a product or multiple products by name, ingredient or description | Find a specific product |
+| # | First time user | View the search results | Identify products for more research or purchase |
+| **PURCHASING & CHECKOUT** |   |   |
+| # | First time user | Select the quantity of a product when purchasing | Ensure the correct quantity is purchased to meet customer need |
+| # | First time user | View notifications/ feedback when a product is added to the basket | recieve immediate feedback if action completed |
+| # | First time user | View items in my basket to be purchased | quickly see the total cost of items |
+| # | First time user | VEdit/ update the items in my basket and adjust quantities | Ensure my purchase is exactly what I want |
+| # | First time user | Enter payment information | Checkout with minimal fuss. |
+| # | First time user | Recieve cnfirmation of my order | know my payment has gone through and that my order is in the system. |
+| **SITE ADMIN** |   |   |
+| # | Store Owner | Add a product | Add new items to my store |
+| # | Store Owner | Edit/ update a product | Amend a product's information so site info is up to date |
+| # | Store Owner | Delete a product | Remove items that are no longer for sale |
+| # | Store Owner | Receive a warning if I accidentally click the delete a product button | Avoid accidental deletion of a product |
+| **DIGITAL MARKETING** |   |   |
+| # | Store Owner |     Signpost customers to social media and digital marketing (newsletter) and special offers | Build a community of repeat customers to drive sales |
+| # | First time and returning user |     Access social media and marketing and sign up for newsletter | Access special offers |
+| **PRODUCT REVIEWS** |   |   |
+| # | First time user | View reviews for a product I am viewing | be made aware of previous customer's views |
+| # | Returning/ frequent user | Be able to add my own reviews to purchased products | share my experiences of a product I purchased |
+| # | Returning/ frequent user | Be able to edit my own reviews to purchased products | maintain control of my published content |
+| # | Returning/ frequent user | Be able to delete my own reviews to purchased products | maintain control of my published content |
+| **USER FAVOURITES LIST** |   |   |
+| # | Returning/ frequent user | Add favourite products to a 'Faves -list' | Access quickly in the future for speedier purchase |
+| # | Returning/ frequent user | Remove favourite products to a 'Faves -list' | Keep products I really like and personalise my list to my own tastes |
+| **BLOG** |   |   |
 
 ---
 
