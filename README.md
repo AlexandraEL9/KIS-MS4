@@ -1,131 +1,261 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Keep It Sweet**
 
-Welcome USER_NAME,
+![amiresponsive mock-ups of Keep It Sweet](./documentation/responsiveness/.png)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+**[Link to the Deployed Site](#)**
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+![GitHub last commit](https://img.shields.io/github/last-commit/#?color=fuschia&style=for-the-badge)- models
+![GitHub contributors](https://img.shields.io/github/contributors/#?color=purple&style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/#?color=blue&style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/ *JoyZadan/shop-kbeauty?* color=yellow&style=for-the-badge)
 
-## Gitpod Reminders
+# Project Overview
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Keep It Sweet is a fictitious, ecommerce full stack project built using Django, Python, JavaScript and Bootstrap 4. The site is deployed to Heroku, uses Amazon S3 for cloud storage and Stripe for payment processing.
 
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+It has been produced as my fourth milestone project for Code Institute's Level 5 Diploma in Web Application Development (Full Stack Software Development).
+<br/>
 
 ---
 
-Happy coding!
+## TABLE OF CONTENTS
+
+* [User Experience](#user-experience)
+    * [User Stories](#user-stories)
+* [Design](#design)    
+    * [Typography](#typography)
+    * [Colour Scheme](#colour-scheme)
+    * [Wireframes](#wireframes)
+* [Database Design](#database-design)
+    * [Relational Database](#relational-database)
+    * [Entity Relationship Diagram](#entity-relationship-diagram)
+* [Models](#models)
+    * [Custom Models](#custom-models)
+* [Features](#features)
+* [Technologies Used](#technologies-used)
+    * [Front End Technologies](#front-end-technologies)
+    * [Back End Technologies](#back-end-technologies)
+    * [Additional Technologies](#additional-technologies)
+* [Credits](#credits)
+    * [Code](#code) 
+    * [Content](#content)
+    * [Media](#media) 
+    * [Acknowledgements](#acknowledgements)
+
+---
+
+## User Experience (UX)
+
+-   ### User stories
+
+    -   #### First Time Customer Goals
+
+        1. As a First Time Customer, I want to easily understand the main products sold by the ecommerce company
+        2. As a First Time Customer, I want to be able to easily navigate throughout the site to find products.
+        3. As a First Time Customer, I want to look for reviewss to understand what their customers think of them and see if they are trusted and provide a good level of service. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.
+
+    -   #### Returning Customer Goals
+
+        1. As a Returning Customer, I want to explore and find new and inspiring dried fruit and nuts to buy.
+        2. As a Returning Customer, I want to be able to buy products form the store and get them delivered.
+        3. As a Returning Customer, I want to be able to find out more about the nutritional benefits of the products the store sells.
+
+    -   #### Frequent Customer Goals
+        1. As a Frequent Customer, I want to be able to find products easily through search options.
+        2. As a Frequent Customer, I want to sign up and create my own account.
+        3. As a Frequent Customer, I want to sign up to the Newsletter so that I am emailed information about any new products.
+
+    -   #### Site Owner Goals
+        1. As a Site Owner, I want the website to be attractive to customers and entice them to buy products easily.
+        2. As a Site Owner, I want to establish a reular customer base who return and make regular purchases.
+        3. As a Site Owner, I want products to be stocked in high street shops and keep track of stock held by partners.
+
+---
+
+## Design:
+
+### Typography
+ The Poppins font via [Google Fonts:](https://fonts.google.com/) is the main font used throughout the website with Sans Serif as the fallback font in case for any reason the font cannot be displayed in a browser correctly.
+
+### Color Scheme:
+
+### Wireframes
+I have drawn a series of wireframes using Adobe XD to evidence responsive design planning of the site taking into account layouts for a range of device sizes (mobile, tablet and desktop views) When the mobile layout differers significantly from tablet, I have drawn an additional layout - for example the products page layout. You can see the wireframes for the product page below. For the complete set of wireframes - the files are stored [here](media/wireframes/).
+
+### Wireframes - mobile first design
+#### Mobile layout (products)
+<img src="media/wireframes/.png">
+
+#### Tablet layout (products)
+<img src="media/wireframes/.png">
+
+#### Desktop layout (products)
+<img src="media/wireframes/.png">
+
+---
+## Database
+### Relational Database
+(This project utilises PostgreSQL, a relational database mangement system (RDBMS) managed by Django which offers PostgreSQL as a service. )
+
+### Entity Relationship Diagram
+As illustrated in the ERD, each model corresponds to a database table, and each field corresponds to a column in that table.
+
+<img src="media/.jpeg">
+
+## Models
+Django includes an Object-Relational Mapping (ORM) system for working with databases. In Django, a "model" refers to a Python class that defines the structure and behaviour of a database table. Models can establish relationships with other models, such as ForeignKey, OneToOneField, and ManyToManyField, to represent associations between tables in the database.
+
+### Custom Models
+The following are the custom built models for this app. Each App has been commented to explain the functionality:
+
+#### Blog:
+The blog has functionality to add a series of posts with title, text excerpt and an image displayed on the main blog page, with a button to click through to read the whole content of the post.
+
+#### Post Model Database Table
+- id: BigAutoField
+- post_title : Charfield
+- slug: Slugfield
+- body : Textfield
+- publish_date: DateTimeField
+- thumb: ImageField
+- author: ForeignKey
+- status: IntegerField
+
+The Post Model also has a nested class Meta, which orders the posts in descending order according to the publish_date field. The __str__ method returns the title of the blog post as a string, so the title of each blog is listed in the admin area. 
+
+#### Subscribe Model Database Table
+- id: BigAutoField
+- name : Charfield
+- email: EmailField
+- date_subscribed: DateTimeField
+
+### Reviews:
+The Reviews model and templates are currently in development.
+
+## Features
+
+#### Main site features
+- Clear navigation for user to select relevant page.
+- A strapline promoting some form of special offer over an indicated amount.
+- Bag modal with bag contents and total on product pages. 
+- (Allauth utilised for profile account features, allowing to  save address information and  order history.)
+- Responsive on all device sizes.
+- A footer has been added to selected pages, with company social links to social media sites. The footer will be developed in the future to include additional navigation  links to internal pages.
+
+#### Home App
+The navigation allows users to select products, blog, checkout and profile pages. Navigation also has a Search bar and Menu dropdowns to sort products into price, category or by rating.
+Hero image and main strapline provides information about the brand and its purpose.
+Footer with social icons to the brand’s Pinterest and Instagram pages and copyright statement. The footer will be developed into a section containing links to all pages, terms and conditions and cookies statement.
+
+#### Product App
+Item_list [CRUD]
+Select products of in a specific category (Nuts, seeds, mixes fruits & berries or coated fruit.
+Sort the products by price, rating or category and add products to the bag - view the total cost of item in the modal box.
+Products page layout shows the images of the various products, name, price, category and star rating.
+Product detail pages allow the user to find out more about the product, add a product to the bag and increase or decrease the number of products selected. Users can redirect to the shopping page to view additional products to buy. Additional JavaScript code ensures that the decrement button is disabled from going below one item.
+On adding the item to the bag, a user sees an automated popup with a Toast message providing feedback to the user confirming the action was successful and how many of that product were added to the bag. The user can also see a list of previous products if they have already been added to the bag, together with an image, description, total price, and a button to go to the checkout page for payment.
+
+#### Bag App
+The product summary page provides a list of products selected for purchase with options to increase or decrease the number of items in the bag, or to delete if required via a remove link.
+Users can view delivery costs at this point and are advised of how much more spend is required to reach the minimum spend for free delivery as well as delivery costs if the user does not want to increase spend. 
+User can proceed to complete purchase via a button stating ‘secure checkout’
+
+#### Checkout App
+- To complete the purchase, users complete the form with their delivery and payment details, and click the ‘complete order’ button to finalise. (The user, right to the final action still has the opportunity to adjust the bag contents. If users go ahead with the purchase they are informed for the total amount that will be charged to their card in advance.
+- Payments are made via the Stripe payment solution integrated with the app..
+A bag session is stored in the database with order details added to the order table 
+- Users can save their order details, so then the database is updated with their profile linked to their order. Users on subsequent logins can view their previous orders in order history on their profile page.
+- Users receive an email to their inbox to confirm their order and are provided with  the order number. 
+
+#### Sign-up/Login
+- The sign-in page allows users to log into their account by filling a username and a password field correctly. If the user has forgotten their password there is a link to the reset password page as well as links to return to the Home page if required.
+- Annonymous users can sign up for an account by adding their email address and setting their passwords in the relevant fields. Toasts keep users informed if thier login has been successful. 
+- New customers receive an email to their inbox requesting them to click a link to verify their account to complete sign-up.
+
+#### Admin features:
+CRUD functionality
+Django @login_required decorator provides protection against anonymous users or users without superuser permissions accessing the data store. Superusers are permitted to Add, Edit and Delete products on the Product Management page on login. 
+
+#### Add Product
+There is a form on the product management allowing staff to complete the necessary fields. Category, Sku, Name, Description, Options, Price, rating and Image url. Some fields are optional as indicated by an asterisk next to their name. If no image is selected then a default image is used instead.
+
+#### Edit Product 
+Admin superusers can go to an existing product on the product page and use the edit link to provide access to the edit product functionality. There is a Toast feedback modal to alert supersuers to the fact they are editing a product. The details of a product can be amended as required and then updated or removed.
+
+#### Delete Product
+Admin superusers can go to an existing product on the product page and use the delete link which on click removes a product immediately, with a feedback popup (Toast) to confirm deletion was successful.
+
+#### Blog App
+**Blog Archive page / Blog detail page:**
+Posts display an image, an excerpt and a button, and the posts are sorted in date order so the latest published blog is at the top. A button takes the user to the post detail page where all the text and an image are displayed. There is also a button to return the user to the blog archive page.
+
+#### Subscribe App
+Unregistered and registered users can sign up to be added to The Nutritionist mailing list. The user signs up and sees a success message if the sign up is successful. The records are saved in the admin area with name, date and date subscribed listed.There are messages that warn the user if the email is invalid or a field is missing.
+
+#### Future Features
+- A reviews app is currently in development so that customers will be able to addd reviews to individual  products.
+- A Favourites app allowing users to bookmark their favourite products.
+- A rewards app where purchases make points for freebies and spcial offers.
+- Additional content on the home page with featured or new products promoted beneath the hero section.
+
+## Technologies Used
+
+### Front-End Technologies
+
+- ![HTML5](https://img.shields.io/static/v1?label=HTML&message=5&color=E34F26&logo=html5&logoColor=ffffff)
+    - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
+- ![CSS3](https://img.shields.io/static/v1?label=CSS&message=3&color=1572B6&logo=css3&logoColor=ffffff)
+    - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used as the base for cascading styles.
+- ![jQuery 3.4.1](https://img.shields.io/static/v1?label=jQuery&message=3.4.1&color=0769AD&logo=jquery&logoColor=ffffff)
+    - [jQuery 3.4.1](https://code.jquery.com/jquery/) - Used as the primary JavaScript functionality.
+- ![Bootstrap 4.6](https://img.shields.io/static/v1?label=Bootstrap&message=4.6&color=ee6e73)
+    - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Used as the front-end framework for layout and design.
+- ![Stripe API](https://img.shields.io/static/v1?label=Stripe&message=API&color=008CDD&logo=stripe&logoColor=ffffff)
+    - [Stripe API](https://stripe.com/docs/api?lang=python) - Used to make secured payments on *The Nutritionist*.
+- ![Amazon AWS S3](https://img.shields.io/static/v1?label=Amazon%20AWS&message=S3&color=232F3E&logo=amazon%20aws)
+    - [Amazon AWS S3](https://aws.amazon.com/) - Used to store *staticfiles* and *media* folders and files.
+
+### Back-End Technologies
+
+- ![Python](https://img.shields.io/static/v1?label=Python&message=3.6.7&color=blue&logo=python&logoColor=ffffff)
+    - [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
+- ![Django](https://img.shields.io/static/v1?label=Django&message=2.2.16&color=092E20&logo=django)
+    - [Django 2.2.16](https://docs.djangoproject.com/en/2.2/) - Used as my Python web framework.
+- ![Heroku](https://img.shields.io/static/v1?label=Heroku&message=PaaS&color=430098&logo=heroku)
+    - [Heroku](https://www.heroku.com) - Used for *"Platform as a Service"* (PaaS) for app hosting.
+- ![PostgreSQL 11.4](https://img.shields.io/static/v1?label=PostgreSQL&message=11.4&color=336791&logo=postgresql)
+    - [PostgreSQL 11.4](https://www.postgresql.org/) - Used as relational SQL database via [ElephantSQL](https://www.elephantsql.com/).
+
+### Additional Technologies
+
+1. [Google Fonts:](https://fonts.google.com/)
+    - Google fonts were used to import the 'Poppins' font used on all pages throughout the project.
+1. [Font Awesome:](https://fontawesome.com/)
+    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
+1. [Git](https://git-scm.com/)
+    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+    - GitHub was used to store the projects code after being pushed from Git.
+
+### Code
+
+-   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+- Tutorial by [DjangoCentral](https://djangocentral.com/building-a-blog-application-with-django/) for help with blog development.
+
+- Tutorial by [Python Lessons](https://www.youtube.com/watch?v=wl4Yxo5_Cgw) for help with newsletter sign up development.
+
+- Code Institute Boutique Ado tutorial code used as a basis for project except for custom app development (Blog, Newsletter, Stockists & Reviews).
+
+### Content
+
+-   All content was written by the developer.
+
+### Media
+
+-   All product images were created by the developer.
+
+### Acknowledgements
+
+-   My Mentor Tim Nelson for continuous helpful feedback.
+
+-   Martin at Code Institute Tutor Support for help with coding errors.
