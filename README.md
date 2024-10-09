@@ -273,7 +273,9 @@ Unregistered and registered users can sign up to be added to The Nutritionist ma
 
 ### Media
 
--   All product images were created by the developer.
+-   homepage-background   https://unsplash.com/photos/assorted-color-candies--vgLTTWPesg
+
+
 
 ### Acknowledgements
 
