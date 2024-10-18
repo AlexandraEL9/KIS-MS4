@@ -35,6 +35,6 @@ class ProductSizeAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Product)
-admin.site.register(Category)
-admin.site.register(ProductSize)
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(ProductSize, ProductSizeAdmin)
