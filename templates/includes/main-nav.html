@@ -17,15 +17,12 @@
                 Categories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Boiled and hard ones</a>
-                <a href="" class="dropdown-item">Chewy Ones</a>
-                <a href="" class="dropdown-item">Chocolat-ey ones</a>
-                <a href="" class="dropdown-item">Fizzy and Sour ones</a>
-                <a href="" class="dropdown-item">Soft Mallow ones</a>
-                <a href="" class="dropdown-item">Gummies and Jelly ones</a>
-                <a href="" class="dropdown-item">Old Fashioned Ones</a>
-                <a href="" class="dropdown-item">Lollipops</a>
-                <a href="" class="dropdown-item">Minty ones</a>
+                <a href="{% url 'products' %}?category=hard" class="dropdown-item">Boiled and hard ones</a>
+                <a href="{% url 'products' %}?category=chewy" class="dropdown-item">Chewy Ones</a>
+                <a href="{% url 'products' %}?category=chocolate" class="dropdown-item">Chocolat-ey ones</a>
+                <a href="{% url 'products' %}?category=fizzy,sour" class="dropdown-item">Fizzy and Sour ones</a>
+                <a href="{% url 'products' %}?category=soft" class="dropdown-item">Soft Mallow ones</a>
+
             </div>
         </li>
 
