@@ -5,37 +5,37 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                <a href="{% url 'products' %}sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-        <!-- Categories menu dropdown -->
+
         <li class="nav-item dropdown">
-            <a href="#" class="logo-font font-weight-bold nav-link text-black mr-5 dropdown-toggle" id="categories-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="categories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Categories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="categories-link">
-                <a href="{% url 'products' %}?category=hard" class="dropdown-item">Boiled and hard ones</a>
-                <a href="{% url 'products' %}?category=chewy" class="dropdown-item">Chewy Ones</a>
-                <a href="{% url 'products' %}?category=chocolate" class="dropdown-item">Chocolat-ey ones</a>
-                <a href="{% url 'products' %}?category=fizzy,sour" class="dropdown-item">Fizzy and Sour ones</a>
-                <a href="{% url 'products' %}?category=soft" class="dropdown-item">Soft Mallow ones</a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a href="{% url 'products' %}?category=soft" class="dropdown-item">Soft</a>
                 <a href="{% url 'products' %}?category=Test" class="dropdown-item">Test</a>
+                <a href="{% url 'products' %}?category=fizzy" class="dropdown-item">Fizzy</a>
+                <a href="{% url 'products' %}?category=chocolate" class="dropdown-item">Chocolate</a>
+                <a href="{% url 'products' %}?category=chewy" class="dropdown-item">Chewy</a>
+                <a href="{% url 'products' %}?category=hard" class="dropdown-item">Hard</a>
+                <a href="{% url 'products' %}?category=soft, Test, fizzy, chocolate, chewy, hard," class="dropdown-item">All Categories</a>
             </div>
         </li>
-       
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>

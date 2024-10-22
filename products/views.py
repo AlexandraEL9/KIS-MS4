@@ -14,6 +14,9 @@ def all_products(request):
     sort = None
     direction = None
 
+    # Fetch all categories for display purposes
+    all_categories = Category.objects.all()
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -21,6 +24,8 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -32,7 +37,6 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
-
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -48,12 +52,13 @@ def all_products(request):
     context = {
         'products': products,
         'search_term': query,
-        'current_categories': categories,
-        'current_sorting': current_sorting,
-        'current_sorting': current_sorting,
+        'current_categories': categories,  # Categories selected by the user
+        'all_categories': all_categories,   # All categories for badges
+        'current_sorting': current_sorting, 
     }
 
     return render(request, 'products/products.html', context)
+
 
 
 def product_detail(request, product_id):
