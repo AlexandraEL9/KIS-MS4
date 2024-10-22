@@ -11,20 +11,21 @@
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
-
+        <!-- Categories menu dropdown -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a href="#" class="logo-font font-weight-bold nav-link text-black mr-5 dropdown-toggle" id="categories-link" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Categories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+            <div class="dropdown-menu border-0" aria-labelledby="categories-link">
                 <a href="{% url 'products' %}?category=hard" class="dropdown-item">Boiled and hard ones</a>
                 <a href="{% url 'products' %}?category=chewy" class="dropdown-item">Chewy Ones</a>
                 <a href="{% url 'products' %}?category=chocolate" class="dropdown-item">Chocolat-ey ones</a>
                 <a href="{% url 'products' %}?category=fizzy,sour" class="dropdown-item">Fizzy and Sour ones</a>
                 <a href="{% url 'products' %}?category=soft" class="dropdown-item">Soft Mallow ones</a>
-
+                <a href="{% url 'products' %}?category=Test" class="dropdown-item">Test</a>
             </div>
         </li>
+       
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
