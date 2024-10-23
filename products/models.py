@@ -10,15 +10,13 @@ class Category(models.Model):
     class Meta:
         verbose_name_plural = 'Categories'
 
-    name = models.CharField(max_length=254)
-    friendly_name = models.CharField(max_length=254, null=True, blank=True)
+    name = models.CharField(max_length=200)  # This is the internal name used in queries
+    friendly_name = models.CharField(max_length=200, unique=True)  # This is the name displayed to users
 
     def __str__(self):
-        return self.name
-
-    def get_friendly_name(self):
         return self.friendly_name
 
+    
 # product size model
 
 
