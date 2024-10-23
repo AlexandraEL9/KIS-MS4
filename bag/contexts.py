@@ -1,7 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 
-def bag_content(request):
+def bag_contents(request):
 
     bag_items = []
     total = 0
@@ -15,7 +15,7 @@ def bag_content(request):
         free_delivery_delta = 0
     
     grand_total = delivery + total
-
+    
     context = {
         'bag_items': bag_items,
         'total': total,
