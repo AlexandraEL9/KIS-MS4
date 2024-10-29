@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, Category, ProductSize
+from .models import Product, Category
 
 # Register your models here.
 
@@ -25,16 +25,5 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
-# productsize admin
-# display productsize fields in admin
-class ProductSizeAdmin(admin.ModelAdmin):
-    list_display = (
-        'product',
-        'size',
-        'price',
-    )
-
-
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(ProductSize, ProductSizeAdmin)
