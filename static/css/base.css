@@ -96,7 +96,9 @@ a.category-badge > span.badge:hover {
     border-radius: 50%; /* Optional circular shape */
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     display: flex; /* Flexbox layout */
     justify-content: center; /* Center the icon */
     align-items: center; /* Align the icon vertically */
