@@ -3,8 +3,6 @@ from .models import Product, Category
 
 # Register your models here.
 
-# product admin
-# displays product fields
 class ProductAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
@@ -12,13 +10,11 @@ class ProductAdmin(admin.ModelAdmin):
         'category',
         'price',
         'rating',
-        'image'
+        'image',
     )
-    # order list of products by sku
+
     ordering = ('sku',)
 
-# category admin
-# display both names so easy to manage
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
         'friendly_name',
