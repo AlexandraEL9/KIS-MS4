@@ -29,7 +29,7 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -46,16 +46,14 @@
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
-                            {% with product.has_sizes as s %}
+                            {% with product.has_options as s %}
                             {% if s %}
                                 <div class="col-12">
-                                    <p><strong>Size:</strong></p>
-                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
-                                        <option value="xs">XS</option>
-                                        <option value="s">S</option>
-                                        <option value="m" selected>M</option>
-                                        <option value="l">L</option>
-                                        <option value="xl">XL</option>
+                                    <p><strong>Options:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="product_options" id='id_product_options'>
+                                        <option value="plant-based">Plant Based</option>
+                                        <option value="low-sugar">Low Sugar</option>
+                                        <option value="no-lactose" selected>No Lactose</option>
                                     </select>
                                 </div>
                             {% endif %}
