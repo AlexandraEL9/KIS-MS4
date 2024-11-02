@@ -44,6 +44,12 @@ body {
     border: 1px solid black;
 }
 
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
 
 .shop-now-button:hover,
 .shop-now-button:active,
@@ -83,36 +89,16 @@ a.category-badge > span.badge:hover {
 }
 
 .btt-button {
-    height: 42px; /* Fixed height */
-    width: 42px; /* Fixed width */
+    height: 42px;
+    width: 42px;
     position: fixed;
     bottom: 10px;
     right: 10px;
-    background-color: darkcyan;
-    border: 1px solid red; /* Temporary border */
-    display: flex; /* Use flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    border-radius: 50%; /* Optional circular shape */
 }
 
-.btt-link,
-.update-link,
-.remove-item {
-    display: flex; /* Flexbox layout */
-    justify-content: center; /* Center the icon */
-    align-items: center; /* Align the icon vertically */
-    height: 100%; /* Full height of the button */
-    width: 100%; /* Full width of the button */
+.btt-link {
     cursor: pointer;
 }
-
-.fas.fa-arrow-up {
-    margin: 0; /* Reset margin for the icon */
-    font-size: 1.2rem; /* Adjust icon size as needed */
-}
-
-
 
 /* -------------------------------- Media Queries */
 
