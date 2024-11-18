@@ -69,7 +69,7 @@ def checkout(request):
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_by_size'].items():
+                        for options, quantity in item_data['items_by_options'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
@@ -105,6 +105,7 @@ def checkout(request):
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
         )
+
 
         # Attempt to prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
