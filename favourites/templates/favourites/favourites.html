@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Your Favourites</h2>
+            </div>
+        </div>
+        <div class="row">
+            <ul>
+                {% for favourite in favourites %}
+                <li>
+                    <a href="{% url 'product_detail' favourite.product.id %}">
+                        {{ favourite.product.name }}
+                    </a>
+                    <a href="{% url 'remove_from_favourites' favourite.product.id %}" class="btn btn-danger">Remove</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
