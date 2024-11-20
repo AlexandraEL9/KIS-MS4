@@ -36,8 +36,16 @@ def remove_from_favourites(request, product_id):
     """ Remove a product from the favourites list """
     product = get_object_or_404(Product, pk=product_id)
 
-    favourite = Favourite.objects.get(user=request.user, product=product)
-    favourite.delete()
-    messages.success(request, f"Removed {product.name} from your favourites.")
+    # Try to get the favourite and delete it
+    try:
+        favourite = Favourite.objects.get(user=request.user, product=product)
+        favourite.delete()
+        messages.success(request, f"Removed {product.name} from your favourites.")
+    except Favourite.DoesNotExist:
+        messages.error(request, f"{product.name} was not found in your favourites.") 
 
+    # Get the updated list of favourites
+    favourites = Favourite.objects.filter(user=request.user)
+
+    # Render the updated favourites list
     return render(request, 'favourites/favourites.html', {'favourites': favourites})
