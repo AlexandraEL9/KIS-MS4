@@ -28,7 +28,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{ item.product.name }}</h5>
                                         <a href="{% url 'product_detail' product_id=item.product.id %}" class="btn btn-primary">View Product</a>
-                                        <a href="{% url 'add_to_bag' product_id=item.product.id %}" class="btn btn-primary">Add to Bag</a>
+                                        <a href="{% url 'remove_from_favourites' product_id=item.product.id %}" class="btn btn-primary">Remove</a>
                                     </div>
                                 </div>
                             </div>

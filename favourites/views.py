@@ -14,6 +14,7 @@ def favourites(request):
     favourites = Favourite.objects.filter(user=request.user)
     return render(request, 'favourites/favourites.html', {'favourites': favourites})
 
+# add to favourites list
 @login_required
 def add_to_favourites(request, product_id):
     """ Add a product to the favourites list """
@@ -28,3 +29,15 @@ def add_to_favourites(request, product_id):
         messages.info(request, f"{product.name} is already in your favourites. <a href='/favourites/' class='alert-link'>View Favourites</a>")
 
     return redirect('product_detail', product_id=product.id)
+
+# remove from favourites list
+@login_required
+def remove_from_favourites(request, product_id):
+    """ Remove a product from the favourites list """
+    product = get_object_or_404(Product, pk=product_id)
+
+    favourite = Favourite.objects.get(user=request.user, product=product)
+    favourite.delete()
+    messages.success(request, f"Removed {product.name} from your favourites.")
+
+    return render(request, 'favourites/favourites.html', {'favourites': favourites})
