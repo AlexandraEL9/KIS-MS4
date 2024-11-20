@@ -19,15 +19,27 @@
         </div>
         <div class="row">
             {% if favourites %}
-                <ul>
-                    {% for item in favourites %}
-                        <li>{{ item.name }}</li>
-                    {% endfor %}
-                </ul>
+                <div class="col-12">
+                    <div class="row">
+                        {% for item in favourites %}
+                            <div class="col-12 col-md-4 mb-4">
+                                <div class="card">
+                                    <img src="{{ item.product.image.url }}" class="card-img-top" alt="{{ item.product.name }}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ item.product.name }}</h5>
+                                        <a href="{% url 'product_detail' product_id=item.product.id %}" class="btn btn-primary">View Product</a>
+                                        <a href="{% url 'add_to_bag' product_id=item.product.id %}" class="btn btn-primary">Add to Bag</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
             {% else %}
-                <p>No favourites found!</p>
+                <div class="col-12">
+                    <p>No favourites found!</p>
+                </div>
             {% endif %}
-
         </div>
     </div>
 {% endblock %}
