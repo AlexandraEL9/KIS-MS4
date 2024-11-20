@@ -3,7 +3,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-
     {% block meta %}
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta charset="utf-8">
@@ -38,6 +37,7 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
+        <!-- Header content here -->
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -73,6 +73,9 @@
                                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'favourites' %}" class="dropdown-item">
+                                    <i class="fas fa-heart"></i> Favourites
+                                </a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -113,22 +116,18 @@
         </div>
     </header>
 
+
     {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
+    <div class="message-container">
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                {{ message|safe }}  <!-- Renders the HTML in the message -->
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        {% endfor %}
+    </div>
     {% endif %}
 
     {% block page_header %}
@@ -142,7 +141,6 @@
         $('.toast').toast('show');
     </script>
     {% endblock %}
-
     
   </body>
 </html>

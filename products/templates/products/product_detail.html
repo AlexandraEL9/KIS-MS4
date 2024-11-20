@@ -37,6 +37,14 @@
                         </a>
                     </p>
                     {% endif %}
+                    <!--buttons to add to favourites if user authenticated-->
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'add_to_favourites' product.id %}" class="btn btn-success">Add to Favourites</a>
+                    {% else %}
+                        <p><a href="{% url 'account_login' %}">Log in</a> to add this product to your favourites.</p>
+                    {% endif %}
+
+
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                     {% else %}

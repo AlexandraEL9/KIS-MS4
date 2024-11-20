@@ -3,10 +3,9 @@ from django.db import models
 from products.models import Product
 
 # Create your models here.
-class Wishlist(models.Model):
-    """ Wishlist model """
-    user_profile = models.ForeignKey(UserProfile, null=True, blank=True,
-                                     on_delete=models.CASCADE)
+class Favourite(models.Model):
+    """ Favourites model """
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, null=True, blank=True,
                                 on_delete=models.CASCADE, default=1)
 

@@ -18,16 +18,16 @@
             </div>
         </div>
         <div class="row">
-            <ul>
-                {% for favourite in favourites %}
-                <li>
-                    <a href="{% url 'product_detail' favourite.product.id %}">
-                        {{ favourite.product.name }}
-                    </a>
-                    <a href="{% url 'remove_from_favourites' favourite.product.id %}" class="btn btn-danger">Remove</a>
-                </li>
-                {% endfor %}
-            </ul>
+            {% if favourites %}
+                <ul>
+                    {% for item in favourites %}
+                        <li>{{ item.name }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No favourites found!</p>
+            {% endif %}
+
         </div>
     </div>
 {% endblock %}
