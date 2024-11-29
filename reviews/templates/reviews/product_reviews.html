@@ -25,18 +25,22 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <h5 class="card-title">{{ review.title }}</h5>
-                    <h6 class="card-subtitle text-muted">By {{ review.user.username }} - {{ review.rating }}/5</h6>
+                    <h6 class="card-subtitle text-muted">
+                        By {{ review.user.username }} - {{ review.rating }}/5
+                    </h6>
                     <p class="card-text mt-3">{{ review.content }}</p>
-                    <!--{% if review.user == request.user %}
-                    <a href="{% url 'edit_review' review.id %}" class="btn btn-secondary btn-sm">Edit</a>
-                    <a href="{% url 'delete_review' review.id %}" class="btn btn-danger btn-sm">Delete</a>
-                    {% endif %}-->
+
+                    <!-- Only show edit button if the review belongs to the logged-in user -->
+                    {% if review.user == request.user %}
+                        <a href="{% url 'edit_review' review.id %}" class="btn btn-secondary btn-sm">Edit</a>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}
         {% else %}
             <p>No reviews yet. Be the first to review this product!</p>
         {% endif %}
+
     </div>
     {% if request.user.is_authenticated %}
     <a href="{% url 'add_review' product.id %}" class="btn btn-primary mt-3">Add Review</a>
