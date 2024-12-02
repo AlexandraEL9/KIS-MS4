@@ -3,12 +3,66 @@ html {
 }
 
 body {
-    background: url('/media/homepage-background.jpg') no-repeat center center fixed;
+    background: url('/media/homepage-background2.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Poppins';
 }
+
+#delivery-banner {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    padding: 10px 0; /* Add vertical padding */
+    font-size: 1.2rem; /* Slightly larger text for emphasis */
+    text-align: center; /* Center the text */
+}
+
+/* Flexbox for neat alignment */
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-around; /* Spread items evenly */
+    align-items: center; /* Vertically center items */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Individual nav items */
+.navbar-nav .nav-item {
+    margin: 0 10px; /* Add spacing between items */
+    text-align: center;
+}
+
+/* Styling for nav links */
+.navbar-nav .nav-link {
+    text-transform: uppercase; /* Optional: Make text uppercase */
+    color: #000; /* Black text */
+    font-weight: bold;
+    padding: 10px 15px; /* Add padding for better click area */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Dropdown menu fix */
+.navbar-nav .dropdown-menu {
+    text-align: left;
+    margin: 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Hover styles */
+.navbar-nav .nav-link:hover {
+    color: #b1192e; /* Deep red on hover */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+
+#delivery-banner h4 {
+    margin: 0; /* Remove extra margin around the heading */
+}
+
 
 /* from Bulma */
 .icon {
@@ -20,7 +74,7 @@ body {
 }
 
 .logo-font {
-    text-transform: uppercase;
+    font-weight:600;
 }
 
 .main-logo-link {
@@ -36,12 +90,6 @@ body {
 .btn-black {
     background: black;
     color: white;
-}
-
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
 }
 
 .btn-outline-black:hover,
@@ -65,6 +113,10 @@ body {
     color: #000 !important;
 }
 
+.text-white{
+    color: #fff !important;
+}
+
 .border-black {
     border: 1px solid black !important;
 }
@@ -79,7 +131,7 @@ body {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: #F0F2F7;
 	z-index: -1;
 }
 
@@ -123,56 +175,13 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
 
 .bag-notification-wrapper {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 
 /* -------------------------------- Media Queries */
 
@@ -237,7 +246,8 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
-/* product form */
+/* Product Form */
+
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -257,6 +267,7 @@ input[name='q']::placeholder {
     border-radius: 0;
     border-color: #dc3545;
 }
+
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #dc3545;
     border-color: #dc3545;
@@ -288,4 +299,91 @@ input[name='q']::placeholder {
     body {
         height: calc(100vh - 116px);
     }
+    
+    .display-4.logo-font.text-black {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
+}
+
+/* Footer Styling */
+.bg-black {
+    background-color: #000; /* Black background */
+}
+
+.text-dark-pink {
+    color: #b1192e; /* Dark pink for headings */
+}
+
+.text-white {
+    color: #fff !important; /* White text */
+}
+
+.footer-link {
+    color: #fff; /* Footer links default to white */
+    text-decoration: none; /* No underline */
+}
+
+.footer-link:hover {
+    color: #ffe07c; /* Bright yellow on hover */
+}
+
+/* Subscribe Button */
+.btn-green {
+    background-color: #c8e6a1; /* Fresh green */
+    color: #000; /* Black text for contrast */
+    border: none;
+}
+
+.btn-green:hover {
+    background-color: #a6d37a; /* Slightly darker green on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Footer Bottom Row Styling */
+.footer-bottom {
+    border-top: 2px solid #b1192e; /* Dark pink border */
+    padding-top: 1rem;
+    text-align: center; /* Center-align text */
+    color: white; /* Text color */
+}
+
+/* Apply this style directly to the row */
+.border-top {
+    border-top: 2px solid #b1192e !important; /* Ensure the border color applies */
+}
+
+.text-center {
+    text-align: center !important; /* Ensure the text is centered */
 }
