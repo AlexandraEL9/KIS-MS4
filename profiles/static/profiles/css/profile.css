@@ -19,3 +19,48 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+/* Centering the Profile Page Elements */
+.profile-container {
+    padding: 2rem 0;
+}
+
+h2.logo-font {
+    font-size: 2rem;
+    color: #b1192e; /* Dark pink */
+    text-align: center;
+}
+
+.btn-black {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-black:hover {
+    background-color: #b1192e;
+    color: #fff;
+    border-color: #b1192e;
+}
+
+/* Table Styling for Order History */
+.table th, .table td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table a {
+    color: #b1192e;
+    text-decoration: none;
+}
+
+.table a:hover {
+    text-decoration: underline;
+}
+
+/* Form Fields */
+#profile-update-form input, #profile-update-form select {
+    border-radius: 5px;
+    padding: 10px;
+}
