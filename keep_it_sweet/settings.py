@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-alexandrael9-kisms4-wcsdgkb9jia.ws.codeinstitute-ide.net']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-alexandrael9-kisms4-wcsdgkb9jia.ws.codeinstitute-ide.net'
+]
+
 
 
 # Application definition
@@ -190,4 +194,5 @@ STRIPE_CURRENCY = 'gbp'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
-DEFAULT_FROM_EMAIL = 'keepitsweet@example.com'
+DEFAULT_FROM_EMAIL = 'keepitsweet16@gmail.com'
+
