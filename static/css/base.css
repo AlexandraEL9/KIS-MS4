@@ -54,10 +54,8 @@ body {
 
 /* Hover styles */
 .navbar-nav .nav-link:hover {
-    color: #b1192e; /* Deep red on hover */
     text-decoration: underline; /* Optional: Add underline on hover */
 }
-
 
 #delivery-banner h4 {
     margin: 0; /* Remove extra margin around the heading */
@@ -107,6 +105,20 @@ body {
 .btn-black:focus {
     background: #222;
     color: white;
+}
+
+.btn-custom-pink {
+    background-color: #b1192e; /* Dark Pink */
+    border: 2px solid #000; /* Black Border */
+    color: #fff; /* White Text */
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-pink:hover {
+    background-color: #7a0d21; /* Slightly Darker Pink */
+    border-color: #fff; /* White Border on Hover */
 }
 
 .text-black {
