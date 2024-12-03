@@ -49,12 +49,19 @@ def edit_review(request, review_id):
 # delete product reviews
 @login_required
 def delete_review(request, review_id):
-    """Allow a user to delete their review"""
-    review = get_object_or_404(Review, pk=review_id, user=request.user)
-    
-    if request.method == 'POST':
+    print("Delete review view accessed")  # Debugging
+    print("Request method:", request.method)  # Debugging
+
+    review = get_object_or_404(Review, id=review_id)
+    print("Review to delete:", review)  # Debugging
+
+    if request.method == "POST" and request.user == review.user:
         review.delete()
         messages.success(request, "Your review has been deleted.")
-        return redirect('product_reviews', product_id=review.product.id)
-    
-    return render(request, 'reviews/confirm_delete.html', {'review': review})
+        print("Review deleted successfully")  # Debugging
+    else:
+        messages.error(request, "You are not authorized to delete this review.")
+        print("Authorization failed or wrong method")  # Debugging
+
+    return redirect('product_reviews', product_id=review.product.id)
+
