@@ -6,67 +6,14 @@ body {
     background: url('/media/homepage-background2.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
-    color: #555;
+    color: black;
     font-family: 'Poppins';
 }
 
-#content-wrapper {
-    min-height: 100%; /* Ensure the content pushes the footer to the bottom */
-    display: flex;
-    flex-direction: column;
-}
-
 #delivery-banner {
-    background-color: black; /* Black background */
-    color: white; /* White text */
-    padding: 10px 0; /* Add vertical padding */
-    font-size: 1.2rem; /* Slightly larger text for emphasis */
-    text-align: center; /* Center the text */
+    background-color: black;
+    color: white;
 }
-
-/* Flexbox for neat alignment */
-.navbar-nav {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-    justify-content: space-around; /* Spread items evenly */
-    align-items: center; /* Vertically center items */
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-/* Individual nav items */
-.navbar-nav .nav-item {
-    margin: 0 10px; /* Add spacing between items */
-    text-align: center;
-}
-
-/* Styling for nav links */
-.navbar-nav .nav-link {
-    text-transform: uppercase; /* Optional: Make text uppercase */
-    color: #000; /* Black text */
-    font-weight: bold;
-    padding: 10px 15px; /* Add padding for better click area */
-    text-decoration: none; /* Remove underline */
-}
-
-/* Dropdown menu fix */
-.navbar-nav .dropdown-menu {
-    text-align: left;
-    margin: 0;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-/* Hover styles */
-.navbar-nav .nav-link:hover {
-    text-decoration: underline; /* Optional: Add underline on hover */
-}
-
-#delivery-banner h4 {
-    margin: 0; /* Remove extra margin around the heading */
-}
-
 
 /* from Bulma */
 .icon {
@@ -78,6 +25,7 @@ body {
 }
 
 .logo-font {
+    text-transform: uppercase;
     font-weight:600;
 }
 
@@ -111,20 +59,6 @@ body {
 .btn-black:focus {
     background: #222;
     color: white;
-}
-
-.btn-custom-pink {
-    background-color: #b1192e; /* Dark Pink */
-    border: 2px solid #000; /* Black Border */
-    color: #fff; /* White Text */
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.btn-custom-pink:hover {
-    background-color: #7a0d21; /* Slightly Darker Pink */
-    border-color: #fff; /* White Border on Hover */
 }
 
 .text-black {
@@ -172,6 +106,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+.bg-footer{
+    background-color: #00474C !important;
+}
+
 input[name='q']::placeholder {
     color: #aab7c4;
 }
@@ -193,6 +131,50 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
 
 .bag-notification-wrapper {
     height: 100px;
@@ -353,47 +335,4 @@ input[name='q']::placeholder {
     .increment-qty, .decrement-qty {
         padding: .25rem .5rem !important;
     }
-}
-
-/* Footer Styling */
-footer {
-    margin-top: auto; /* Push footer to the bottom */
-}
-
-.bg-black {
-    background-color: #000; /* Black background */
-}
-
-.text-dark-pink {
-    color: #b1192e; /* Dark pink for headings */
-}
-
-.text-white {
-    color: #fff !important; /* White text */
-}
-
-.footer-link {
-    color: #fff; /* Footer links default to white */
-    text-decoration: none; /* No underline */
-}
-
-.footer-link:hover {
-    color: #ffe07c; /* Bright yellow on hover */
-}
-
-/* Footer Bottom Row Styling */
-.footer-bottom {
-    border-top: 2px solid #b1192e; /* Dark pink border */
-    padding-top: 1rem;
-    text-align: center; /* Center-align text */
-    color: white; /* Text color */
-}
-
-/* Apply this style directly to the row */
-.border-top {
-    border-top: 2px solid #b1192e !important; /* Ensure the border color applies */
-}
-
-.text-center {
-    text-align: center !important; /* Ensure the text is centered */
 }
