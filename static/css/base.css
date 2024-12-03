@@ -10,6 +10,12 @@ body {
     font-family: 'Poppins';
 }
 
+#content-wrapper {
+    min-height: 100%; /* Ensure the content pushes the footer to the bottom */
+    display: flex;
+    flex-direction: column;
+}
+
 #delivery-banner {
     background-color: black; /* Black background */
     color: white; /* White text */
@@ -350,6 +356,9 @@ input[name='q']::placeholder {
 }
 
 /* Footer Styling */
+footer {
+    margin-top: auto; /* Push footer to the bottom */
+}
 
 .bg-black {
     background-color: #000; /* Black background */
@@ -370,18 +379,6 @@ input[name='q']::placeholder {
 
 .footer-link:hover {
     color: #ffe07c; /* Bright yellow on hover */
-}
-
-/* Subscribe Button */
-.btn-green {
-    background-color: #c8e6a1; /* Fresh green */
-    color: #000; /* Black text for contrast */
-    border: none;
-}
-
-.btn-green:hover {
-    background-color: #a6d37a; /* Slightly darker green on hover */
-    color: #fff; /* White text on hover */
 }
 
 /* Footer Bottom Row Styling */
