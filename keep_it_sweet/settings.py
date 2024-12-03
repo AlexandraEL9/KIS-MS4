@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-$rv09%q8v0ndf53r0#8$lpvu$fz%4=)0_^n+3@x1cfao0wxv**
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-alexandrael9-kisms4-wcsdgkb9jia.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['localhost', 'keep-it-sweet.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://8000-alexandrael9-kisms4-wcsdgkb9jia.ws.codeinstitute-ide.net'
@@ -128,12 +129,17 @@ WSGI_APPLICATION = 'keep_it_sweet.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL' in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Password validation
@@ -195,4 +201,6 @@ STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 DEFAULT_FROM_EMAIL = 'keepitsweet16@gmail.com'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
