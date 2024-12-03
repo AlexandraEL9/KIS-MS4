@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block body_class %}minimal-content-page{% endblock %}
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -43,7 +44,6 @@
     </div>
 </div>
 
-{% include 'includes/footer.html' %}
 {% endblock %}
 {% block postloadjs %}
     {{ block.super }}
