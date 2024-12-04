@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['keep-it-sweet-2ecaa2229785.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['keep-it-sweet-2ecaa2229785.herokuapp.com', 'localhost']
 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -111,8 +111,6 @@ AUTHENTICATION_BACKENDS = (
 )
 
 SITE_ID = 1
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
@@ -216,8 +214,6 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 
 # Stripe
 FREE_DELIVERY_THRESHOLD = 50
