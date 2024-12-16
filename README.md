@@ -156,34 +156,30 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 <img src="media/.jpeg">
 
 ## Models
-Django includes an Object-Relational Mapping (ORM) system for working with databases. In Django, a "model" refers to a Python class that defines the structure and behaviour of a database table. Models can establish relationships with other models, such as ForeignKey, OneToOneField, and ManyToManyField, to represent associations between tables in the database.
+### Table Description and Relationships
 
-### Custom Models
-The following are the custom built models for this app. Each App has been commented to explain the functionality:
+| **Table Name**          | **Purpose**                                                                 | **Relationships**                                                                                          |
+|-------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| **User**                | Stores user authentication data, such as username, email, password, and admin status. | - **One-to-One** with `User Profile` (user_id is the foreign key).                                        |
+|                         |                                                                             | - **One-to-Many** with `Review` (a user can write many reviews).                                          |
+|                         |                                                                             | - **One-to-Many** with `Favourite` (a user can have many favourite products).                             |
+| **User Profile**        | Stores additional details for a user, like address and contact information. | - **One-to-One** with `User` (foreign key: `user_id`).                                                    |
+|                         |                                                                             | - **One-to-Many** with `Order` (a user profile can have many orders).                                     |
+| **Category Entity**     | Represents product categories, like chocolates or candies.                  | - **One-to-Many** with `Product` (a category can have many products).                                     |
+| **Product**             | Stores information about products such as name, price, description, and SKU. | - **Many-to-One** with `Category Entity` (foreign key: `category_id`).                                    |
+|                         |                                                                             | - **One-to-Many** with `OrderLineItem` (a product can appear in multiple order items).                    |
+|                         |                                                                             | - **One-to-Many** with `Review` (a product can have multiple reviews).                                    |
+|                         |                                                                             | - **One-to-Many** with `Favourite` (a product can be favourited by many users).                           |
+| **Order**               | Represents a user’s purchase order, including totals, costs, and delivery details. | - **Many-to-One** with `User Profile` (foreign key: `user_profile_id`).                                   |
+|                         |                                                                             | - **One-to-Many** with `OrderLineItem` (an order can contain multiple products).                          |
+| **OrderLineItem**       | Represents individual items within an order, including quantity and options. | - **Many-to-One** with `Order` (foreign key: `order_id`).                                                 |
+|                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
+| **Review**              | Stores user-generated reviews for products, including title, content, and ratings. | - **Many-to-One** with `User` (foreign key: `user_id`).                                                   |
+|                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
+| **Favourite**           | Allows users to mark products as favourites.                                | - **Many-to-One** with `User` (foreign key: `user_id`).                                                   |
+|                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
+| **Newsletter Subscriber** | Stores email subscriptions for newsletters, including date of subscription. | - Optionally can be **linked** to a `User` for registered users (if a user is specified).                 |
 
-#### Blog:
-The blog has functionality to add a series of posts with title, text excerpt and an image displayed on the main blog page, with a button to click through to read the whole content of the post.
-
-#### Post Model Database Table
-- id: BigAutoField
-- post_title : Charfield
-- slug: Slugfield
-- body : Textfield
-- publish_date: DateTimeField
-- thumb: ImageField
-- author: ForeignKey
-- status: IntegerField
-
-The Post Model also has a nested class Meta, which orders the posts in descending order according to the publish_date field. The __str__ method returns the title of the blog post as a string, so the title of each blog is listed in the admin area. 
-
-#### Subscribe Model Database Table
-- id: BigAutoField
-- name : Charfield
-- email: EmailField
-- date_subscribed: DateTimeField
-
-### Reviews:
-The Reviews model and templates are currently in development.
 
 ## Features
 
