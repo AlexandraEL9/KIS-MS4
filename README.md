@@ -100,18 +100,50 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
 
 ### Color Scheme:
 
-### Wireframes
-I have drawn a series of wireframes using Adobe XD to evidence responsive design planning of the site taking into account layouts for a range of device sizes (mobile, tablet and desktop views) When the mobile layout differers significantly from tablet, I have drawn an additional layout - for example the products page layout. You can see the wireframes for the product page below. For the complete set of wireframes - the files are stored [here](media/wireframes/).
+### **Wireframes**
+The wireframes were created using [Balsamiq](https://balsamiq.cloud/).
 
-### Wireframes - mobile first design
-#### Mobile layout (products)
-<img src="media/wireframes/.png">
+* Home Page
+![Home Page Wireframe](./docs/wireframes/homepage-wf.png)
 
-#### Tablet layout (products)
-<img src="media/wireframes/.png">
+* Products Page
+![Products Page Wireframe](./docs/wireframes/products-wf.png)
 
-#### Desktop layout (products)
-<img src="media/wireframes/.png">
+* Product Detail Page
+![Product Detail Page Wireframe](./docs/wireframes/product-detail-wf.png)
+
+* Bag Page
+![Bag Page Wireframe](./docs/wireframes/bag-wf.png)
+
+* Checkout Page
+![Checkout Page Wireframe](./docs/wireframes/checkout-wf.png)
+
+* Checkout Success Page
+![Checkout Success Page Wireframe](./docs/wireframes/checkout-success-wf.png)
+
+* Favourites Page
+![Favourites Page Wireframe](./docs/wireframes/favourites-wf.png)
+
+* Profile Page
+![Profile Page Wireframe](./docs/wireframes/profile-wf.png)
+
+* Reviews Page
+![Reviews Page Wireframe](./docs/wireframes/reviews-wf.png)
+
+* Add/Edit reviews Page
+![Add/Edit reviews Page Wireframe](./docs/wireframes/add-edit-review-wf.png)
+
+* Product Management Page (Add and Delete)
+![Product Management Page Wireframe](./docs/wireframes/add-edit-product-wf.png)
+
+* Register Page
+![Register Page Wireframe](./docs/wireframes/register-wf.png)
+
+* Login Page
+![Login Page Wireframe](./docs/wireframes/login-wf.png)
+
+* Newsletter Subscription Page
+![Newsletter Subscription Page Wireframe](./docs/wireframes/newsletter-subscription-wf.png)
 
 ---
 ## Database
