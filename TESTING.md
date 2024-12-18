@@ -39,20 +39,20 @@ I implemented automated testing on both **Python forms** using Django's `SimpleT
 - **Example:** Testing required fields, invalid inputs, and clean method logic for Django forms.
 
 #### JavaScript Testing with Jest  
-- Tested dynamic behaviors in the frontend, such as triggering modals and updating quantities.  
-- **Example:** Ensuring modals display correctly when interacting with buttons and verifying quantity increment/decrement behavior.
+- Tested dynamic behaviors in the frontend, such as triggering modals.  
+- **Example:** Ensuring modals display correctly when interacting with buttons.
 
 ---
 
 ### Testing Results  
 
-| **Test Name**               | **Description**                                                               | **Result** | **Screenshot**                   |
-|-----------------------------|-------------------------------------------------------------------------------|------------|---------------------------------|
-| **ReviewForm Validation**   | Checks if the `ReviewForm` validates required fields and correct data.       | ✅ Pass    | ![Screenshot](link-to-image1)   |
-| **Modal Trigger Test**      | Ensures the delete confirmation modal is triggered when the delete button is clicked. | ✅ Pass    | ![Screenshot](link-to-image2)   |
-| **Toast Display Test**      | Verifies that Bootstrap's toast messages are displayed correctly.            | ✅ Pass    | ![Screenshot](link-to-image3)   |
-| **Quantity Increment Test** | Checks if the increment button increases the input field value correctly.    | ✅ Pass    | ![Screenshot](link-to-image4)   |
-| **Quantity Decrement Test** | Ensures the decrement button decreases the input field value correctly.      | ✅ Pass    | ![Screenshot](link-to-image5)   |
+| **Test Name**               | **Test Type**                | **Description**                                                               | **Result** | **Screenshot**                                      |
+|-----------------------------|------------------------------|-------------------------------------------------------------------------------|------------|----------------------------------------------------|
+| **ReviewForm Validation**   | Django - SimpleTestCase      | Uses 4 tests to ensure the functionality and validation of the `ReviewForm` in the reviews app: Valid Data Test, Missing Title Test, Missing Content Test, Invalid Rating Test.       | ✅ Pass    | ![Screenshot](/docs/testing/automated-testing/review-forms-testing.png)   |
+| **CheckoutForm Validation** | Django - SimpleTestCase      | Uses 4 tests to ensure the functionality and validation of the `orderForm` in the checkout app: Valid Data Test, Missing Required Fields Test, Optional Fields Test, Invalid Email Test. | ✅ Pass    | ![Screenshot](/docs/testing/automated-testing/checkout-form-testing.png) |
+| **UserProfilesForm Validation** | Django - SimpleTestCase      | Uses 2 tests to ensure the functionality and validation of the `UserProfileForm` in the checkout app: Correct Fields Test, Labels Removed Test | ✅ Pass    | ![Screenshot](/docs/testing/automated-testing/profile-form-testing.png) |
+| **Modal Trigger Test**      | Jest                         | Ensures the delete confirmation modal is triggered when the delete button is clicked. | ✅ Pass    | ![Screenshot](/docs/testing/automated-testing/jest-tests.png)                          |
+| **Toast Display Test**      | Jest                         | Verifies that Bootstrap's toast messages are displayed correctly.             | ✅ Pass    | ![Screenshot](/docs/testing/automated-testing/jest-tests.png)                          |
 
 
 ### HTML Validation
