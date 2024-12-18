@@ -1,6 +1,6 @@
 # **Shop K-Beauty Testing Results**
 
-![amiresponsive mock-ups of SHOP K-BEAUTY](./docs/.png)
+![amiresponsive mock-ups of Keep it Sweet!](./docs/.png)
 
 <br/>
 
@@ -29,6 +29,32 @@
 ---
 
 ## Automated Testing and Validation
+### Automated Testing
+
+#### Overview  
+I implemented automated testing on both **Python forms** using Django's `SimpleTestCase` and **JavaScript functionality** using **Jest** to ensure error-free behavior across key parts of the site.
+
+#### Forms Testing  
+- Focused on validating form functionality and ensuring form inputs meet expected validation rules.  
+- **Example:** Testing required fields, invalid inputs, and clean method logic for Django forms.
+
+#### JavaScript Testing with Jest  
+- Tested dynamic behaviors in the frontend, such as triggering modals and updating quantities.  
+- **Example:** Ensuring modals display correctly when interacting with buttons and verifying quantity increment/decrement behavior.
+
+---
+
+### Testing Results  
+
+| **Test Name**               | **Description**                                                               | **Result** | **Screenshot**                   |
+|-----------------------------|-------------------------------------------------------------------------------|------------|---------------------------------|
+| **ReviewForm Validation**   | Checks if the `ReviewForm` validates required fields and correct data.       | ✅ Pass    | ![Screenshot](link-to-image1)   |
+| **Modal Trigger Test**      | Ensures the delete confirmation modal is triggered when the delete button is clicked. | ✅ Pass    | ![Screenshot](link-to-image2)   |
+| **Toast Display Test**      | Verifies that Bootstrap's toast messages are displayed correctly.            | ✅ Pass    | ![Screenshot](link-to-image3)   |
+| **Quantity Increment Test** | Checks if the increment button increases the input field value correctly.    | ✅ Pass    | ![Screenshot](link-to-image4)   |
+| **Quantity Decrement Test** | Ensures the decrement button decreases the input field value correctly.      | ✅ Pass    | ![Screenshot](link-to-image5)   |
+
+
 ### HTML Validation
 I used [W3C Markup Validation Service](https://validator.w3.org/) to validate all the HTML files by direct input:
 | Page | Result | Validation Details & Screenshots |
