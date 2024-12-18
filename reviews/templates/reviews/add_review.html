@@ -1,59 +1,38 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block page_header %}
-<div class="container header-container">
+{% extends "base.html" %} {% load static %} {% block page_header %} <div class="container header-container">
     <div class="row">
-        <div class="col"></div>
+      <div class="col"></div>
     </div>
-</div>
-{% endblock %}
-
-{% block content %}
-<div class="overlay"></div>
-<div class="container text-center">
+  </div> {% endblock %} {% block content %} <div class="overlay"></div>
+  <div class="container text-center">
     <!-- Header Section -->
     <div class="row">
-        <div class="col-12 col-md-8 offset-md-2 mt-5">
-            <h2 class="logo-font mb-4 mt-5">Add a Review</h2>
-            <h5 class="text-muted">
-                {% if product %}
-                    Tell others what you think of {{ product.name }}
-                {% else %}
-                    Write a review for this product.
-                {% endif %}
-            </h5>
-        </div>
+      <div class="col-12 col-md-8 offset-md-2 mt-5">
+        <h2 class="logo-font mb-4 mt-5">Add a Review</h2>
+        <h5 class="text-muted"> {% if product %} Tell others what you think of {{ product.name }} {% else %} Write a review for this product. {% endif %} </h5>
+      </div>
     </div>
-
     <!-- Form Section -->
     <div class="row mt-4">
-        <div class="col-12 col-md-6 offset-md-3">
-            <form method="POST">
-                {% csrf_token %}
-                <!-- Title Field -->
-                <div class="form-group text-left">
-                    <label for="id_title">Title:</label>
-                    <input id="id_title" type="text" name="title" class="form-control rounded-0" placeholder="Enter a title for your review" required>
-                </div>
-                
-                <!-- Content Field -->
-                <div class="form-group text-left">
-                    <label for="id_content">Content:</label>
-                    <textarea id="id_content" name="content" rows="5" class="form-control rounded-0" placeholder="Write your review here..." required></textarea>
-                </div>
-                
-                <!-- Rating Field -->
-                <div class="form-group text-left">
-                    <label for="id_rating">Rating:</label>
-                    <input id="id_rating" type="number" name="rating" min="1" max="5" class="form-control rounded-0" placeholder="Rate the product (1 to 5)" required>
-                </div>
-                
-                <!-- Submit Button -->
-                <button type="submit" class="btn btn-dark-pink rounded-0 text-uppercase mt-3">Submit</button>
-            </form>
-        </div>
+      <div class="col-12 col-md-6 offset-md-3">
+        <form method="POST"> {% csrf_token %}
+          <!-- Title Field -->
+          <div class="form-group text-left">
+            <label for="id_title">Title:</label>
+            <input id="id_title" type="text" name="title" class="form-control rounded-0" placeholder="Enter a title for your review" required>
+          </div>
+          <!-- Content Field -->
+          <div class="form-group text-left">
+            <label for="id_content">Content:</label>
+            <textarea id="id_content" name="content" rows="5" class="form-control rounded-0" placeholder="Write your review here..." required></textarea>
+          </div>
+          <!-- Rating Field -->
+          <div class="form-group text-left">
+            <label for="id_rating">Rating:</label>
+            <input id="id_rating" type="number" name="rating" min="1" max="5" class="form-control rounded-0" placeholder="Rate the product (1 to 5)" required>
+          </div>
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-dark-pink rounded-0 text-uppercase mt-3">Submit</button>
+        </form>
+      </div>
     </div>
-</div>
-
-{% endblock %}
+  </div> {% endblock %}
