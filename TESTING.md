@@ -74,12 +74,22 @@ I used [JSHint](https://jshint.com/) to validate all JavaScript and JQuery files
 | ./# | # errors, <br/># warnings | [scrollToTop script](./docus/.png) |
 
 ### Python Validation
-At the project inception, I installed [PyCodeStyle](https://pycodestyle.pycqa.org/en/latest/intro.html#configuration) in my IDE and throughout the development, I was using it to test and fix the errors as they appear. I also used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint my Python code.
+I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint my Python code.
 | File | Result | Validation Details & Screenshots |
 | :-- | :-: | -------------------------- |
-| #.py | All clear, no errors found | [#](./docs.png)|
-| **SHOP_** |  |  |
-| #.py | All clear, no errors found | [#.py validation](./docs/.png) |
+| manage.py | All clear, no errors found | [Screenshot](./docs/testing/python-linter/managepy.png)|
+| custom_storages.py | All clear, no errors found | [Screenshot](./docs/testing/python-linter/custom_storages.png)|
+| **Keep_it_sweet** |  |  |
+| keep_it_sweet/wsgi.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-wsgi.png) |
+| keep_it_sweet/urls.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-urls.png) |
+| keep_it_sweet/settings.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-settings.png) |
+| **Bag app** |  |  |
+| bag/views.py | All clear, no errors found | [bag/views.py validation](./docs/testing/python-linter/bag-views.png) |
+| bag/urls.py | All clear, no errors found | [bag/urls.py validation](./docs/testing/python-linter/bag-urls.png) |
+| bag/models.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-settings.png) |
+ bag/contexts.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/bag-contexts.png) |
+| bag/models.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-settings.png) |
+| bag/apptemplatestags/bag_tools.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-settings.png) |
 
 ### Lighthouse Report
 [Chrome DevTools' Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance, accessibility, best practices and SEO of the site
