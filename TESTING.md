@@ -83,13 +83,17 @@ I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint m
 | keep_it_sweet/wsgi.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-wsgi.png) |
 | keep_it_sweet/urls.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-urls.png) |
 | keep_it_sweet/settings.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-settings.png) |
-| **Bag app** |  |  |
-| bag/views.py | All clear, no errors found | [bag/views.py validation](./docs/testing/python-linter/bag-views.png) |
-| bag/urls.py | All clear, no errors found | [bag/urls.py validation](./docs/testing/python-linter/bag-urls.png) |
-| bag/models.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-settings.png) |
- bag/contexts.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/bag-contexts.png) |
-| bag/models.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-settings.png) |
-| bag/apptemplatestags/bag_tools.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-settings.png) |
+| **Checkout app** |  |  |
+| checkout/webhooks.py | All clear, no errors found | [checkout/webhooks.py validation](./docs/testing/python-linter/checkout-webhooks.png) |
+| checkout/webhook_handler.py | All clear, no errors found | [checkout/webhook_handler.py validation](./docs/testing/python-linter/checkout-webhook-handler.png) |
+| checkout-views.py | All clear, no errors found | [checkout/views.py validation](./docs/testing/python-linter/checkout/views.png) |
+ checkout/urls.py | All clear, no errors found | [checkout/urls.py validation](./docs/testing/python-linter/checkout-urls.png) |
+| checkout/signals.py | All clear, no errors found | [checkout/signals.py validation](./docs/testing/python-linter/checkout-signals.png) |
+| checkout/models.py | All clear, no errors found | [checkout/models.py validation](./docs/testing/python-linter/checkout-models.png) |
+| checkout/forms.py | All clear, no errors found | [checkout/forms.py validation](./docs/testing/python-linter/checkout-forms.png) |
+| checkout/apps.py | All clear, no errors found | [checkout/apps.py validation](./docs/testing/python-linter/checkout-apps.png) |
+| checkout/admin.py | All clear, no errors found | [checkout/admin.py validation](./docs/testing/python-linter/checkout-admin.png) |
+| checkout/tests/test_forms.py | All clear, no errors found | [checkout/tests/test_forms.py validation](./docs/testing/python-linter/checkout-admin.png) |
 
 ### Lighthouse Report
 [Chrome DevTools' Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance, accessibility, best practices and SEO of the site
