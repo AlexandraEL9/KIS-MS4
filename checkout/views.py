@@ -1,4 +1,26 @@
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
+from django.views.decorators.http import require_POST
+from django.views.decorators.csrf import csrf_exempt
+from django.contrib import messages
+from django.conf import settings
+
+from .forms import OrderForm
+from .models import Order, OrderLineItem
+from products.models import Product
+from profiles.forms import UserProfileForm
+from profiles.models import UserProfile
+from bag.contexts import bag_contents
+
+import stripe
+import json
+
+
 def checkout(request):
+    """
+    Handle the checkout process, including order creation and Stripe payment.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -58,22 +80,19 @@ def checkout(request):
 
             # Save the info to the user's profile if all is well
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse(
-                'checkout_success', args=[order.order_number]))
+            return redirect(
+                reverse('checkout_success', args=[order.order_number])
+            )
         else:
             messages.error(
-                request, (
-                    'There was an error with your form. Please double-check '
-                    'your information.'
-                )
+                request,
+                'There was an error with your form. '
+                'Please double-check your information.'
             )
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(
-                request,
-                "There's nothing in your bag at the moment"
-            )
+            messages.error(request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -85,8 +104,7 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
         )
 
-        # Attempt to prefill the form with any info the user maintains
-        # in their profile
+        # Prefill the form with any info the user maintains in their profile
         if request.user.is_authenticated:
             try:
                 profile = UserProfile.objects.get(user=request.user)
@@ -109,10 +127,8 @@ def checkout(request):
     if not stripe_public_key:
         messages.warning(
             request,
-            (
-                'Stripe public key is missing. '
-                'Did you forget to set it in your environment?'
-            )
+            'Stripe public key is missing. '
+            'Did you forget to set it in your environment?'
         )
 
     template = 'checkout/checkout.html'
@@ -125,10 +141,9 @@ def checkout(request):
     return render(request, template, context)
 
 
-# checkout success
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful checkouts.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
@@ -146,17 +161,19 @@ def checkout_success(request, order_number):
                 'default_country': order.country,
                 'default_postcode': order.postcode,
                 'default_town_or_city': order.town_or_city,
-                'default_street_address1': order.street_address1,
-                'default_street_address2': order.street_address2,
+                'street_address1': order.street_address1,
+                'street_address2': order.street_address2,
                 'default_county': order.county,
             }
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    messages.success(
+        request,
+        f'Order successfully processed! Your order number is {order_number}. '
+        f'A confirmation email will be sent to {order.email}.'
+    )
 
     if 'bag' in request.session:
         del request.session['bag']
@@ -167,3 +184,17 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
+
+@require_POST
+@csrf_exempt
+def cache_checkout_data(request):
+    """
+    Caches checkout data in the session for use during payment processing.
+    """
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        request.session['save_info'] = request.POST.get('save_info') == 'true'
+        request.session['payment_intent_id'] = pid
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(content=f'Error: {e}', status=400)
