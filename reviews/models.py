@@ -2,8 +2,16 @@ from django.db import models
 from django.contrib.auth.models import User
 from products.models import Product
 
+
 class Review(models.Model):
-    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    """
+    Model to represent a product review.
+    """
+    product = models.ForeignKey(
+        Product,
+        related_name='reviews',
+        on_delete=models.CASCADE
+    )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     content = models.TextField()

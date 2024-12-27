@@ -1,6 +1,7 @@
 from django.test import SimpleTestCase
 from profiles.forms import UserProfileForm
 
+
 class TestUserProfileForm(SimpleTestCase):
     """
     Tests for the UserProfileForm using SimpleTestCase.

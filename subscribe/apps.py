@@ -7,4 +7,3 @@ class SubscribeConfig(AppConfig):
 
     # Set the name of the app
     name = 'subscribe'
-

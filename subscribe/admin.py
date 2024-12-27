@@ -9,4 +9,3 @@ class SubscriberAdmin(admin.ModelAdmin):
 
 # Register the Subscriber model with the custom admin configuration
 admin.site.register(Subscriber, SubscriberAdmin)
-
