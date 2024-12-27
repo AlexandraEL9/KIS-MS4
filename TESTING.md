@@ -77,12 +77,12 @@ I used [JSHint](https://jshint.com/) to validate all JavaScript and JQuery files
 I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint my Python code.
 | File | Result | Validation Details & Screenshots |
 | :-- | :-: | -------------------------- |
-| manage.py | All clear, no errors found | [Screenshot](./docs/testing/python-linter/managepy.png)|
-| custom_storages.py | All clear, no errors found | [Screenshot](./docs/testing/python-linter/custom_storages.png)|
+| manage.py | All clear, no errors found | [manage.py](./docs/testing/python-linter/managepy.png)|
+| custom_storages.py | All clear, no errors found | [custom_storages.py](./docs/testing/python-linter/custom_storages.png)|
 | **Keep_it_sweet** |  |  |
-| keep_it_sweet/wsgi.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-wsgi.png) |
-| keep_it_sweet/urls.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-urls.png) |
-| keep_it_sweet/settings.py | All clear, no errors found | [#.py validation](./docs/testing/python-linter/kis-settings.png) |
+| keep_it_sweet/wsgi.py | All clear, no errors found | [keep_it_sweet.wsgi.py validation](./docs/testing/python-linter/kis-wsgi.png) |
+| keep_it_sweet/urls.py | All clear, no errors found | [keep_it_sweet.urls.py validation](./docs/testing/python-linter/kis-urls.png) |
+| keep_it_sweet/settings.py | All clear, no errors found | [keep_it_sweet.settings.py validation](./docs/testing/python-linter/kis-settings.png) |
 | **Checkout app** |  |  |
 | checkout/webhooks.py | All clear, no errors found | [checkout/webhooks.py validation](./docs/testing/python-linter/checkout-webhooks.png) |
 | checkout/webhook_handler.py | All clear, no errors found | [checkout/webhook_handler.py validation](./docs/testing/python-linter/checkout-webhook-handler.png) |
