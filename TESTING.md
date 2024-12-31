@@ -69,9 +69,28 @@ I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to val
 
 ### JavaScript Validation
 I used [JSHint](https://jshint.com/) to validate all JavaScript and JQuery files
-| Page | Result | Test Details & Screenshots |
-| ---- | :-: | -------------------------- |
-| ./# | # errors, <br/># warnings | [scrollToTop script](./docus/.png) |
+| Function | Result | Validation Details & Screenshots |
+| :-- | :-: | -------------------------- |
+| **bag.html** |  |  |
+| bag/templates/bag/bag.html (Update quantity on click) | All clear, no errors found | [bag.update-quantity](./docs/testing/jshint/bag-update-quantity.png) |
+| bag/templates/bag/bag.html (Remove item and reload on click) | All clear, no errors found | [bag.remove-reload](./docs/testing/jshint/bag-remove-reload.png) |
+| Complete section | All clear, no errors found | [bag.full-section](./docs/testing/jshint/bag-full-section.png) |
+| **checkout app** |  |  |
+| checkout/static/checkout/js/stript_elements.js (Stripe elements) | Added Stripe as a global variable- no errors- all clear. | [checkout.static.checkout.js.stripe_elements.js](./docs/testing/jshint/bag-update-quantity.png) |
+| **products app** |  |  |
+| products/templates/products/products.html (sort selector) | no errors- all clear. | [products.html- sort-selector](./docs/testing/jshint/products-sort-selector.png) |
+| products/templates/products/products.html (scroll button) | no errors- all clear. | [products.html- scroll button](./docs/testing/jshint/products-scroll.png) |
+| products/templates/products/edit_product.html (edit product- image) | no errors- all clear. | [edit products](./docs/testing/jshint/products-edit-image.png) |
+| products/templates/products/add_product.html(add product- image) | no errors- all clear. | [add products](./docs/testing/jshint/products-add-image.png) |
+| products/templates/products/includes/quantity_input_script.html| no errors- all clear. | [products.includes/quantity_input_script](./docs/testing/jshint/products-quantity-input-script.png) |
+| **profiles app** |  |  |
+| profiles/static/profiles/js/countryfield.js| no errors- all clear. | [profiles-countryfield.js](./docs/testing/jshint/profiles-countryfield.png) |
+| **reviews app** |  |  |
+| reviews/templates/reviews/product_reviews.html| no errors- all clear. | [reviews- modal](./docs/testing/jshint/reviews-product-reviews-modal.png) |
+| **templates** |  |  |
+| templates/base.html- 'show toasts'| no errors- all clear. | [templates.base.toasts](./docs/testing/jshint/templates-base-toasts.png) |
+
+
 
 ### Python Validation
 I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint my Python code.

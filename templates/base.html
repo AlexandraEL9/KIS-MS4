@@ -93,8 +93,11 @@
           </button>
         </div> {% endfor %} </div> {% endif %} {% block page_header %} {% endblock %} <main class="flex-fill"> {% block content %} {% endblock %} </main>
       <footer> {% include 'includes/footer.html' %} </footer>
-    </div> {% block postloadjs %} <script type="text/javascript">
+    </div> 
+    {% block postloadjs %}
+    <script>
       $('.toast').toast('show');
-    </script> {% endblock %}
+    </script>
+    {% endblock %}
   </body>
 </html>

@@ -54,6 +54,7 @@
     </div>
   </div> {% endblock %} {% block postloadjs %} {{ block.super }}
   <script>
+    // modal
     document.addEventListener('DOMContentLoaded', function() {
       $('#confirmDeleteModal').on('show.bs.modal', function(event) {
         let button = $(event.relatedTarget); // Button that triggered the modal
