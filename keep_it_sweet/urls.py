@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,6 +30,9 @@ urlpatterns = [
     path('subscribe/', include('subscribe.urls')),
     path('favourites/', include('favourites.urls')),
     path('reviews/', include('reviews.urls')),
-    path('privacy-policy/', TemplateView.as_view(template_name='static_pages/privacy-policy.html'), name='privacy_policy'),
-
+    path(
+        'privacy-policy/',
+        TemplateView.as_view(template_name='static_pages/privacy-policy.html'),
+        name='privacy_policy',
+    ),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
