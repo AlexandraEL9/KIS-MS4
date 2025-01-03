@@ -351,10 +351,12 @@ input[name='q']::placeholder {
 
 a {
     color: #0056b3; /* Use a darker blue for links */
+    font-weight: bold;
 }
 
 a:hover, a:focus {
     color: #003d80; /* Even darker for hover/focus state */
+    font-weight: bolder;
 }
 
 .card {

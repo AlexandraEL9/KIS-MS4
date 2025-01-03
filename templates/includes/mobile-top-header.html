@@ -1,4 +1,4 @@
-<ul class="list-inline">
+<ul>
     <li class="list-inline-item">
         <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
@@ -20,31 +20,32 @@
                             class="form-control btn border border-black rounded-pill" 
                             type="submit" 
                             style="border-radius: 25px;" 
-                            aria-label="Search">
+                            aria-label="Search for products">
                             <span class="icon">
                                 <i class="fas fa-search" aria-hidden="true"></i>
                             </span>
                         </button>
-
                     </div>
                 </div>
             </form>        
         </div>
     </li>
     <li class="list-inline-item dropdown">
-        <a class="nav-link d-block d-lg-none" href="#" id="user-options-mobile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class=" nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-user fa-lg"></i></div>
                 <p class="my-0">My Account</p>
             </div>
         </a>
-        <div class="dropdown-menu border-0" aria-labelledby="user-options-mobile">
+        <div class="dropdown-menu border-0" aria-labelledby="user-options">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                     <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
                 {% endif %}
                 <a href="" class="dropdown-item">My Profile</a>
-                <a href="{% url 'favourites' %}" class="dropdown-item">Favourites</a>
+                <a href="{% url 'favourites' %}" class="dropdown-item">
+                    <i class="fas fa-heart"></i> Favourites
+                </a>
                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
             {% else %}
                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
@@ -58,9 +59,9 @@
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                 <p class="my-0">
                     {% if grand_total %}
-                        £{{ grand_total|floatformat:2 }}
+                        ${{ grand_total|floatformat:2 }}
                     {% else %}
-                        £0.00
+                        $0.00
                     {% endif %}
                 </p>
             </div>
