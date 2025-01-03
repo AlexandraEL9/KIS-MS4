@@ -29,5 +29,6 @@ urlpatterns = [
     path('subscribe/', include('subscribe.urls')),
     path('favourites/', include('favourites.urls')),
     path('reviews/', include('reviews.urls')),
+    path('privacy-policy/', TemplateView.as_view(template_name='static_pages/privacy-policy.html'), name='privacy_policy'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
