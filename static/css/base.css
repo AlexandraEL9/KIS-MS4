@@ -12,11 +12,11 @@ body {
 }
 /* Use Oleo Script for headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Oleo Script', Arial, sans-serif;
 }
 /* Use Oleo Script for grand totals and prices */
 .grand-total, .price {
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Oleo Script', Ariel, sans-serif;
     font-weight: 700; /* Bold for emphasis */
 }
 
@@ -348,6 +348,20 @@ input[name='q']::placeholder {
         padding: .25rem .5rem !important;
     }
 }
+
+a {
+    color: #0056b3; /* Use a darker blue for links */
+}
+
+a:hover, a:focus {
+    color: #003d80; /* Even darker for hover/focus state */
+}
+
+.card {
+    background-color: #f8f9fa; /* Light gray */
+    color: #212529; /* Dark gray for text */
+}
+
 
 /* footer */
 .footer-link {

@@ -154,27 +154,14 @@ I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint m
 #### Desktop
 | Page | Performance (%) | Accessibility (%) | Best Practices (%) | SEO (%) | If score is below 90% |
 | :-- | :-: | :-: | :-: | :-: | :-- |
-| ['index.html'](./docs.png) | # | # | # | # | Scores are above 90% on average |
+| ['index.html'](/docs/testing/lighthouse-testing/homepage-desktop.png) | 78 | 91 | 96 | 90 | Scores are above 90% on average- an exception being 'Performance'. Some initial work has been done to make the site perform better including pre loading some data etc. The next seps will be to update images to more efficient types, for example webp or AVIF |
+| ['subscribe.html'](/docs/testing/lighthouse-testing/subscribe-desktop.png) | 99 | 91 | 96 | 90 | Scores are above 90% on average |
 
 #### Mobile
 | Page | Performance (%) | Accessibility (%) | Best Practices (%) | SEO (%) | If score is below 90% |
 | :-- | :-: | :-: | :-: | :-: | :-- |
-| ['index.html'](./docs/.png) | #  | # | # | # | comment |
-
-### WAVE Web Accessibility Evaluation Tool
-[WAVE](https://wave.webaim.org/) was used to ensure that Keep It Sweet's content is also accessible to individuals with disabilities. WAVE can identify many accessibility and Web Content Accessibility Guideline (WCAG) errors, which are then corrected following the results of the initial evaluation.
-
-In order to fully validate the page, I used the WAVE Chrome extension. This enabled me to test the pages that require user authentication.
-
-| Page | WAVE This Page Result | Reasons for not fixing the contrast errors, if any |
-| :-- | --- | --- |
-| # Page | no errors |  |
-
-
-### Django Automated Testing
-For the automated testing, the writing and running of these tests used [Django's built in test module](https://docs.djangoproject.com/en/4.1/topics/testing/overview/). For each installed application, I created a folder called tests, added the ```__init__.py``` file and the separate files for testing the views, models and forms.
-
-I also used coverage to generate the report and find out the percentage of statements that I was able to cover and those that I missed for every installed application. I tried to achieve as close to the 100% mark as I possibly can, but I am still fairly new to using Automated Testing and am looking forward to learning more to reach this goal.
+| ['index.html'](/docs/testing/lighthouse-testing/homepage-mobile.png) | 88  | 98 | 96 | 90 | Scores are above 90% on average- an exception being 'Performance'. Some initial work has been done to make the site perform better including pre loading some data etc. The next seps will be to update images to more efficient types, for example webp or AVIF |
+| ['subscribe.html'](/docs/testing/lighthouse-testing/subscribe-mobile.png) | 93 | 98 | 96 | 90 | Scores are above 90% on average |
 
 #### Coverage
 | Installed App Coverage Report | Cover in Percentage | Screenshot of Coverage Report |
