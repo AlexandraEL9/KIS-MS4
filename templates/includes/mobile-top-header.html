@@ -1,6 +1,13 @@
 <ul>
+    <!-- Search Dropdown -->
     <li class="list-inline-item">
-        <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a 
+            class="text-black nav-link d-block d-lg-none" 
+            href="#" 
+            id="mobile-search" 
+            data-toggle="dropdown" 
+            aria-haspopup="true" 
+            aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-search fa-lg"></i></div>
                 <p class="my-0">Search</p>
@@ -14,13 +21,14 @@
                         type="text" 
                         name="q" 
                         placeholder="Search our site" 
+                        aria-label="Search input"
                         style="border-radius: 25px;">
                     <div class="input-group-append">
                         <button 
                             class="form-control btn border border-black rounded-pill" 
                             type="submit" 
                             style="border-radius: 25px;" 
-                            aria-label="Search for products">
+                            aria-label="Submit search query">
                             <span class="icon">
                                 <i class="fas fa-search" aria-hidden="true"></i>
                             </span>
@@ -30,8 +38,16 @@
             </form>        
         </div>
     </li>
+
+    <!-- User Account Dropdown -->
     <li class="list-inline-item dropdown">
-        <a class=" nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a 
+            class="nav-link d-block d-lg-none" 
+            href="#" 
+            id="user-options" 
+            data-toggle="dropdown" 
+            aria-haspopup="true" 
+            aria-expanded="false">
             <div class="text-center">
                 <div><i class="fas fa-user fa-lg"></i></div>
                 <p class="my-0">My Account</p>
@@ -53,8 +69,12 @@
             {% endif %}
         </div>
     </li>
+
+    <!-- Shopping Bag -->
     <li class="list-inline-item">
-        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
+        <a 
+            class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" 
+            href="{% url 'view_bag' %}">
             <div class="text-center">
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                 <p class="my-0">
