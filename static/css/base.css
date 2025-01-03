@@ -117,10 +117,6 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
-.bg-footer{
-    background-color: #00474C !important;
-}
-
 input[name='q']::placeholder {
     color: #aab7c4;
 }
