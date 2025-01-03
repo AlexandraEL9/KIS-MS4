@@ -97,11 +97,36 @@
           </button>
         </div> {% endfor %} </div> {% endif %} {% block page_header %} {% endblock %} <main class="flex-fill"> {% block content %} {% endblock %} </main>
       <footer> {% include 'includes/footer.html' %} </footer>
-    </div> 
+      <!-- Cookie Banner -->
+      <div id="cookie-banner" style="position: fixed; bottom: 0; width: 100%; background-color: #f8d7da; color: #721c24; padding: 10px; text-align: center; z-index: 1000;">
+        This site uses cookies, including third-party cookies for secure payments. 
+        <a href="/templates/includes/privacy-policy.html">Learn more</a>.
+        <button id="accept-cookies" style="margin-left: 10px; padding: 5px 10px; background-color: #721c24; color: white; border: none; cursor: pointer;">Accept</button>
+      </div>
+    </div>
+  
     {% block postloadjs %}
     <script>
       $('.toast').toast('show');
     </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const cookieBanner = document.getElementById('cookie-banner');
+          const acceptCookiesButton = document.getElementById('accept-cookies');
+  
+          // Check if cookies have already been accepted
+          if (localStorage.getItem('cookiesAccepted') === 'true') {
+              cookieBanner.style.display = 'none';
+          }
+  
+          // Accept cookies and hide the banner
+          acceptCookiesButton.addEventListener('click', function () {
+              localStorage.setItem('cookiesAccepted', 'true');
+              cookieBanner.style.display = 'none';
+          });
+      });
+    </script>
+  
     {% endblock %}
   </body>
 </html>
