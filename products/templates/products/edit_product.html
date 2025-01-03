@@ -1,43 +1,60 @@
-{% extends "base.html" %} {% load static %} {% block page_header %} <div class="container header-container">
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
     <div class="row">
-      <div class="col"></div>
+        <div class="col"></div>
     </div>
-  </div> {% endblock %} {% block content %} <div class="overlay"></div>
-  <div class="container">
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
     <!-- Center the heading -->
     <div class="row justify-content-center">
-      <div class="col-12 text-center">
-        <h2 class="logo-font mb-4 mt-5">Product Management</h2>
-        <h3>Edit a Product</h3>
-      </div>
+        <div class="col-12 text-center">
+            <h2 class="logo-font mb-4 mt-5">Product Management</h2>
+            <h3>Edit a Product</h3>
+        </div>
     </div>
     <!-- Center the form -->
     <div class="row justify-content-center">
-      <div class="col-12 col-md-8">
-        <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
-          {% csrf_token %}
-          {% for field in form %}
-            <div class="mb-3">
-              {% if field.name != 'image' %}
-                {{ field|as_crispy_field }}
-              {% else %}
-                <label for="new-image" class="form-label">Upload a new image:</label>
-                {{ field }}
-              {% endif %}
-            </div>
-          {% endfor %}
-          <div class="d-flex justify-content-between">
-            <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
-            <button class="btn btn-black rounded-0" type="submit">Update Product</button>
-          </div>
-        </form>
-      </div>
+        <div class="col-12 col-md-8">
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="mb-3">
+                    {% if field.name != 'image' %}
+                        {{ field|as_crispy_field }}
+                    {% else %}
+                        <label for="new-image" class="form-label">Upload a new image:</label>
+                        {{ field }}
+                        <p id="filename" class="mt-2 text-muted"></p>
+                        <a href="{{ product.image.url }}" title="Current image of {{ product.name }}" aria-label="Current image of {{ product.name }}">
+                            <img id="image-preview" src="{{ product.image.url }}" alt="Current image of {{ product.name }}" style="max-width: 100px; display: block; margin-top: 10px;">
+                        </a>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <div class="d-flex justify-content-between">
+                    <a class="btn btn-outline-black rounded-0" href="{% url 'products' %}">Cancel</a>
+                    <button class="btn btn-black rounded-0" type="submit">Update Product</button>
+                </div>
+            </form>
+        </div>
     </div>
-  </div> {% endblock %} {% block postloadjs %} {{ block.super }}
-  <script type="text/javascript">
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script type="text/javascript">
     // add/new image
     $('#new-image').change(function() {
-      var file = $('#new-image')[0].files[0];
-      $('#filename').text(`Image will be set to: ${file.name}`);
+        var file = $('#new-image')[0].files[0];
+        $('#filename').text(`Image will be set to: ${file.name}`);
     });
-  </script> {% endblock %}
+</script>
+{% endblock %}
