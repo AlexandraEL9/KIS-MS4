@@ -26,23 +26,21 @@
                 {% csrf_token %}
                 {% for field in form %}
                 <div class="mb-3">
-                  {% if field.name != 'image' %}
-                      {{ field|as_crispy_field }}
-                  {% else %}
-                      <label for="new-image" class="form-label">Upload a new image:</label>
-                      {{ field }}
-                      {% if product.image %}
-                          <img 
-                            id="image-preview" 
-                            src="{{ product.image.url }}" 
-                            alt="Current image of {{ product.name|default:'product' }}" 
-                            class="rounded shadow-sm"
-                            style="max-width: 100px; display: block; margin-top: 10px;">
-                      {% else %}
-                          <p>No image available for this product.</p>
-                      {% endif %}
-                  {% endif %}
-               
+                    {% if field.name != 'image' %}
+                        {{ field|as_crispy_field }}
+                    {% else %}
+                        <label for="new-image" class="form-label">Upload a new image:</label>
+                        {{ field }}
+                        {% if product.image %}
+                            <img 
+                                id="image-preview" 
+                                src="{{ product.image.url }}" 
+                                alt="Current image of {{ product.name|default:'product' }}" 
+                                class="rounded shadow-sm" 
+                                style="max-width: 100px; display: block; margin-top: 10px;">
+                        {% endif %}
+                        <p id="filename" class="mt-2 text-muted"></p>
+                    {% endif %}
                 </div>
                 {% endfor %}
                 <div class="d-flex justify-content-between">
@@ -58,10 +56,21 @@
 {% block postloadjs %}
 {{ block.super }}
 <script type="text/javascript">
-    // add/new image
+    // Add a new image preview dynamically
     $('#new-image').change(function() {
         var file = $('#new-image')[0].files[0];
-        $('#filename').text(`Image will be set to: ${file.name}`);
+        if (file) {
+            // Display selected file name
+            $('#filename').text(`Image will be set to: ${file.name}`);
+            
+            // Dynamically update the preview image
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#image-preview').attr('src', e.target.result);
+            };
+            reader.readAsDataURL(file);
+        }
     });
 </script>
 {% endblock %}
+
