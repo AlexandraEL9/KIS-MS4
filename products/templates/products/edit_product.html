@@ -33,7 +33,9 @@
                         {{ field }}
                         {% if product.image %}
                             <p>Current Image:</p>
-                            <a href="{{ product.image.url }}" title="View current image of {{ product.name|default:'product' }}" aria-label="View current image of {{ product.name|default:'product' }}">
+                            <a href="{{ product.image.url }}" 
+                               title="View current image of {{ product.name|default:'product' }}" 
+                               aria-label="View current image of {{ product.name|default:'product' }}">
                                 <img 
                                     id="image-preview" 
                                     src="{{ product.image.url }}" 
@@ -70,11 +72,10 @@
             var reader = new FileReader();
             reader.onload = function(e) {
                 $('#image-preview').attr('src', e.target.result);
-                $('#image-preview').attr('alt', `New image preview of ${file.name}`);
+                $('#image-preview').attr('alt', `New image preview for selected file: ${file.name}`);
             };
             reader.readAsDataURL(file);
         }
     });
 </script>
 {% endblock %}
-
