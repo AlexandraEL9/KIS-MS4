@@ -39,7 +39,7 @@
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">
-                    <i class="fas fa-clipboard-list"></i> Product Management
+                    <i class="fas fa-clipboard"></i> Product Management
                 </a>
             {% endif %}
             <a href="" class="dropdown-item">My Profile</a>
