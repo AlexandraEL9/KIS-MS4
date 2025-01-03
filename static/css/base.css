@@ -350,48 +350,11 @@ input[name='q']::placeholder {
 }
 
 /* footer */
-footer {
-    background-color: #000; /* Black background for contrast */
-    color: #fff; /* White text for readability */
-    padding: 20px 0; /* Space around content */
-    text-align: center;
-}
-footer h4 {
-    font-family: 'Oleo Script', cursive; /* Decorative font */
-    font-weight: 700;
-    font-size: 1.5rem; /* Larger for emphasis */
-    margin-bottom: 10px;
-}
-footer p {
-    font-family: 'Poppins', sans-serif; /* Clean font for body text */
-    font-size: 0.9rem; /* Slightly smaller size */
-    margin: 5px 0;
-}
-footer a {
-    color: #e91e63; /* Bright pink for links */
-    text-decoration: none;
-    font-weight: 500;
+.footer-link {
+    color: #ff7eb3;
+    transition: color 0.3s ease;
 }
 
-footer a:hover {
-    text-decoration: underline; /* Add hover effect for emphasis */
-}
-
-footer .row {
-    margin: 0 auto;
-    max-width: 1200px; /* Limit width for better alignment */
-}
-
-footer .col-md-4 {
-    margin-bottom: 15px; /* Space between sections */
-}
-
-footer .col-md-4:last-child {
-    text-align: right; /* Align Privacy Policy to the right */
-}
-
-@media (max-width: 768px) {
-    footer .col-md-4 {
-        text-align: center; /* Center-align on smaller screens */
-    }
+.footer-link:hover {
+    color: #ff4500;
 }
