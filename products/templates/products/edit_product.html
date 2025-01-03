@@ -32,8 +32,12 @@
                         <label for="new-image" class="form-label">Upload a new image:</label>
                         {{ field }}
                         <p id="filename" class="mt-2 text-muted"></p>
-                        <a href="{{ product.image.url }}" title="Current image of {{ product.name }}" aria-label="Current image of {{ product.name }}">
-                        </a>
+                        <img 
+                          id="image-preview" 
+                          src="{{ product.image.url }}" 
+                          alt="Current image of {{ product.name }}" 
+                          style="max-width: 100px; display: block; margin-top: 10px;">
+
                     {% endif %}
                 </div>
                 {% endfor %}
