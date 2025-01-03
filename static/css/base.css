@@ -350,11 +350,11 @@ input[name='q']::placeholder {
 }
 
 /* footer */
-.footer a {
+.footer-link {
     color: #ff7eb3;
     transition: color 0.3s ease;
 }
 
-.footer a:hover {
+.footer-link:hover {
     color: #ff4500;
 }
