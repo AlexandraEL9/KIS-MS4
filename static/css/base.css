@@ -20,6 +20,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700; /* Bold for emphasis */
 }
 
+/* navbar */
+.navbar {
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    color: white;
+}
 
 #delivery-banner {
     background-color: black;
@@ -35,19 +40,19 @@ h1, h2, h3, h4, h5, h6 {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-    font-weight:600;
-}
-
 .main-logo-link {
     width: fit-content;
 }
 
 .shop-now-button {
-    background: black;
+    background: #ff6347;
     color: white;
-    min-width: 260px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shop-now-button:hover {
+    background: #ff4500;
 }
 
 .btn-black {
@@ -344,3 +349,12 @@ input[name='q']::placeholder {
     }
 }
 
+/* footer */
+.footer a {
+    color: #ff7eb3;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff4500;
+}
