@@ -32,13 +32,14 @@
                       <label for="new-image" class="form-label">Upload a new image:</label>
                       {{ field }}
                       {% if product.image %}
-                          <p id="filename" class="mt-2 text-muted"></p>
                           <img 
                             id="image-preview" 
                             src="{{ product.image.url }}" 
-                            alt="Current image of {{ product.name }}" 
+                            alt="Current image of {{ product.name|default:'product' }}" 
                             class="rounded shadow-sm"
                             style="max-width: 100px; display: block; margin-top: 10px;">
+                      {% else %}
+                          <p>No image available for this product.</p>
                       {% endif %}
                   {% endif %}
                
