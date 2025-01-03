@@ -39,7 +39,8 @@
         {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">
-                    <i class="fas fa-clipboard-list"></i>Product Management</a>
+                    <i class="fas fa-clipboard-list"></i> Product Management
+                </a>
             {% endif %}
             <a href="" class="dropdown-item">My Profile</a>
             <a href="{% url 'favourites' %}" class="dropdown-item">
@@ -50,7 +51,7 @@
         {% else %}
             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
             <a href="{% url 'account_login' %}" class="dropdown-item">
-                <i class="fas fa-door-open"></i>Login</a>
+                <i class="fas fa-door-open"></i> Login</a>
         {% endif %}
     </div>
 </li>
