@@ -45,14 +45,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .shop-now-button {
-    background: #ff6347;
+    background: black;
     color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .shop-now-button:hover {
-    background: #ff4500;
+    background: ff6348;
 }
 
 .btn-black {
