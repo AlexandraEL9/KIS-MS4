@@ -350,39 +350,48 @@ input[name='q']::placeholder {
 }
 
 /* footer */
-.footer-link {
-    color: #ff7eb3;
-    transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-    color: #ff4500;
-}
-
-/* cookie banner */
-#cookie-banner {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f8d7da; /* Light red background */
-    color: #721c24; /* Dark red text */
-    padding: 10px;
+footer {
+    background-color: #000; /* Black background for contrast */
+    color: #fff; /* White text for readability */
+    padding: 20px 0; /* Space around content */
     text-align: center;
-    z-index: 1000;
+}
+footer h4 {
+    font-family: 'Oleo Script', cursive; /* Decorative font */
+    font-weight: 700;
+    font-size: 1.5rem; /* Larger for emphasis */
+    margin-bottom: 10px;
+}
+footer p {
+    font-family: 'Poppins', sans-serif; /* Clean font for body text */
+    font-size: 0.9rem; /* Slightly smaller size */
+    margin: 5px 0;
+}
+footer a {
+    color: #e91e63; /* Bright pink for links */
+    text-decoration: none;
+    font-weight: 500;
 }
 
-#cookie-banner a {
-    color: #721c24;
-    text-decoration: underline;
+footer a:hover {
+    text-decoration: underline; /* Add hover effect for emphasis */
 }
 
-#accept-cookies {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #721c24; /* Dark red background */
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
+footer .row {
+    margin: 0 auto;
+    max-width: 1200px; /* Limit width for better alignment */
 }
 
+footer .col-md-4 {
+    margin-bottom: 15px; /* Space between sections */
+}
+
+footer .col-md-4:last-child {
+    text-align: right; /* Align Privacy Policy to the right */
+}
+
+@media (max-width: 768px) {
+    footer .col-md-4 {
+        text-align: center; /* Center-align on smaller screens */
+    }
+}
