@@ -107,26 +107,30 @@
   
     {% block postloadjs %}
     <script>
-      $('.toast').toast('show');
+        // Bootstrap toast initialization
+        $('.toast').toast('show');
+
+        // Cookie banner logic
+        document.addEventListener('DOMContentLoaded', function () {
+            const cookieBanner = document.getElementById('cookie-banner');
+            const acceptCookiesButton = document.getElementById('accept-cookies');
+
+            if (localStorage.getItem('cookiesAccepted') === 'true') {
+                cookieBanner.style.display = 'none';
+            }
+
+            acceptCookiesButton.addEventListener('click', function () {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.style.display = 'none';
+            });
+        });
     </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-          const cookieBanner = document.getElementById('cookie-banner');
-          const acceptCookiesButton = document.getElementById('accept-cookies');
-  
-          // Check if cookies have already been accepted
-          if (localStorage.getItem('cookiesAccepted') === 'true') {
-              cookieBanner.style.display = 'none';
-          }
-  
-          // Accept cookies and hide the banner
-          acceptCookiesButton.addEventListener('click', function () {
-              localStorage.setItem('cookiesAccepted', 'true');
-              cookieBanner.style.display = 'none';
-          });
-      });
-    </script>
-  
+
+    {% if 'checkout' in request.path %}
+    <script src="https://js.stripe.com/v3/"></script>
+    {% endif %}
     {% endblock %}
+
+
   </body>
 </html>
