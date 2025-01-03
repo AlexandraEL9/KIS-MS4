@@ -26,19 +26,21 @@
                 {% csrf_token %}
                 {% for field in form %}
                 <div class="mb-3">
-                    {% if field.name != 'image' %}
-                        {{ field|as_crispy_field }}
-                    {% else %}
-                        <label for="new-image" class="form-label">Upload a new image:</label>
-                        {{ field }}
-                        <p id="filename" class="mt-2 text-muted"></p>
-                        <img 
-                          id="image-preview" 
-                          src="{{ product.image.url }}" 
-                          alt="Current image of {{ product.name }}" 
-                          style="max-width: 100px; display: block; margin-top: 10px;">
-
-                    {% endif %}
+                  {% if field.name != 'image' %}
+                      {{ field|as_crispy_field }}
+                  {% else %}
+                      <label for="new-image" class="form-label">Upload a new image:</label>
+                      {{ field }}
+                      {% if product.image %}
+                          <p id="filename" class="mt-2 text-muted"></p>
+                          <img 
+                            id="image-preview" 
+                            src="{{ product.image.url }}" 
+                            alt="Current image of {{ product.name }}" 
+                            style="max-width: 100px; display: block; margin-top: 10px;">
+                      {% endif %}
+                  {% endif %}
+              
                 </div>
                 {% endfor %}
                 <div class="d-flex justify-content-between">
