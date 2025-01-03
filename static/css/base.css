@@ -7,8 +7,19 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: black;
-    font-family: 'Poppins';
+    /* Set Poppins as the default font for the body */
+    font-family: 'Poppins', sans-serif;
 }
+/* Use Oleo Script for headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oleo Script', cursive;
+}
+/* Use Oleo Script for grand totals and prices */
+.grand-total, .price {
+    font-family: 'Oleo Script', cursive;
+    font-weight: 700; /* Bold for emphasis */
+}
+
 
 #delivery-banner {
     background-color: black;
