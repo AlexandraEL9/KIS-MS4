@@ -27,17 +27,20 @@
                 {% for field in form %}
                 <div class="mb-3">
                     {% if field.name != 'image' %}
-                        {{ field|as_crispy_field }}
+                        {{ field.label_tag }} {{ field|as_crispy_field }}
                     {% else %}
                         <label for="new-image" class="form-label">Upload a new image:</label>
                         {{ field }}
                         {% if product.image %}
-                            <img 
-                                id="image-preview" 
-                                src="{{ product.image.url }}" 
-                                alt="Current image of {{ product.name|default:'product' }}" 
-                                class="rounded shadow-sm" 
-                                style="max-width: 100px; display: block; margin-top: 10px;">
+                            <p>Current Image:</p>
+                            <a href="{{ product.image.url }}" title="View current image of {{ product.name|default:'product' }}" aria-label="View current image of {{ product.name|default:'product' }}">
+                                <img 
+                                    id="image-preview" 
+                                    src="{{ product.image.url }}" 
+                                    alt="Current image of {{ product.name|default:'product' }}" 
+                                    class="rounded shadow-sm" 
+                                    style="max-width: 100px; display: block; margin-top: 10px;">
+                            </a>
                         {% endif %}
                         <p id="filename" class="mt-2 text-muted"></p>
                     {% endif %}
@@ -67,6 +70,7 @@
             var reader = new FileReader();
             reader.onload = function(e) {
                 $('#image-preview').attr('src', e.target.result);
+                $('#image-preview').attr('alt', `New image preview of ${file.name}`);
             };
             reader.readAsDataURL(file);
         }
