@@ -154,19 +154,26 @@ I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint m
 #### Desktop
 | Page | Performance (%) | Accessibility (%) | Best Practices (%) | SEO (%) | If score is below 90% |
 | :-- | :-: | :-: | :-: | :-: | :-- |
-| ['index.html'](/docs/testing/lighthouse-testing/homepage-desktop.png) | 78 | 91 | 96 | 90 | Scores are above 90% on average- an exception being 'Performance'. Some initial work has been done to make the site perform better including pre loading some data etc. The next seps will be to update images to more efficient types, for example webp or AVIF |
+| ['index.html'](/docs/testing/lighthouse-testing/home-desktop.png) | 78 | 91 | 96 | 90 | Scores are above 90% on average- an exception being 'Performance'. Some initial work has been done to make the site perform better including pre loading some data etc. The next seps will be to update images to more efficient types, for example webp or AVIF |
 | ['subscribe.html'](/docs/testing/lighthouse-testing/subscribe-desktop.png) | 99 | 91 | 96 | 90 | Scores are above 90% on average |
+| ['privacy-policy.html'](/docs/testing/lighthouse-testing/privacy-policy-desktop.png) | 95 | 92 | 96 | 90 | Scores are above 90% on average |
+| ['signup.html'](/docs/testing/lighthouse-testing/signup-desktop.png) | 98 | 92 | 96 | 90 | Scores are above 90% on average |
+| ['login.html'](/docs/testing/lighthouse-testing/login-desktop.png) | 98 | 92 | 96 | 90 | Scores are above 90% on average |
+| ['add-product.html'](/docs/testing/lighthouse-testing/add-product-desktop.png) | 84 | 92 | 96 | 90 | Scores are above 90% on average, with the exception of 'Performance'. More research needed to further enhance performance across the site. |
+| ['edit-product.html'](/docs/testing/lighthouse-testing/edit-product-desktop.png) | 84 | 92 | 96 | 90 | Scores are above 90% on average, with the exception of 'Performance'. More research needed to further enhance performance across the site. |
+
 
 #### Mobile
 | Page | Performance (%) | Accessibility (%) | Best Practices (%) | SEO (%) | If score is below 90% |
 | :-- | :-: | :-: | :-: | :-: | :-- |
-| ['index.html'](/docs/testing/lighthouse-testing/homepage-mobile.png) | 88  | 98 | 96 | 90 | Scores are above 90% on average- an exception being 'Performance'. Some initial work has been done to make the site perform better including pre loading some data etc. The next seps will be to update images to more efficient types, for example webp or AVIF |
+| ['index.html'](/docs/testing/lighthouse-testing/home-mobile.png) | 91  | 98 | 96 | 90 | Scores are above 90% on average- an exception being 'Performance'. Some initial work has been done to make the site perform better including pre loading some data etc. The next seps will be to update images to more efficient types, for example webp or AVIF |
 | ['subscribe.html'](/docs/testing/lighthouse-testing/subscribe-mobile.png) | 93 | 98 | 96 | 90 | Scores are above 90% on average |
+| ['privacy-policy.html'](/docs/testing/lighthouse-testing/privacy-policy-mobile.png) | 87 | 100 | 96 | 90 | Scores are above 90% on average with the exception of 'Performance'. More work required to improve site performance on pages with lots of content. |
+| ['signup.html'](/docs/testing/lighthouse-testing/signup-desktop.png) | 82 | 98 | 96 | 90 | Scores are above 90% on average with the exception of 'Performance'. More research needed to further enhance performance across the site. |
+| ['login.html'](/docs/testing/lighthouse-testing/login-mobile.png) | 67 | 98 | 96 | 90 | Scores are above 90% on average with the exception of 'Performance'. More research needed to further enhance performance across the site. |
+| ['add-product.html'](/docs/testing/lighthouse-testing/add-product-desktop.png) | 76 | 100 | 96 | 90 | Scores are above 90% on average, with the exception of 'Performance'. More research needed to further enhance performance across the site. |
 
-#### Coverage
-| Installed App Coverage Report | Cover in Percentage | Screenshot of Coverage Report |
-| -- | :-: | :-: |
-| # app | #% | [bag app cover](./documentation/coverage_report/coverage-report-#-app.png) |
+
 
 ## Manual Testing
 ### Testing User Stories
