@@ -12,7 +12,7 @@ class UserProfileForm(forms.ModelForm):
         Add placeholders and classes, remove auto-generated
         labels and set autofocus on first field
         """
-        super().__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)  # Correctly indented
         placeholders = {
             'default_phone_number': 'Phone Number',
             'default_postcode': 'Postal Code',
@@ -24,13 +24,17 @@ class UserProfileForm(forms.ModelForm):
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if field != 'default_country':
+            if field != 'default_country':  # Exclude default_country from placeholder logic
                 if self.fields[field].required:
                     placeholder = f"{placeholders[field]} *"
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
+            else:
+                # Set a label for default_country
+                self.fields[field].label = "Country"
             self.fields[field].widget.attrs[
                 'class'
             ] = 'border-black rounded-0 profile-form-input'
-            self.fields[field].label = False
+            if field != 'default_country':
+                self.fields[field].label = False
