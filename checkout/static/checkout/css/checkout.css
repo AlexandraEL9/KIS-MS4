@@ -22,7 +22,7 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #aab7c4;
+    color: #062f57;
 }
 
 .fieldset-label {
@@ -43,7 +43,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-    color: #aab7c4 !important;
+    color: #092f55 !important;
 }
 
 #loading-overlay {
@@ -63,4 +63,12 @@ select option[value=""] {
     justify-content: center;
     margin: 0;
     height: 100%;
+}
+
+select#id_country {
+    color: #000; /* Ensure text is black for contrast */
+    background-color: #fff; /* White background */
+    border: 1px solid #000; /* Black border for visibility */
+    padding: 5px; /* Add padding for usability */
+    font-size: 1rem; /* Ensure text is legible */
 }
