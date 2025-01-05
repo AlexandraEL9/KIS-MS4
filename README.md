@@ -67,19 +67,19 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
 | 12 | First time user | Search for a product or multiple products by name, ingredient or description | Find a specific product |
 | 13 | First time user | View the search results | Identify products for more research or purchase |
 | **PURCHASING & CHECKOUT** |   |   |
-| # | First time user | Select the quantity of a product when purchasing | Ensure the correct quantity is purchased to meet customer need |
-| # | First time user | View notifications/ feedback when a product is added to the basket | recieve immediate feedback if action completed |
-| # | First time user | View items in my basket to be purchased | quickly see the total cost of items |
-| # | First time user | VEdit/ update the items in my basket and adjust quantities | Ensure my purchase is exactly what I want |
-| # | First time user | Enter payment information | Checkout with minimal fuss. |
-| # | First time user | Recieve cnfirmation of my order | know my payment has gone through and that my order is in the system. |
+| 14 | First time user | Select the quantity of a product when purchasing | Ensure the correct quantity is purchased to meet customer need |
+| 15 | First time user | View notifications/ feedback when a product is added to the basket | recieve immediate feedback if action completed |
+| 16 | First time user | View items in my basket to be purchased | quickly see the total cost of items |
+| 17 | First time user | VEdit/ update the items in my basket and adjust quantities | Ensure my purchase is exactly what I want |
+| 18 | First time user | Enter payment information | Checkout with minimal fuss. |
+| 19 | First time user | Recieve cnfirmation of my order | know my payment has gone through and that my order is in the system. |
 | **SITE ADMIN** |   |   |
-| # | Store Owner | Add a product | Add new items to my store |
-| # | Store Owner | Edit/ update a product | Amend a product's information so site info is up to date |
-| # | Store Owner | Delete a product | Remove items that are no longer for sale |
-| # | Store Owner | Receive a warning if I accidentally click the delete a product button | Avoid accidental deletion of a product |
+| 20 | Store Owner | Add a product | Add new items to my store |
+| 21 | Store Owner | Edit/ update a product | Amend a product's information so site info is up to date |
+| 22 | Store Owner | Delete a product | Remove items that are no longer for sale |
 | **DIGITAL MARKETING** |   |   |
-| # | Store Owner |     Signpost customers to social media and digital marketing (newsletter) and special offers | Build a community of repeat customers to drive sales |
+| 23 | Store Owner |     Signpost customers to social media. | Build a community of repeat customers to drive sales |
+| 24 | Store Owner |     Signpost customers digital marketing (newsletter) and special offers | Build a community of repeat customers to drive sales |
 | # | First time and returning user |     Access social media and marketing and sign up for newsletter | Access special offers |
 | **PRODUCT REVIEWS** |   |   |
 | # | First time user | View reviews for a product I am viewing | be made aware of previous customer's views |
