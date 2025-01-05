@@ -54,18 +54,18 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
 | 1 | First time user | Navigate around the site | View a list of products  |
 | 2 | First time user | Easily and quickly understand the main purpose and products of the 'Keep it Sweet' company | Be sure I am in the right place for my needs  |
 | 3 | First time user | View and search specific categories of products | Quickly access a range of products I may be interested in.  |
-| 4 | First time user | View individual product details | Identify the price, description, product reviews, product image, product ingredients  |
+| 4 | First time user | View individual product details | Identify the price, description, product reviews, product image.  |
 | 5 | First time user | View the total amount of products in my shopping bag | Keep track of spending  |
-| 5 | First time user | View customer reviews of previous Keep it Sweet's customers | Feel safe in the knowledge that I will be treated well as a customer and feel confident about my purchase.  |
+| 6 | First time user | View customer reviews of previous Keep it Sweet's customers | Feel safe in the knowledge that I will be treated well as a customer and feel confident about my purchase.  |
 | **REGISTRATION & USER ACCOUNTS** |   |   |
-| # | First time user | Easily register for an account | Have a personal account and be able to view my profile |
-| # | First time user | Recieve an email after the above registration process| Have feedback that my registration was successful |
-| # | Returning user | Easily log in and log out of my account| Access my personal information |
-| # | Returning/ frequent user | Have a personalised user profile | Access my stored information, order history, order confirmations (and wishlist/ faves list) |
+| 7 | First time user | Easily register for an account | Have a personal account and be able to view my profile |
+| 8 | First time user | Recieve an email after the above registration process| Have feedback that my registration was successful |
+| 9 | Returning user | Easily log in and log out of my account| Access my personal information |
+| 10 | Returning/ frequent user | Have a personalised user profile | Access my stored information, order history, order confirmations (and wishlist/ faves list) |
 | **SORTING & SEARCHING** |   |   |
-| # | First time user | Sort the list of available products | Easily identify categorically and subcategorically sorted products |
-| # | First time user | Search for a product or multiple products by name, ingredient or description | Find a specific product |
-| # | First time user | View the search results | Identify products for more research or purchase |
+| 11 | First time user | Sort the list of available products | Easily identify categorically sorted products |
+| 12 | First time user | Search for a product or multiple products by name, ingredient or description | Find a specific product |
+| 13 | First time user | View the search results | Identify products for more research or purchase |
 | **PURCHASING & CHECKOUT** |   |   |
 | # | First time user | Select the quantity of a product when purchasing | Ensure the correct quantity is purchased to meet customer need |
 | # | First time user | View notifications/ feedback when a product is added to the basket | recieve immediate feedback if action completed |
