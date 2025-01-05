@@ -3,12 +3,12 @@
 <html lang="en">
   <head>
     {% block meta %}
-    <!-- Metadata -->
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
-    {% block extra_meta %}{% endblock %}
+    {% block extra_meta %}
+    {% endblock %}
 
     {% block corecss %}
     <!-- Preload Critical Resources -->
@@ -35,9 +35,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
     <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" defer></script>
+    <!-- jQuery (Load First) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/" async></script>
+
     {% endblock %}
     
     {% block extra_js %}{% endblock %}
@@ -45,6 +54,7 @@
     <!-- Page Title -->
     <title>Keep It SWEET! {% block extra_title %}{% endblock %}</title>
   </head>
+
 
   <body class="{% block body_class %}{% endblock %}">
     <div class="page-container d-flex flex-column min-vh-100">
@@ -90,7 +100,7 @@
                 </div>
               </li>
               <li class="list-inline-item">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                <a class="{% if grand_total %} font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                   <div class="text-center">
                     <div>
                       <i class="fas fa-shopping-bag fa-lg"></i>
@@ -123,15 +133,18 @@
         </div> {% endfor %} </div> {% endif %} {% block page_header %} {% endblock %} <main class="flex-fill"> {% block content %} {% endblock %} </main>
       <footer> {% include 'includes/footer.html' %} </footer>
     </div> 
+    <!-- Toast script in postloadjs block -->
     {% block postloadjs %}
     <script>
-      // initialise bootstrap toasts
-      $('.toast').toast('show');
+        // Debugging: Log jQuery to ensure it's defined
+        console.log(jQuery); // Should log the jQuery function
+
+        // Initialize toasts using the jQuery namespace
+        jQuery(document).ready(function () {
+            jQuery('.toast').toast('show');
+        });
     </script>
-    <!-- Conditionally Load Stripe Script -->
-    {% if 'checkout' in request.path %}
-    <script src="https://js.stripe.com/v3/"></script>
-    {% endif %}
     {% endblock %}
+
   </body>
 </html>

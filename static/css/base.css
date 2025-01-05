@@ -20,6 +20,37 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700; /* Bold for emphasis */
 }
 
+/* Base styling for the shopping bag link */
+.shopping-bag {
+    color: black; /* Keep the text/icon color black */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styling for the bag icon */
+.bag-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%; /* Make it circular */
+    background-color: transparent; /* Default background */
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styling when the bag is filled */
+.shopping-bag.bag-filled .bag-icon {
+    background-color: #ff7795 !important; /* Pink background for full bag */
+    color: black !important; /* Ensure the icon color remains black */
+}
+
+/* Default state for an empty bag */
+.shopping-bag.bag-empty .bag-icon {
+    background-color: transparent; /* No background for empty bag */
+}
+
+
 /* navbar */
 .navbar {
     background: linear-gradient(to right, #ff7eb3, #ff758c);
@@ -99,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: #F0F2F7;
+	background: /*#F0F2F7*/white;
 	z-index: -1;
 }
 
@@ -254,9 +285,9 @@ input[name='q']::placeholder {
     border-color: #222;
 }
 
-.allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
-}
+/*.allauth-form-inner-content a {
+	color: #17a2b8; /*  */
+
 
 /* Product Form */
 
@@ -362,6 +393,35 @@ a:hover, a:focus {
 .card {
     background-color: #f8f9fa; /* Light gray */
     color: #212529; /* Dark gray for text */
+}
+
+/* bag increment and decrement */
+/* Make touch targets larger and more accessible */
+.decrement-qty, .increment-qty {
+    width: 48px; /* Minimum recommended touch size */
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty_input {
+    height: 48px; /* Match button size */
+    text-align: center;
+}
+
+.input-group-prepend, .input-group-append {
+    margin: 0 4px; /* Add spacing between elements */
+}
+
+/* Add hover and focus states for clarity */
+.decrement-qty:hover, .increment-qty:hover {
+    background-color: #444; /* Darker for hover state */
+    color: white;
+}
+
+.decrement-qty:focus, .increment-qty:focus {
+    outline: 2px solid #0056b3; /* Add a visible focus outline */
 }
 
 
