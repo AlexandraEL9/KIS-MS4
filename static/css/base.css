@@ -116,6 +116,42 @@ input[name="q"]::placeholder {
   cursor: pointer;
 }
 
+/* Scroll button */
+.btt-button {
+    height: 50px; /* Adjust the size */
+    width: 50px; /* Make it slightly larger */
+    position: fixed;
+    bottom: 20px; /* Space it slightly more from the bottom */
+    right: 20px; /* Space it slightly more from the right */
+    background-color: #ff7eb3; /* Match your site's theme */
+    border: none;
+    border-radius: 50%; /* Make it circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it stays on top */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.btt-button:hover {
+    background-color: #ff5678; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.btt-button i {
+    color: white; /* Make the arrow white for contrast */
+    font-size: 1.5rem; /* Adjust arrow size */
+}
+
+/* Add accessibility focus styles */
+.btt-button:focus {
+    outline: 2px solid #ff4500; /* Highlight the button on focus */
+    box-shadow: 0 0 0 4px rgba(255, 120, 180, 0.5); /* Add a glow effect */
+}
+
+
 /* Product Form Checkbox */
 .custom-checkbox .custom-control-label::before {
   border-radius: 0;
