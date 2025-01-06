@@ -1,53 +1,40 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-box-open"></i> All Products
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">
-                    <i class="fas fa-dollar-sign"></i> By Price
-                </a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">
-                    <i class="fas fa-star"></i> By Rating
-                </a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">
-                    <i class="fas fa-layer-group"></i> By Category
-                </a>
-                <a href="{% url 'products' %}" class="dropdown-item">
-                    <i class="fas fa-th-large"></i> All Products
-                </a>
-            </div>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="categories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-tags"></i> Categories
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="categories-link">
-                <a href="{% url 'products' %}?category=soft" class="dropdown-item">
-                    <i class="fas fa-cloud"></i> Soft
-                </a>
-                <a href="{% url 'products' %}?category=fizzy" class="dropdown-item">
-                    <i class="fas fa-bolt"></i> Fizzy
-                </a>
-                <a href="{% url 'products' %}?category=chocolate" class="dropdown-item">
-                    <i class="fas fa-cookie-bite"></i> Chocolate
-                </a>
-                <a href="{% url 'products' %}?category=chewy" class="dropdown-item">
-                    <i class="fas fa-tooth"></i> Chewy
-                </a>
-                <a href="{% url 'products' %}?category=hard" class="dropdown-item">
-                    <i class="fas fa-gem"></i> Hard
-                </a>
-                <a href="{% url 'products' %}?category=special_diet" class="dropdown-item">
-                    <i class="fas fa-leaf"></i> Special Diet
-                </a>
-            </div>
-        </li>
-        <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'subscribe' %}">
-                <i class="fas fa-envelope"></i> Newsletter
-            </a>
-        </li>
+      <li class="nav-item dropdown">
+        <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-box-open"></i> All Products </a>
+        <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+          <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">
+            <i class="fas fa-dollar-sign"></i> By Price </a>
+          <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">
+            <i class="fas fa-star"></i> By Rating </a>
+          <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">
+            <i class="fas fa-layer-group"></i> By Category </a>
+          <a href="{% url 'products' %}" class="dropdown-item">
+            <i class="fas fa-th-large"></i> All Products </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="logo-font font-weight-bold nav-link text-black" href="#" id="categories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-tags"></i> Categories </a>
+        <div class="dropdown-menu border-0" aria-labelledby="categories-link">
+          <a href="{% url 'products' %}?category=soft" class="dropdown-item">
+            <i class="fas fa-cloud"></i> Soft </a>
+          <a href="{% url 'products' %}?category=fizzy" class="dropdown-item">
+            <i class="fas fa-bolt"></i> Fizzy </a>
+          <a href="{% url 'products' %}?category=chocolate" class="dropdown-item">
+            <i class="fas fa-cookie-bite"></i> Chocolate </a>
+          <a href="{% url 'products' %}?category=chewy" class="dropdown-item">
+            <i class="fas fa-tooth"></i> Chewy </a>
+          <a href="{% url 'products' %}?category=hard" class="dropdown-item">
+            <i class="fas fa-gem"></i> Hard </a>
+          <a href="{% url 'products' %}?category=special_diet" class="dropdown-item">
+            <i class="fas fa-leaf"></i> Special Diet </a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="logo-font font-weight-bold nav-link text-black" href="{% url 'subscribe' %}">
+          <i class="fas fa-envelope"></i> Newsletter </a>
+      </li>
     </ul>
 </div>
