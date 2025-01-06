@@ -27,28 +27,24 @@ h1, h2, h3, h4, h5, h6 {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Styling for the bag icon */
-.bag-icon {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%; /* Make it circular */
-    background-color: transparent; /* Default background */
-    text-align: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Styling when the bag is filled */
-.shopping-bag.bag-filled .bag-icon {
-    background-color: #ff7795 !important; /* Pink background for full bag */
-    color: black !important; /* Ensure the icon color remains black */
-}
-
-/* Default state for an empty bag */
-.shopping-bag.bag-empty .bag-icon {
-    background-color: transparent; /* No background for empty bag */
-}
+/* General link styles for navigation items */
+.nav-link {
+    color: black !important; /* Ensure consistent text color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .nav-link:hover, .nav-link:focus, .nav-link:active {
+    color: black !important; /* Ensure hover/active states remain black */
+    text-decoration: none; /* Ensure no underline on hover or focus */
+  }
+  
+  /* Mobile-specific fixes */
+  @media (max-width: 991.98px) {
+    .nav-link {
+      color: black !important; /* Override any default mobile link styles */
+    }
+  }
+  
 
 
 /* navbar */
