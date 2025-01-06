@@ -1,83 +1,119 @@
-{% extends "base.html" %} {% load static %} {% block page_header %} <div class="container header-container">
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
     <div class="row">
-      <div class="col"></div>
+        <div class="col"></div>
     </div>
-  </div> {% endblock %} {% block content %} <div class="overlay"></div>
-  <div class="container">
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
     <!-- Product Header Section -->
     <div class="row">
-      <div class="col-12 col-md-6 text-center">
-        <h2 class="logo-font mb-4 mt-5">Reviews</h2>
-        <h5 class="">Here's what people think of {{ product.name }}</h5>
-      </div>
-      <div class="col-12 col-md-6 text-center mt-2"> {% if product.image %} <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid rounded shadow-sm" style="max-height: 250px;"> {% else %} <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="img-fluid rounded shadow-sm" style="max-height: 250px;"> {% endif %} </div>
-    </div>
-    <!-- Reviews Section -->
-    <div class="mt-4"> {% if reviews %} {% for review in reviews %} <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">{{ review.title }}</h5>
-          <h6 class="card-subtitle "> By {{ review.user.username }} - {{ review.rating }}/5 </h6>
-          <p class="card-text mt-3">{{ review.content }}</p>
-          <!-- Edit and Delete Buttons --> {% if review.user == request.user %} <a href="{% url 'edit_review' review.id %}" class="btn btn-secondary btn-sm">Edit</a>
-          <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#confirmDeleteModal" data-review-id="{{ review.id }}" data-review-title="{{ review.title }}" data-review-content="{{ review.content }}" data-review-rating="{{ review.rating }}" data-product-name="{{ review.product.name }}" data-form-action="{% url 'delete_review' review.id %}"> Delete </button> {% endif %}
+        <div class="col-12 col-md-6 text-center">
+            <h2 class="logo-font mb-4 mt-5">Reviews</h2>
+            <h5>Here's what people think of {{ product.name }}</h5>
         </div>
-      </div> {% endfor %} {% else %} <p class="text-center">No reviews yet. Be the first to review this product!</p> {% endif %} </div>
-    <!-- Add Review Button --> {% if request.user.is_authenticated %} <div class="text-center mt-4">
-      <a href="{% url 'add_review' product.id %}" class="btn btn-primary add-review-btn">Add Review</a>
+        <div class="col-12 col-md-6 text-center mt-2">
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid rounded shadow-sm" style="max-height: 250px;">
+        </div>
+    </div>
 
-    </div> {% else %} <p class="text-center mt-4">
-      <a href="{% url 'account_login' %}">Log in</a> to write a review.
-    </p> {% endif %}
-  </div>
-  <!-- Delete Confirmation Modal -->
-  <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="confirmDeleteModalLabel">Delete Review</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <!-- Reviews Section -->
+    {% if reviews %}
+    <div class="mt-4">
+        {% for review in reviews %}
+        <div class="card my-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ review.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Rating: {{ review.rating }}/5</h6>
+                <p class="card-text">{{ review.content }}</p>
+                {% if review.user == request.user %}
+                <div class="d-flex justify-content-between">
+                    <a href="{% url 'edit_review' review.id %}" class="btn btn-sm btn-primary">Edit</a>
+                    <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#confirmDeleteModal" 
+                        data-form-action="{% url 'delete_review' review.id %}" 
+                        data-review-title="{{ review.title }}" 
+                        data-review-content="{{ review.content }}" 
+                        data-review-rating="{{ review.rating }}" 
+                        data-product-name="{{ product.name }}">
+                        Delete
+                    </button>
+                </div>
+                {% endif %}
+            </div>
         </div>
-        <div class="modal-body">
-          <p>Are you sure you want to delete your review for <strong id="product-name"></strong>? </p>
-          <p>
-            <strong id="review-title"></strong> - <span id="review-rating"></span>/5
-          </p>
-          <p id="review-content"></p>
-        </div>
-        <div class="modal-footer">
-          <form id="delete-form" method="POST" action=""> {% csrf_token %} <button type="submit" class="btn btn-danger">Confirm Delete</button>
-          </form>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        </div>
-      </div>
+        {% endfor %}
     </div>
-  </div> {% endblock %} {% block postloadjs %} {{ block.super }}
-  <script>
-    // modal
-    document.addEventListener('DOMContentLoaded', function() {
-      $('#confirmDeleteModal').on('show.bs.modal', function(event) {
-        let button = $(event.relatedTarget); // Button that triggered the modal
-        let formAction = button.data('form-action');
-        let productName = button.data('product-name');
-        let reviewTitle = button.data('review-title');
-        let reviewContent = button.data('review-content');
-        let reviewRating = button.data('review-rating');
-        // Log the values for debugging
-        console.log({
-          formAction,
-          productName,
-          reviewTitle,
-          reviewContent,
-          reviewRating
+    {% else %}
+    <div class="mt-4">
+        <p class="text-center">No reviews yet. Be the first to review this product!</p>
+    </div>
+    {% endif %}
+
+    <!-- Add Review Button -->
+    <div class="text-center mt-4">
+        <a href="{% url 'add_review' product.id %}" class="btn btn-primary add-review-btn">Add Review</a>
+    </div>
+</div>
+
+<!-- Delete Confirmation Modal -->
+<div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmDeleteModalLabel">Delete Review</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete your review for <strong id="product-name"></strong>?</p>
+                <p><strong id="review-title"></strong> - <span id="review-rating"></span>/5</p>
+                <p id="review-content"></p>
+            </div>
+            <div class="modal-footer">
+                <form id="delete-form" method="POST" action="#">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+                </form>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    // Modal setup for delete confirmation
+    document.addEventListener('DOMContentLoaded', function () {
+        $('#confirmDeleteModal').on('show.bs.modal', function (event) {
+            let button = $(event.relatedTarget); // Button that triggered the modal
+            let formAction = button.data('form-action'); // Get the action URL
+            let productName = button.data('product-name');
+            let reviewTitle = button.data('review-title');
+            let reviewContent = button.data('review-content');
+            let reviewRating = button.data('review-rating');
+
+            let modal = $(this);
+            modal.find('#product-name').text(productName || "Unknown Product");
+            modal.find('#review-title').text(reviewTitle || "No Title");
+            modal.find('#review-content').text(reviewContent || "No Content");
+            modal.find('#review-rating').text(reviewRating || "0");
+
+            // Update the form action
+            if (formAction) {
+                modal.find('#delete-form').attr('action', formAction);
+            } else {
+                modal.find('#delete-form').attr('action', '#'); // Fallback in case no action is provided
+            }
         });
-        let modal = $(this);
-        modal.find('#product-name').text(productName || "Unknown Product");
-        modal.find('#review-title').text(reviewTitle || "No Title");
-        modal.find('#review-content').text(reviewContent || "No Content");
-        modal.find('#review-rating').text(reviewRating || "0");
-        modal.find('#delete-form').attr('action', formAction);
-      });
     });
-  </script> {% endblock %}
+</script>
+{% endblock %}
