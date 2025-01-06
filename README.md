@@ -80,16 +80,16 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
 | **DIGITAL MARKETING** |   |   |
 | 23 | Store Owner |     Signpost customers to social media. | Build a community of repeat customers to drive sales |
 | 24 | Store Owner |     Signpost customers digital marketing (newsletter) and special offers | Build a community of repeat customers to drive sales |
-| # | First time and returning user |     Access social media and marketing and sign up for newsletter | Access special offers |
+| 25 | Customer |     Access site's social media | Access special offers, be updated on new products and read other reviews. |
+| 26 | Customer |     Sign up to digital marketing (Newsletter) | Access special offers, be updated on new products |
 | **PRODUCT REVIEWS** |   |   |
-| # | First time user | View reviews for a product I am viewing | be made aware of previous customer's views |
-| # | Returning/ frequent user | Be able to add my own reviews to purchased products | share my experiences of a product I purchased |
-| # | Returning/ frequent user | Be able to edit my own reviews to purchased products | maintain control of my published content |
-| # | Returning/ frequent user | Be able to delete my own reviews to purchased products | maintain control of my published content |
+| 27 | First time user | View reviews for a product I am viewing | be made aware of previous customer's views |
+| 28 | Returning/ frequent user | Be able to add my own reviews to purchased products | share my experiences of a product I purchased |
+| 29 | Returning/ frequent user | Be able to edit my own reviews to purchased products | maintain control of my published content |
+| 30 | Returning/ frequent user | Be able to delete my own reviews to purchased products | maintain control of my published content |
 | **USER FAVOURITES LIST** |   |   |
-| # | Returning/ frequent user | Add favourite products to a 'Faves -list' | Access quickly in the future for speedier purchase |
-| # | Returning/ frequent user | Remove favourite products to a 'Faves -list' | Keep products I really like and personalise my list to my own tastes |
-| **BLOG** |   |   |
+| 31 | Returning/ frequent user | Add favourite products to a 'Faves -list' | Access quickly in the future for speedier purchase |
+| 32 | Returning/ frequent user | Remove favourite products to a 'Faves -list' | Keep products I really like and personalise my list to my own tastes |
 
 ---
 
@@ -153,7 +153,7 @@ The wireframes were created using [Balsamiq](https://balsamiq.cloud/).
 ### Entity Relationship Diagram
 As illustrated in the ERD, each model corresponds to a database table, and each field corresponds to a column in that table.
 
-<img src="media/.jpeg">
+<img src="./docs/erd.png">
 
 ## Models
 ### Table Description and Relationships
