@@ -54,7 +54,20 @@ I used [W3C Markup Validation Service](https://validator.w3.org/) to validate al
 | Page | Result | Validation Details & Screenshots |
 | ---- | :-: | -------------------------- |
 | home/index.html | Pass | [Homepage](./docs/testing/html-validation/homepage.png) |
-| bag.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/bag-warnings.png) These were to do with an unnecessary use of 'type'. As these are warnings and do not damage or impede the site I have chosen to ignore for now. Result here. [Bag](./docs/testing/html-validation/bag-warnings.png)  |
+| bag.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/bag-warnings.png) These were to do with an unnecessary use of 'type'. I founsd all files using this outdated info and deleted the 'type' attribute. Result here. [Bag](./docs/testing/html-validation/bag.png)  |
+| checkout.html | Pass | Validator came up with 1 warning- [Warnings](./docs/testing/html-validation/checkout-warning.png) To do with an h1 element having no content. I decided to change this h1 elemnt into a div. While this made the spinner a bit smaller, the function worked perfectly fine. Result here. [Checkout](./docs/testing/html-validation/checkout.png)  |
+| checkout_success.html | Pass | [Checkout_success](./docs/testing/html-validation/checkout-success.png)  |
+| favourites.html | Pass | [Favourites](./docs/testing/html-validation/favourites.png)  |
+| products.html | Pass | [Products](./docs/testing/html-validation/products.png)  |
+| product_detail.html | Pass | [Product_detail](./docs/testing/html-validation/product-detail.png)  |
+| add_product.html | Pass | [Add_product](./docs/testing/html-validation/add-product.png)  |
+| edit_product.html | Pass | [Edit_product](./docs/testing/html-validation/edit-product.png)  |
+| profile.html | Pass | [Profile](./docs/testing/html-validation/profile.png)  |
+| product_reviews.html | Pass | Validator came up with 1 warning- [Warnings](./docs/testing/html-validation/product-reviews-warning.png) The error indicates that the action attribute of the form in the delete confirmation modal is empty. I made changes so that he action attribute in the form inside the modal is updated dynamically using JavaScript based on the data-form-action attribute of the delete button.I also set a fallback: (#) is provided in the action attribute to prevent it from being empty.[Product Reviews](./docs/testing/html-validation/product_reviews.png)  |
+| add_review.html | Pass | [Add Review](./docs/testing/html-validation/add-review.png)  |
+| edit_review.html | Pass | [Edit Review](./docs/testing/html-validation/edit-review.png)  |
+| subscribe.html | Pass | [Subscribe](./docs/testing/html-validation/subscribe.png)  |
+| privacy_policy.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/privacy-policy-warning.png) The error indicates the <p> tags in the original template have invalid syntax because they include nested <ul> tags, which is not allowed. In HTML, a <p> tag cannot contain block-level elements like <ul>. With this in mind, I moved the <ul> tags outside of the <p> tags and adjusted the structure of the page. Results: [Product Reviews](./docs/testing/html-validation/privacy-policy.png)  |
 
 ### CSS Validation
 I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate all CSS files by direct input.
