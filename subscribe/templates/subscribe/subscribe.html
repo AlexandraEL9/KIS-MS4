@@ -1,28 +1,28 @@
 {% extends "base.html" %} {% load static %} {% block page_header %} <div class="container header-container">
-    <div class="row">
-      <div class="col"></div>
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div> {% endblock %} {% block content %} <div class="overlay"></div>
+<div class="container">
+  <div class="row">
+    <div class="col text-center mt-3 mx-5">
+      <hr>
+      <h2 class="logo-font mb-4">Sign up to our newsletter</h2>
+      <p>Join our mailing list to get our quarterly newsletter. Keep up to date with exciting new and special seasonal product launches and access special offers reserved for our 'Keep it Sweet' family.</p>
+      <hr>
     </div>
-  </div> {% endblock %} {% block content %} <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col text-center mt-3 mx-5">
-        <hr>
-        <h2 class="logo-font mb-4">Sign up to our newsletter</h2>
-        <p>Join our mailing list to get our quarterly newsletter. Keep up to date with exciting new and special seasonal product launches and access special offers reserved for our 'Keep it Sweet' family.</p>
-        <hr>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col my-4">
-        <div class="card">
-          <div class="card-body">
-            <p>Subscribe now and keep up to date with all things <strong>Keep it SWEET!</strong>
-            </p>
-            <form method="POST" action="{% url 'subscribe' %}"> {% csrf_token %} {{ subscribe_form|crispy }}
-              <button class="btn btn-dark text-uppercase" type="submit"> Sign Me Up! </button>
-            </form>
-          </div>
+  </div>
+  <div class="row">
+    <div class="col my-4">
+      <div class="card">
+        <div class="card-body">
+          <p>Subscribe now and keep up to date with all things <strong>Keep it SWEET!</strong>
+          </p>
+          <form method="POST" action="{% url 'subscribe' %}"> {% csrf_token %} {{ subscribe_form|crispy }}
+            <button class="btn btn-dark text-uppercase" type="submit"> Sign Me Up! </button>
+          </form>
         </div>
       </div>
     </div>
-  </div> {% endblock %}
+  </div>
+</div> {% endblock %}
