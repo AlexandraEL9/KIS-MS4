@@ -53,7 +53,8 @@ I implemented automated testing on **Python forms** using Django's `SimpleTestCa
 I used [W3C Markup Validation Service](https://validator.w3.org/) to validate all the HTML files by direct input:
 | Page | Result | Validation Details & Screenshots |
 | ---- | :-: | -------------------------- |
-| 'templates/home/index.html' | # error and # warning | [Homepage](./docs/) |
+| home/index.html | Pass | [Homepage](./docs/testing/html-validation/homepage.png) |
+| bag.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/bag-warnings.png) These were to do with an unnecessary use of 'type'. As these are warnings and do not damage or impede the site I have chosen to ignore for now. Result here. [Bag](./docs/testing/html-validation/bag-warnings.png)  |
 
 ### CSS Validation
 I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate all CSS files by direct input.
