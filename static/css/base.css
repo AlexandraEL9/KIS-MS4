@@ -305,6 +305,19 @@ a:focus {
   color: #fff;
 }
 
+/* Bag Page */
+.update-link, .remove-item {
+    font-weight: bold; /* Make the text bold */
+    cursor: pointer; /* Make the cursor a pointer */
+    text-decoration: none; /* Remove underline by default */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.update-link:hover, .remove-item:hover {
+    font-size: 1.1em; /* Slightly increase font size on hover */
+}
+
+
 /* Accessibility Improvements */
 .decrement-qty,
 .increment-qty {
