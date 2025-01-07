@@ -87,12 +87,24 @@
             <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
           </div>
         </div>
-      </header> {% if messages %} <div class="message-container"> {% for message in messages %} <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-          {{ message|safe }}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div> {% endfor %} </div> {% endif %} {% block page_header %} {% endblock %} <main class="flex-fill"> {% block content %} {% endblock %} </main>
+      </header> 
+      {% if messages %}
+      <div class="message-container">
+          {% for message in messages %}
+              {% with message.level as level %}
+                  {% if level == 40 %}
+                      {% include 'includes/toasts/toast_error.html' %}
+                  {% elif level == 30 %}
+                      {% include 'includes/toasts/toast_warning.html' %}
+                  {% elif level == 25 %}
+                      {% include 'includes/toasts/toast_success.html' %}
+                  {% else %}
+                      {% include 'includes/toasts/toast_info.html' %}
+                  {% endif %}
+              {% endwith %}
+          {% endfor %}
+      </div>
+      {% endif %} {% block page_header %} {% endblock %} <main class="flex-fill"> {% block content %} {% endblock %} </main>
       <footer class="footer bg-black text-white py-4 mt-5"> {% include 'includes/footer.html' %} </footer>
     </div> {% block postloadjs %} <script>
       $('.toast').toast('show');
