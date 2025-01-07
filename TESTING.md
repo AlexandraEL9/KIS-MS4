@@ -264,8 +264,64 @@ With regarde to the 'Best Practices' scoring, issues center on the use of cookie
 ### Full Feature Testing
 | **TEST** | **TEST DETAILS** | **EXPECTED RESULTS** | **ACTUAL RESULTS** | **PASS/FAIL** | **EVIDENCE**
 | :-- | :-- | :-- | :-- | :-- | :-- |
-| **TOP HEADER LINKS** |  |  |  |  | [desktop](./media/documentation/top-header-desktop.png), [mobile](./media/documentation/top-header-mobile.png) |
-| 1 | Access URL: # |Site shows home page including Nav & Search Bar, Account, site content & footer | As Expected | Pass | [desktop](./media/documentation/top-header-desktop.png), [mobile](./media/documentation/top-header-mobile.png) |
+| **General site opening** |  |  |  |  |   |
+| 1 | Access URL: # |Site shows home page including Nav & Search Bar, Account, site content & footer | As Expected | Pass | [desktop](./docs/testing/full-feature/feature-test-1-desktop.png), [tablet](./docs/testing/full-feature/feature-test-1-tablet.png), [mobile](./docs/testing/full-feature/feature-test-1-mobile.png) |
+| **TOP HEADER LINKS** |  |  |  |  |   |
+| 2a | Desktop Test: Header renders correctly. |Desktop Top header shows Site name, searchbar, Account and Bag. | As Expected | Pass | [desktop](./docs/testing/full-feature/feature-test-2a-desktop.png) |
+| 2b | Tablet and Mobile test: Header renders correctly. | Top header shows toggler, icon, Account and Bag. | As Expected | Pass | [tablet](./docs/testing/full-feature/feature-test-2b-tablet.png), [mobile](./docs/testing/full-feature/feature-test-2b-mobile.png)|
+| 3 | Click on site name |On desktop, when site logo/ name clicked, user is navigated back to homepage. | As Expected | Pass | [desktop](./docs/testing/full-feature/feature-test-3-desktop.png) |
+| 4a | Searchbar: No search query. |If nothing entered into searchbar and a search ran, user is navigated to 'Products' page and a 'toast' message alerts user to issue.   | As Expected | Pass | [desktop](./docs/testing/full-feature/feature-test-4a-desktop.png), [tablet](./docs/testing/full-feature/feature-test-4a-tablet.png), [mobile](./docs/testing/full-feature/feature-test-4a-mobile.png) |
+| 4b | Searchbar: Product Search. |Return correct results when searching for a product.   | As Expected | Pass | [4b results](./docs/testing/full-feature/feature-test-4b.png)  |
+| 5 | My Account: Dropdown. | On clicking the 'My Account' icon, users given s dropdown including 'Register' and 'Login' options.   | As Expected | Pass | [5 results](./docs/testing/full-feature/feature-test-5.png)  |
+| 6 | My Account: Register. | On selecting the 'Register' option, users are navigated to the dedicated 'Sign Up' page.   | As Expected | Pass | [6 results](./docs/testing/full-feature/feature-test-6.png)  |
+| 7 | My Account: Login. | On selecting the 'Login' option, users are navigated to the dedicated 'Sign In' page.   | As Expected | Pass | [7 results](./docs/testing/full-feature/feature-test-7.png)  |
+| 8 | Bag icon | On selecting the 'Bag' icon, users are navigated to the 'Bag' page.   | As Expected | Pass | [8 results](./docs/testing/full-feature/feature-test-8.png)  |
+| **Main Nav and Links** |  |  |  |  |   |
+| 9a | Main Nav renders correctly on desktop | On desktop, the main nav links are in a horizontal list of options: 'All Products', 'Categories', and 'Newsletter'.   | As Expected | Pass | [9a results](./docs/testing/full-feature/feature-test-9a.png)  |
+| 9b | Main Nav renders correctly on mobile and tablet | On mobile and tablet, the main nave links are accessed via the toggler and render as avertical list of options: 'All Products', 'Categories', and 'Newsletter'.   | As Expected | Pass | [9b results- tablet](./docs/testing/full-feature/feature-test-9b-tablet.png), [9b results- mobile](./docs/testing/full-feature/feature-test-9b-mobile.png)   |
+| 10 | Products menu item |  Selecting 'All Products' triggers a dropdown including options for sorting items by: Price, Rating, Category and All Products.   | As Expected | Pass | [desktop](./docs/testing/full-feature/feature-test-10-desktop.png),[tablet](./docs/testing/full-feature/feature-test-9b-tablet.png), [mobile](./docs/testing/full-feature/feature-test-10-mobile.png)   |
+| 11 | Products/ By Price selection |  Selecting 'By Price' from 'All Products' navigates the user to a page where all the site's products are sorted by price.   | As Expected | Pass | [11 results](./docs/testing/full-feature/feature-test-11.png)   |
+| 12 | Products/ By Rating selection |  Selecting 'By Rating' from 'All Products' navigates the user to a page where all the site's products are sorted by rating.   | As Expected | Pass | [12 results](./docs/testing/full-feature/feature-test-12.png)   |
+| 13 | Products/ By Category selection |  Selecting 'By Category' from 'All Products' navigates the user to a page where all the site's products are sorted by category.   | As Expected | Pass | [13 results](./docs/testing/full-feature/feature-test-13.png)   |
+| 14 | Categories menu item |  Selecting 'Categories' triggers a dropdown including options for viewing items from a specific category. Categories are: Soft, Fizzy, Chocolate, Chewy, Hard and 'Special Diet.   | As Expected | Pass | [desktop](./docs/testing/full-feature/feature-test-14-desktop.png),[tablet](./docs/testing/full-feature/feature-test-14-tablet.png), [mobile](./docs/testing/full-feature/feature-test-14-mobile.png)   |
+| 15 | Category selection |  When selecting a category from the Category options, users are navigated to a page of products belonging to that category.   | As Expected | Pass | [15 results](./docs/testing/full-feature/feature-test-15.png)   |
+| 16 | Newsletter Link |  When selecting the 'Newsletter' link in the nav nar, users are directed to the subscribe.html page.   | As Expected | Pass | [16 results](./docs/testing/full-feature/feature-test-16.png)   |
+| **Footer and Links** |  |  |  |  |   |
+| 17 | Facebook Link |  When selecting the 'Facebook' link, user is directed to the standard facebook site which opens in a new tab. (As this is for ed purposes only, there is no 'Keep it Sweet' page.)   | As Expected | Pass | N/A   |
+| 18 | Instagram Link |  When selecting the 'Instagram' link, user is directed to the standard Instagram site which opens in a new tab. (As this is for ed purposes only, there is no 'Keep it Sweet' page.)   | As Expected | Pass | N/A   |
+| 19 | Support Link: (support@keepitsweet.com) |  When selecting the 'support@keepitsweet.com' link, user is directed to the standard Google sign in site which opens in a new tab. (As this is for ed purposes only, there is no 'Keep it Sweet' page.)   | As Expected | Pass | N/A   |
+| 20 | Privacy Policy Link |  When selecting the 'Privacy Policy' link, user is directed to the site's 'Stripe Cookies Privacy Policy' page.   | As Expected | Pass | N/A   |
+| **Newsletter Signup** |  |  |  |  |   |
+| 21 | Sign up button: Empty/ incorrect form fields |  leaving fields blank or incorrectly filled in, form validation stops the form from submitting.   | As Expected | Pass | [Blank form](./docs/testing/full-feature/feature-test-21-blank-form.png), [Incorrect email field](./docs/testing/full-feature/feature-test-21-incorrect-email-field.png)   |
+| 22 | Submit button |  Success message when correct form submitted   | As Expected | Pass | [Blank form](./docs/testing/full-feature/feature-test-21-blank-form.png)   |
+| 23 | Record Stored |  Subscription appears in admin panel   | As Expected | Pass | [Blank form](./docs/testing/full-feature/feature-test-21-blank-form.png)   |
+| **Bag** |  |  |  |  |   |
+| 24 | Bag page displays prices |  Price, Subtotal, Bag total, Delivery, Grand Total listed accurately | As Expected | [24 Results](./docs/testing/full-feature/feature-test-24.png) |
+| 25 | Bag page displays message if total under free delivery rate |  Message evident with clear signposting as to how much more to spend to qualify for free delivery. | As Expected | [25 Results](./docs/testing/full-feature/feature-test-25.png) |
+| 26 | Bag page displays quantity of products required |  Current quantity amount evident. | As Expected | [26 Results](./docs/testing/full-feature/feature-test-26.png) |
+| 27 | Bag quantity adjustment |  Users can increase or decrease product quantities. | As Expected | [27 Results](./docs/testing/full-feature/feature-test-27.png) |
+| 28 | Bag product removal |  Users can remove a product from the bag | As Expected | [28 Results](./docs/testing/full-feature/feature-test-28.png) |
+| 29 | Bag page shows product options |  Product options selected by user, displayed on relevant products | As Expected | [29 Results](./docs/testing/full-feature/feature-test-29.png)  |
+| 30 | Secure checkout button |  Secure checkout button navigates user to checkout page | As Expected | N/A |
+| 31 | Keep shopping button |  Keep shopping button navigates user to products page | As Expected | N/A |
+| 32 | Empty Bag |  Bag page is rendered even with no products in it. | As Expected | [32 Results](./docs/testing/full-feature/feature-test-32.png) |
+| **Favourites App** |  |  |  |  |   |
+| 33 | No logged in user. |  Users not logged in can browse site, but, should not be able to add favourites. | As Expected | [33 Results](./docs/testing/full-feature/feature-test-33.png) |
+| 34 | Add products to Favourites: Logged in user. |   Registered, logged in users able to add products to a favourites list. | As Expected | [34 Results](./docs/testing/full-feature/feature-test-34.png) |
+| 35 | View Favourites list |   Registered, logged in users able to view their favourites list. | As Expected | [35 Results](./docs/testing/full-feature/feature-test-35.png) |
+| 36 | Remove from Favourites list |   Registered, logged in users able to delete products from their favourites list. | As Expected | [36 Results](./docs/testing/full-feature/feature-test-36.png) |
+| 37 | View empty favourites list |   Registered, logged in users able to access an empty list page. | As Expected | [37 Results](./docs/testing/full-feature/feature-test-37.png) |
+| **Reviews App** |  |  |  |  |   |
+| 38 | View Reviews- No review- All users. |  All users, both logged in and not, users should be able to view a page with no reviews for a product. | As Expected | [38 Results](./docs/testing/full-feature/feature-test-38.png) |
+| 39 | View Reviews-All users. |  All users, both logged in and not, should be able to view reviews for a product. | As Expected | [39 Results](./docs/testing/full-feature/feature-test-39.png) |
+| 40 | Add Review. |  Users able to add reviews for a product. | As Expected | [40 Results](./docs/testing/full-feature/feature-test-40.png) |
+| 41 | Edit Review: (Context: Not the user's review) |  Users should not be able to edit or delete other user's reviews. No buttons to Edit or Delete review. | As Expected | [41 Results](./docs/testing/full-feature/feature-test-41.png) |
+| 42 | Edit Review: (Context: User CAN edit own review) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | [42 Results](./docs/testing/full-feature/feature-test-42.png) |
+| 43 | Delete Review (Context: User CAN'T delete reviews which are not their own) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | [43 Results](./docs/testing/full-feature/feature-test-41.png) |
+| 44 | Delete Review: (Context: User CAN delete own review) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | [44 Results](./docs/testing/full-feature/feature-test-44.png) |
+
+
+
 
 ## Responsivity Testing
 Site was tested accross a range of 3 device types: Nest Hub, iPad Mini (tablet) and iPhone 14 Pro Max (mobile).
@@ -277,7 +333,7 @@ Site was tested accross a range of 3 device types: Nest Hub, iPad Mini (tablet) 
 | privacy_policy.html | Site content resizes and layout adapts. Header and footer as above | Pass | [Nest Hub](/docs/testing/responsivity-testing/privacy-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/privacy-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/privacy-mobile.png)  |
 | signup.html | Site content resizes and layout adapts. Header and footer as above | Pass | [Nest Hub](/docs/testing/responsivity-testing/sign-up-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/sign-up-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/sign-up-mobile.png)  |
 | login.html | Site content resizes and layout adapts. Header and footer as above | Pass | [Nest Hub](/docs/testing/responsivity-testing/log-in-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/log-in-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/log-in-mobile.png)  |
-| products.html | Header and footer as above. Site content resizes and layout adapts. Product card veviews on x-large screens = 4 columns, on Nest Hub = 3 columns, on Tablet = 2 columns and on mobile= single column. | Pass | [X-Large Screen](/docs/testing/responsivity-testing/view-products-Xlarge.png), [Nest Hub](/docs/testing/responsivity-testing/view-products-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/view products-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/view-products-mobile.png)  |
+| products.html | Header and footer as above. Site content resizes and layout adapts. Product card veviews on x-large screens = 4 columns, on Nest Hub = 3 columns, on Tablet = 2 columns and on mobile= single column. | Pass | [X-Large Screen](/docs/testing/responsivity-testing/view-products-Xlarge.png), [Nest Hub](/docs/testing/responsivity-testing/view-products-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/view-products-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/view-products-mobile.png)  |
 | product_detail.html | Site content resizes and layout adapts. Header and footer as above. Content as a single column on mobile, and 2 columns on tablet and desktop. | Pass | [Nest Hub](/docs/testing/responsivity-testing/view-product-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/view-product-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/view-product-mobile.png)  |
 | add_product.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/add-product-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/add-product-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/add-product-mobile.png)  |
 | edit_product.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/edit-product-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/edit-product-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/edit-product-mobile.png)  |
