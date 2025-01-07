@@ -27,7 +27,7 @@
             <div class="card-footer bg-white pt-0 border-0 text-left">
               <div class="row">
                 <div class="col">
-                  <p class="lead mb-0 text-left font-weight-bold">${{ item.product.price }}</p> {% if item.product.category %} <p class="small mt-1 mb-0">
+                  <p class="lead mb-0 text-left font-weight-bold">£{{ item.product.price }}</p> {% if item.product.category %} <p class="small mt-1 mb-0">
                     <a class="" href="{% url 'products' %}?category={{ item.product.category.name }}">
                       <i class="fas fa-tag mr-1"></i>{{ item.product.category.friendly_name }}
                     </a>
