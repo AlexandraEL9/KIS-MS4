@@ -67,13 +67,15 @@ I used [W3C Markup Validation Service](https://validator.w3.org/) to validate al
 | add_review.html | Pass | [Add Review](./docs/testing/html-validation/add-review.png)  |
 | edit_review.html | Pass | [Edit Review](./docs/testing/html-validation/edit-review.png)  |
 | subscribe.html | Pass | [Subscribe](./docs/testing/html-validation/subscribe.png)  |
-| privacy_policy.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/privacy-policy-warning.png) The error indicates the <p> tags in the original template have invalid syntax because they include nested <ul> tags, which is not allowed. In HTML, a <p> tag cannot contain block-level elements like <ul>. With this in mind, I moved the <ul> tags outside of the <p> tags and adjusted the structure of the page. Results: [Product Reviews](./docs/testing/html-validation/privacy-policy.png)  |
+| privacy_policy.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/privacy-policy-warning.png) The error indicates the p tags in the original template have invalid syntax because they include nested ul tags, which is not allowed. In HTML, a p tag cannot contain block-level elements like ul.With this in mind, I moved the ul tags outside of the p tags and adjusted the structure of the page. Results: [Product Reviews](./docs/testing/html-validation/privacy-policy.png)  |
 
 ### CSS Validation
 I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate all CSS files by direct input.
 | File | Result | Test Details & Screenshots |
 | ---- | :-: | -------------------------- |
-| /.css | Pass | [checkout.css](./docs/.png) |
+| /static/css/base.css | Pass | [base.css result](./docs/testing/jigsaw-css/base-css.png) |
+| /checkout/static//checkout/css/checkout.css | Pass | [checkout.css result](./docs/testing/jigsaw-css/checkout-css.png) |
+| /profiles/static/profiles/css/profile.css | Pass | [profile.css result](./docs/testing/jigsaw-css/profile-css.png) |
 
 ### JavaScript Validation
 I used [JSHint](https://jshint.com/) to validate all JavaScript and JQuery files
