@@ -17,12 +17,10 @@
     * [Lighthouse Report](#lighthouse-report)
         * [Desktop](#desktop)
         * [Mobile](#mobile)
-    * [WAVE Web Accessibility Evaluation Tool](#wave-web-accessibility-evaluation-tool)
-    * [Django Automated Testing](#django-automated-testing)
-        * [Coverage](#coverage)
 * [Manual Testing](#manual-testing)
     * [Testing User Stories](#testing-user-stories)
-    * [Full Testing](#full-testing)
+    * [Full Feature Testing](#full-feature-testing)
+* [Responsivity Testing](#responsivity-testing)
 * [Bugs, Errors & Solutions](#bugs-found-during-testing-and-development-phase)
     * [Solved Bugs](#solved-bugs)
     * [Known Bugs](#known-bugs)
@@ -261,6 +259,32 @@ With regarde to the 'Best Practices' scoring, issues center on the use of cookie
 | **USER FAVOURITES LIST**                                                                                                                                                                                                      |
 | 31                | Returning Customer            | Add favourite products to a 'Faves-list'                             | Access quickly in the future for speedier purchase                       | Built a 'Favourites' feature allowing users to save products.             | [user-story-31](./docs/testing/user-stories/user-story-31.png)    |
 | 32                | Returning Customer            | Remove favourite products from a 'Faves-list'                        | Personalise my list to my own tastes                                     | Added a 'Remove from Favourites' button.                                  | [user-story-32](./docs/testing/user-stories/user-story-32.png)                           |
+
+
+### Full Feature Testing
+| **TEST** | **TEST DETAILS** | **EXPECTED RESULTS** | **ACTUAL RESULTS** | **PASS/FAIL** | **EVIDENCE**
+| :-- | :-- | :-- | :-- | :-- | :-- |
+| **TOP HEADER LINKS** |  |  |  |  | [desktop](./media/documentation/top-header-desktop.png), [mobile](./media/documentation/top-header-mobile.png) |
+| 1 | Access URL: # |Site shows home page including Nav & Search Bar, Account, site content & footer | As Expected | Pass | [desktop](./media/documentation/top-header-desktop.png), [mobile](./media/documentation/top-header-mobile.png) |
+
+## Responsivity Testing
+Site was tested accross a range of 3 device types: Nest Hub, iPad Mini (tablet) and iPhone 14 Pro Max (mobile).
+
+| **Page** | **Expected Result** | **Pass/Fail** | **Evidence** |
+| :-- | :-- | :-- | :-- |
+| homepage/index.html | Site content resizes. For mobile, search bar becomes a dropdown, nav var toggles to a dropdown. On mobile, footer stacks. | Pass | [Nest Hub](/docs/testing/responsivity-testing/home-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/home-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/home-mobile.png)  |
+| subscribe.html (Newsletter) | Site content resizes and layout adapts. Header and footer as above | Pass | [Nest Hub](/docs/testing/responsivity-testing/newsletter-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/newsletter-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/newsletter-mobile.png)  |
+| privacy_policy.html | Site content resizes and layout adapts. Header and footer as above | Pass | [Nest Hub](/docs/testing/responsivity-testing/privacy-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/privacy-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/privacy-mobile.png)  |
+| signup.html (Newsletter) | Site content resizes and layout adapts. Header and footer as above | Pass | [Nest Hub](/docs/testing/responsivity-testing/sign-up-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/sign-up-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/sign-up-mobile.png)  |
+| login.html (Newsletter) | Site content resizes and layout adapts. Header and footer as above | Pass | [Nest Hub](/docs/testing/responsivity-testing/log-in-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/log-in-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/log-in-mobile.png)  |
+| products.html | Header and footer as above. Site content resizes and layout adapts. Product card veviews on x-large screens = 4 columns, on Nest Hub = 3 columns, on Tablet = 2 columns and on mobile= single column. | Pass | [X-Large Screen](/docs/testing/responsivity-testing/view-products-Xlarge.png), [Nest Hub](/docs/testing/responsivity-testing/view-products-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/view products-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/view-products-mobile.png)  |
+| product_detail.html (Newsletter) | Site content resizes and layout adapts. Header and footer as above. Content as a single column on mobile, and 2 columns on tablet and desktop. | Pass | [Nest Hub](/docs/testing/responsivity-testing/view-product-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/view-product-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/view-product-mobile.png)  |
+| add_product.html (Newsletter) | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/add-product-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/add-product-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/add-product-mobile.png)  |
+| edit_product.html (Newsletter) | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/edit-product-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/edit-product-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/edit-product-mobile.png)  |
+| profile.html | Site content resizes and layout adapts. Header and footer as above. On desktop, site uses a 2 column layout, moving to a 1 column layout on other device types. | Pass | [Nest Hub](/docs/testing/responsivity-testing/user-profile-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/user-profile-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/user-profile-mobile.png)  |
+| reviews.html| Site content resizes and layout adapts. Header and footer as above. On desktop and mobile, site uses a 2 column layout, moving to a 1 column layout on mobile. | Pass | [Nest Hub](/docs/testing/responsivity-testing/read-reviews-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/read-reviews-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/read-reviews-mobile.png)  |
+| add_review.html (Newsletter) | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/add-a-review-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/add-a-review-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/add-a-review-mobile.png)  |
+| edit_review.html (Newsletter) | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/edit-a-review-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/edit-a-review-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/edit-a-review-mobile.png)  |
 
 
 ## Bugs found during testing and development phase
