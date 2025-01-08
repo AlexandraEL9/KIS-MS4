@@ -99,9 +99,16 @@ def checkout(request):
         total = current_bag['grand_total']
         stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
+
+        # Add metadata to the PaymentIntent
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
             currency=settings.STRIPE_CURRENCY,
+            metadata={
+                'bag': json.dumps(bag),  # Serialize the bag to JSON
+                'username': request.user.username if request.user.is_authenticated else 'AnonymousUser',
+                'save_info': request.session.get('save_info', False),  # Include save info from session
+            }
         )
 
         # Prefill the form with any info the user maintains in their profile
@@ -141,9 +148,24 @@ def checkout(request):
     return render(request, template, context)
 
 
+@require_POST
+@csrf_exempt
+def cache_checkout_data(request):
+    """
+    Caches checkout data in the session for use during payment processing.
+    """
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        request.session['save_info'] = request.POST.get('save_info') == 'true'
+        request.session['payment_intent_id'] = pid
+        return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(content=f'Error: {e}', status=400)
+
+# checkout success
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts.
+    Handle successful checkouts
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
@@ -161,19 +183,17 @@ def checkout_success(request, order_number):
                 'default_country': order.country,
                 'default_postcode': order.postcode,
                 'default_town_or_city': order.town_or_city,
-                'street_address1': order.street_address1,
-                'street_address2': order.street_address2,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
                 'default_county': order.county,
             }
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
 
-    messages.success(
-        request,
-        f'Order successfully processed! Your order number is {order_number}. '
-        f'A confirmation email will be sent to {order.email}.'
-    )
+    messages.success(request, f'Order successfully processed! \
+        Your order number is {order_number}. A confirmation \
+        email will be sent to {order.email}.')
 
     if 'bag' in request.session:
         del request.session['bag']
@@ -185,16 +205,3 @@ def checkout_success(request, order_number):
 
     return render(request, template, context)
 
-@require_POST
-@csrf_exempt
-def cache_checkout_data(request):
-    """
-    Caches checkout data in the session for use during payment processing.
-    """
-    try:
-        pid = request.POST.get('client_secret').split('_secret')[0]
-        request.session['save_info'] = request.POST.get('save_info') == 'true'
-        request.session['payment_intent_id'] = pid
-        return HttpResponse(status=200)
-    except Exception as e:
-        return HttpResponse(content=f'Error: {e}', status=400)
