@@ -319,6 +319,25 @@ With regarde to the 'Best Practices' scoring, issues center on the use of cookie
 | 42 | Edit Review: (Context: User CAN edit own review) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | [42 Results](./docs/testing/full-feature/feature-test-42.png) |
 | 43 | Delete Review (Context: User CAN'T delete reviews which are not their own) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | [43 Results](./docs/testing/full-feature/feature-test-41.png) |
 | 44 | Delete Review: (Context: User CAN delete own review) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | [44 Results](./docs/testing/full-feature/feature-test-44.png) |
+| **CHECKOUT & PAYMENT** |  |  |  |  |  |
+| 45 | Checkout Form: (Form Validation- incomplete form) |  Form should not submit if mandatory fields are not populated. | As Expected | [45 Results](./docs/testing/full-feature/feature-test-45.png) |
+| 46 | Adjust bag link|  User is taken back to bag page | As Expected | N/A |
+| 47 | Payment Success- user feedback|  After pressing 'Complete Order' and a successful payment, the user is given in page feedback that the order has been submitted in the form of a 'Thank You' page with all order details and a 'Success' toast message. | As Expected | [47 Results](./docs/testing/full-feature/feature-test-47.png) |
+| 48 | Completed order can be viewed in profile section|  Order information is listed on Checkout Success page and information provided to user that a confirmation email has been sent to their email account | As Expected | [48 Results](./docs/testing/full-feature/feature-test-48.png) |
+| 49 | Confirmation email works correctly| Confirmation email has been received and contains correct information | As Expected | FAIL!! |
+| 50 | Order history is correct| The order can be seen in Order History on user profile page | As Expected | [50 Results](./docs/testing/full-feature/feature-test-50.png) |
+| 51 | Test link to order detail on Profile Page| Link takes user to order detail on Order History page in User Profile | As Expected | [51 Results](./docs/testing/full-feature/feature-test-51.png) |
+| **Products** |  |  |  |  |  |
+| 52 | View Products- Non logged in user | Non logged in users are able to view product details but have no options to 'Add to Favourites' or edit/ delete products details. | [52 Results](./docs/testing/full-feature/feature-test-52.png) |
+| 53 | View Products- logged in user- Customer | Customers are able to view product details and have the option to 'Add to Favourites' or but have no options toedit/ delete products details. | [53 Results](./docs/testing/full-feature/feature-test-53.png) |
+| 54 | View Products- logged in user- Staff/ superuser | Staff. admin are able to view product details and have the option to 'Add to Favourites' and to edit/ delete products details. | [54 Results](./docs/testing/full-feature/feature-test-54.png) |
+| 55 | CRUD- Add Products- Non logged in user | Non logged in users are not able to access 'Product Management' options which are accessed through the 'My Accounts' menu option. Options should only be 'Register' or 'Login'. | [55 Results](./docs/testing/full-feature/feature-test-55.png) |
+| 56 | View Products- logged in user- Customer | Customers are not able to access 'Product Management' options which are accessed through the 'My Accounts' menu option. Options should only be 'Register' or 'Login'. | [53 Results](./docs/testing/full-feature/feature-test-53.png) |
+| 57 | CRUD- Add Products- logged in user- Staff/ superuser | Staff/admin are able to access the 'Product Management' option found in 'My Accounts' | [57 Results](./docs/testing/full-feature/feature-test-57.png) |
+| 58 | CRUD- Add Products- logged in user- Staff/ superuser | Staff/admin are able to access the Product Management pages and use the form to add products to the database/ site. | [58 Results](./docs/testing/full-feature/feature-test-58.png) |
+| 59 | CRUD- Edit Products- logged in user- Staff/ superuser | Staff/admin are able to access the Product Management pages and use the form to add products to the database/ site. | [59 Results](./docs/testing/full-feature/feature-test-59.png) |
+| 60 | CRUD- Delete Products- logged in user- Staff/ superuser | Staff/admin are able to delete products to the database/ site. | [60 Results](./docs/testing/full-feature/feature-test-60.png) |
+
 
 
 
