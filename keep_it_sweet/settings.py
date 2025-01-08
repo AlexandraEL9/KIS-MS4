@@ -11,13 +11,13 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-#from pathlib import Path
+from pathlib import Path
 import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-#BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -27,9 +27,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = 'DEBUG' in os.environ
 
-ALLOWED_HOSTS = ['keep-it-sweet-2ecaa2229785.herokuapp.com', '8000-alexandrael9-kisms4-wcsdgkb9jia.ws.codeinstitute-ide.net', 'localhost']
+ALLOWED_HOSTS = [os.environ.get('ALLOWED_HOST'), 'keep-it-sweet-2ecaa2229785.herokuapp.com', '8000-alexandrael9-kisms4-wcsdgkb9jia.ws.codeinstitute-ide.net', 'localhost']
 
 
 CSRF_TRUSTED_ORIGINS = [
@@ -233,3 +233,8 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
