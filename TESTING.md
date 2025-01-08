@@ -324,19 +324,25 @@ With regarde to the 'Best Practices' scoring, issues center on the use of cookie
 | 46 | Adjust bag link|  User is taken back to bag page | As Expected | N/A |
 | 47 | Payment Success- user feedback|  After pressing 'Complete Order' and a successful payment, the user is given in page feedback that the order has been submitted in the form of a 'Thank You' page with all order details and a 'Success' toast message. | As Expected | [47 Results](./docs/testing/full-feature/feature-test-47.png) |
 | 48 | Completed order can be viewed in profile section|  Order information is listed on Checkout Success page and information provided to user that a confirmation email has been sent to their email account | As Expected | [48 Results](./docs/testing/full-feature/feature-test-48.png) |
-| 49 | Confirmation email works correctly| Confirmation email has been received and contains correct information | As Expected | FAIL!! |
-| 50 | Order history is correct| The order can be seen in Order History on user profile page | As Expected | [50 Results](./docs/testing/full-feature/feature-test-50.png) |
+| 49 | Confirmation email works correctly| Confirmation email has been received and contains correct information | As Expected | [49 Results](./docs/testing/full-feature/feature-test-49.png) |
+| 50 | Order history is correct| The order can be seen in Order History on user profile page | As Expected | [50 Results](./docs/testing/full-feature/feature-test-48.png) |
 | 51 | Test link to order detail on Profile Page| Link takes user to order detail on Order History page in User Profile | As Expected | [51 Results](./docs/testing/full-feature/feature-test-51.png) |
 | **Products** |  |  |  |  |  |
 | 52 | View Products- Non logged in user | Non logged in users are able to view product details but have no options to 'Add to Favourites' or edit/ delete products details. | [52 Results](./docs/testing/full-feature/feature-test-52.png) |
 | 53 | View Products- logged in user- Customer | Customers are able to view product details and have the option to 'Add to Favourites' or but have no options toedit/ delete products details. | [53 Results](./docs/testing/full-feature/feature-test-53.png) |
 | 54 | View Products- logged in user- Staff/ superuser | Staff. admin are able to view product details and have the option to 'Add to Favourites' and to edit/ delete products details. | [54 Results](./docs/testing/full-feature/feature-test-54.png) |
 | 55 | CRUD- Add Products- Non logged in user | Non logged in users are not able to access 'Product Management' options which are accessed through the 'My Accounts' menu option. Options should only be 'Register' or 'Login'. | [55 Results](./docs/testing/full-feature/feature-test-55.png) |
-| 56 | View Products- logged in user- Customer | Customers are not able to access 'Product Management' options which are accessed through the 'My Accounts' menu option. Options should only be 'Register' or 'Login'. | [53 Results](./docs/testing/full-feature/feature-test-53.png) |
+| 56 | View Products- logged in user- Customer | Customers are not able to access 'Product Management' options which are accessed through the 'My Accounts' menu option. Options should only be 'My Profile', 'Favourites' and 'Logout'. | [56 Results](./docs/testing/full-feature/feature-test-56.png) |
 | 57 | CRUD- Add Products- logged in user- Staff/ superuser | Staff/admin are able to access the 'Product Management' option found in 'My Accounts' | [57 Results](./docs/testing/full-feature/feature-test-57.png) |
 | 58 | CRUD- Add Products- logged in user- Staff/ superuser | Staff/admin are able to access the Product Management pages and use the form to add products to the database/ site. | [58 Results](./docs/testing/full-feature/feature-test-58.png) |
 | 59 | CRUD- Edit Products- logged in user- Staff/ superuser | Staff/admin are able to access the Product Management pages and use the form to add products to the database/ site. | [59 Results](./docs/testing/full-feature/feature-test-59.png) |
 | 60 | CRUD- Delete Products- logged in user- Staff/ superuser | Staff/admin are able to delete products to the database/ site. | [60 Results](./docs/testing/full-feature/feature-test-60.png) |
+| **Register** |  |  |  |  |  |
+| 60 |  Register New Users: Context- incorrect form submission. | Form does not submit if mandatory information not entered or entered incorrectly | [60 No Email](./docs/testing/full-feature/feature-test-60-no-email.png), [60 No Username](./docs/testing/full-feature/feature-test-60-no-username.png), [60 Mismatch Passwords](./docs/testing/full-feature/feature-test-60-password-mismatch.png) | 
+| 61 |  Register New Users: Context- Successful Registration. | on successful form submission user is alerted to email sent for verification | [61 Results](./docs/testing/full-feature/feature-test-61.png) |
+| 62 |  Register New Users: Context- Successful Registration- email Confirm/Verify | Users revieve an email with a link to verify their details, this navigates them to the site to verify, finally recieving confirmation of verified details. | [62 Results](./docs/testing/full-feature/feature-test-62.png) |
+| **Sign In** |  |  |  |  |  |
+| 63 |  Login | Registered users are able to login in to the site and their successful sign in be evident. | [63 Results](./docs/testing/full-feature/feature-test-63.png) |
 
 
 

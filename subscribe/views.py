@@ -4,17 +4,11 @@ from .forms import SubscribeForm
 
 
 def subscribe(request):
-    """
-    Handle newsletter subscription form submissions.
-    """
     if request.method == 'POST':
         form = SubscribeForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(
-                request,
-                "You have successfully subscribed to our newsletter!"
-            )
+            messages.success(request, "You have successfully subscribed to our newsletter!")
             return redirect('subscribe')  # Stay on the same page
     else:
         form = SubscribeForm()
@@ -23,3 +17,4 @@ def subscribe(request):
         'subscribe_form': form,
     }
     return render(request, 'subscribe/subscribe.html', context)
+  
