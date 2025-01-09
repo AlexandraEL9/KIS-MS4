@@ -41,7 +41,7 @@
               <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}" width="300" height="300">
             </a> {% else %} <a href="{% url 'product_detail' product.id %}" aria-label="View details about {{ product.name }}">
               <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="Image not available for {{ product.name }}" width="300" height="300">
-            </a> {% endif %} <div class="card-body pb-0">
+            </a> {% endif %} <div class="card-body pb-3">
               <p class="mb-0">{{ product.name }}</p>
             </div>
             <div class="card-footer bg-white pt-0 border-0 text-left">

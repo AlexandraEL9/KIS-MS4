@@ -179,6 +179,14 @@ input[name="q"]::placeholder {
   border-radius: 8px; /* Optional: Add rounded corners for better visuals */
 }
 
+.card-body p {
+  font-size: 1.5rem; /* Increase font size */
+  font-weight: bold; /* Make the text bold */
+  color: Black; /* Add a distinctive color */
+  text-align: center; /* Center-align the text */
+  margin-bottom: 0.5rem; /* Add spacing below the product name */
+  font-family: 'Oleo Script', Arial, sans-serif; /* Optional: Match heading font */
+}
 
 /* Product Form Checkbox */
 .custom-checkbox .custom-control-label::before {
