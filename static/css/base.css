@@ -171,6 +171,14 @@ input[name="q"]::placeholder {
     box-shadow: 0 0 0 4px rgba(255, 120, 180, 0.5); /* Add a glow effect */
 }
 
+/* Product Page */
+.product-image {
+  width: 100%; /* Make the image responsive */
+  height: 200px; /* Set a consistent height */
+  object-fit: cover; /* Ensure the image fits within the bounds */
+  border-radius: 8px; /* Optional: Add rounded corners for better visuals */
+}
+
 
 /* Product Form Checkbox */
 .custom-checkbox .custom-control-label::before {
