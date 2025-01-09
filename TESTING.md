@@ -377,6 +377,8 @@ Site was tested accross a range of 3 device types: Nest Hub, iPad Mini (tablet) 
 ### Known Bugs
 | # | Known Bugs, Errors and Issues | Justification |
 | :--- | :--- | :--- |
-| 1 | Browser: Chrome, Error: **#**. This error appears ... | Justification explanation... |
+| 1 | During Lighthouse Testing, pages with images had poorer that hoped 'Performance' scores For Example: [Image](./docs/bugs-and-fixes/known-bugs/known-bug-1.png)  | Further work to be done on the updating of all images on this site to a nextGen format like AVIF of WebP. As this site is just for educational purposes only and 'Performance' is beyond the scope of the project at this level, I have decided to leave it for further development at this time. |
+| 2 | During Lighthouse Testing, pages which utilize 'Stripe' cookies had poorer that hoped 'Best Practices' scores For Example: [Image](./docs/bugs-and-fixes/known-bugs/known-bug-2.png)  | Further work to be done on understanding the use of Cookies in Stripe. As this site is just for educational purposes only and in depth knowledge of Stripe Cookies is beyond the scope of the project at this level, I have decided to leave it for further development at this time. |
+| 3 | During User Stories and Features testing, discoverd that the email being recieved by newly Registered users is formatted incorrectly. Example: [Image](./docs/bugs-and-fixes/known-bugs/known-bug-3.png)  | This will require more research into Google Account settings. As is, the current implementation works for the purly educational purposes of the project. |
 
 
