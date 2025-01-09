@@ -234,6 +234,37 @@ a:focus {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Bag Section Styles */
+@media (max-width: 576px) {
+  .qty_input,
+  .decrement-qty,
+  .increment-qty {
+      width: 100%; /* Full width for stacking */
+      height: auto; /* Let the height adjust naturally */
+      margin-bottom: 5px; /* Add spacing between elements */
+  }
+
+  .input-group {
+      flex-direction: column; /* Stack the input and buttons vertically */
+      align-items: stretch; /* Ensure elements take full width */
+  }
+
+  .update-link,
+  .remove-item {
+      display: inline-block; /* Ensure buttons stay accessible */
+      width: auto;
+      margin: 5px 0; /* Add some spacing */
+  }
+}
+
+/* Remove any conflicting pre-defined widths */
+.qty_input,
+.decrement-qty,
+.increment-qty {
+  width: auto; /* Remove fixed widths */
+  height: auto; /* Remove fixed heights */
+}
+
 /* ------------------------------- bootstrap toasts */
 
 .message-container {
@@ -367,32 +398,34 @@ a:focus {
     font-size: 1.1em; /* Slightly increase font size on hover */
 }
 
+/* Quantity Section Styles */
+@media (max-width: 576px) {
+  .input-group {
+    flex-direction: column; /* Stack the elements vertically */
+    align-items: stretch; /* Stretch to the container width */
+    gap: 5px; /* Add spacing between buttons and input */
+  }
 
-/* Accessibility Improvements */
-.decrement-qty,
-.increment-qty {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease;
+  .decrement-qty,
+  .increment-qty {
+    width: 100%; /* Full width for buttons */
+    height: auto; /* Let height adjust naturally */
+  }
+
+  .qty_input {
+    text-align: center; /* Center align the quantity */
+    width: 100%; /* Full width for input */
+    height: auto; /* Let height adjust naturally */
+  }
+
+  .update-link,
+  .remove-item {
+    display: block; /* Stack links vertically */
+    margin-top: 5px; /* Add spacing between links */
+    text-align: left; /* Align text left */
+  }
 }
 
-.decrement-qty:hover,
-.increment-qty:hover {
-  background-color: #444;
-  color: white;
-}
-
-.decrement-qty:focus,
-.increment-qty:focus {
-  outline: 2px solid #0056b3;
-}
-.qty_input {
-  height: 48px;
-  text-align: center;
-}
 
 /* General Overlay */
 .overlay {
