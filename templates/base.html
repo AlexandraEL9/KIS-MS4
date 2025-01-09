@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <!-- Stripe -->
-    <script src="https://js.stripe.com/v3/"></script> {% endblock %} {% block extra_js %} {% endblock %} <title>Keep It SWEET! {% block extra_title %}{% endblock %}</title>
+    <!--<script src="https://js.stripe.com/v3/"></script>--> {% endblock %} {% block extra_js %} {% endblock %} <title>Keep It SWEET! {% block extra_title %}{% endblock %}</title>
   </head>
   <body class="{% block body_class %}{% endblock %}">
     <div class="page-container d-flex flex-column min-vh-100">
@@ -108,6 +108,11 @@
       <footer class="footer bg-black text-white py-4 mt-5"> {% include 'includes/footer.html' %} </footer>
     </div> {% block postloadjs %} <script>
       $('.toast').toast('show');
-    </script> {% endblock %}
+    </script> 
+    {% if request.resolver_match.url_name == "checkout" %}
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
+    {% endif %}
+  {% endblock %}
   </body>
 </html>
