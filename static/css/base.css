@@ -387,19 +387,39 @@ a:focus {
 }
 
 /* Bag Page */
-.update-link, .remove-item {
-    font-weight: bold; /* Make the text bold */
-    cursor: pointer; /* Make the cursor a pointer */
-    text-decoration: none; /* Remove underline by default */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
+.links-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space links evenly across the row */
+  align-items: center; /* Vertically center the links */
+  margin-top: 5px; /* Add some spacing above the links */
 }
 
-.update-link:hover, .remove-item:hover {
-    font-size: 1.1em; /* Slightly increase font size on hover */
+.update-link,
+.remove-item {
+    display: inline-block; /* Keep them inline */
+    margin-right: 10px; /* Add spacing between them */
+    font-size: 0.9rem; /* Adjust font size to be consistent */
+    text-decoration: underline; /* Optional: Highlight links */
 }
+
+.update-link:hover,
+.remove-item:hover {
+    text-decoration: none; /* Optional: Remove underline on hover */
+}
+
 
 /* Quantity Section Styles */
 @media (max-width: 576px) {
+  .links-container {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the left */
+    gap: 5px; /* Add spacing between the links */
+  }
+
+  .links-container a {
+    width: 100%; /* Make links take full width */
+    text-align: center; /* Center align the text */
+  }
   .input-group {
     flex-direction: column; /* Stack the elements vertically */
     align-items: stretch; /* Stretch to the container width */
