@@ -18,9 +18,9 @@
       </div>
       <div class="row"> {% for item in favourites %} <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
           <div class="card h-100 border-0"> {% if item.product.image %} <a href="{% url 'product_detail' item.product.id %}">
-              <img class="card-img-top img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+              <img class="card-img-top img-fluid" src="{{ item.product.image.url }}" alt="{{ item.product.name }}" loading="lazy">
             </a> {% else %} <a href="{% url 'product_detail' item.product.id %}">
-              <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
+              <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" loading="lazy">
             </a> {% endif %} <div class="card-body pb-0">
               <p class="mb-0">{{ item.product.name }}</p>
             </div>
