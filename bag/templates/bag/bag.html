@@ -127,22 +127,32 @@
 <script>
     // Update quantity on click
     $('.update-link').click(function(e) {
-        var form = $(this).prev('.update-form');
-        form.submit();
+        e.preventDefault(); // Prevent the default link behavior
+        var form = $(this).closest('form'); // Find the closest form element
+        form.submit(); // Submit the form
     });
+
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var size = $(this).data('product_size');
-        var url = `/bag/remove/${itemId}/`;
+        e.preventDefault(); // Prevent the default link behavior
+        var csrfToken = "{{ csrf_token }}"; // Get CSRF token
+        var itemId = $(this).attr('id').split('remove_')[1]; // Extract item ID from the element ID
+        var options = $(this).data('product_options'); // Get product options data attribute
+        var url = `/bag/remove/${itemId}/`; // Construct the URL for the AJAX POST request
         var data = {
             'csrfmiddlewaretoken': csrfToken,
-            'product_size': size
+            'product_options': options
         };
-        $.post(url, data).done(function() {
-            location.reload();
-        });
+
+        // Send POST request to remove item
+        $.post(url, data)
+            .done(function() {
+                location.reload(); // Reload the page on success
+            })
+            .fail(function(xhr, status, error) {
+                console.error("Error removing item:", error); // Log error for debugging
+                alert("Failed to remove item. Please try again."); // Show error message to the user
+            });
     });
 </script>
 {% endblock %}
