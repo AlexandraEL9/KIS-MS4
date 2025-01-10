@@ -7,9 +7,9 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-6 col-lg-4">
         <div class="image-container my-5"> {% if product.image %} <a href="{{ product.image.url }}" target="_blank" aria-label="View a larger version of {{ product.name }}">
-            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="Image of {{ product.name }}">
+            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="Image of {{ product.name }}" loading="lazy">
           </a> {% else %} <a href="#" aria-label="No image available for {{ product.name }}">
-            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="No image available for {{ product.name }}">
+            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="No image available for {{ product.name }}" loading="lazy">
           </a> {% endif %} </div>
         <!-- View Reviews Button -->
         <a href="{% url 'product_reviews' product.id %}" class="btn btn-custom-pink mt-2" aria-label="View all reviews for {{ product.name }}" style="padding: 10px 16px; font-size: 16px;">
