@@ -58,6 +58,7 @@
                                     <button class="decrement-qty btn btn-black rounded-0" data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}" aria-label="Decrease quantity">
                                         <i class="fas fa-minus"></i>
                                     </button>
+                                    <label for="id_qty_{{ item.item_id }}" class="sr-only">Quantity for {{ item.product.name }}</label>
                                     <input
                                         class="form-control qty_input"
                                         type="number"
@@ -79,7 +80,7 @@
                                     </a>
                                 </div>
                             </form>
-                        </td>
+                        </td>                        
                         <td class="py-3">
                             <p class="my-0">&pound;{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
