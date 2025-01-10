@@ -39,7 +39,7 @@
                     {% if product.image and product.image.url %}
                     <p class="mt-3">Current Image:</p>
                     <a href="{{ product.image.url }}" target="_blank" title="View current image">
-                        <img id="image-preview" src="{{ product.image.url }}" alt="Current image of {{ product.name }}" class="rounded shadow-sm" style="max-width: 150px;">
+                        <img id="image-preview" src="{{ product.image.url }}" alt="Current image of {{ product.name }}" class="rounded shadow-sm" style="max-width: 150px;" loading="lazy">
                     </a>
                     {% else %}
                     <p class="mt-3">No image currently associated with this product.</p>
