@@ -172,10 +172,10 @@ input[name="q"]::placeholder {
 
 /* Product Page */
 .product-image {
-  width: 100%; /* Make the image responsive */
-  height: 200px; /* Set a consistent height */
-  object-fit: cover; /* Ensure the image fits within the bounds */
-  border-radius: 8px; /* Optional: Add rounded corners for better visuals */
+  width: 100%; /* Responsive width */
+  height: auto; /* Adjust height automatically */
+  object-fit: cover; /* Maintains aspect ratio and fits container */
+  border-radius: 8px; /* Optional rounded corners */
 }
 
 .card-body p {
