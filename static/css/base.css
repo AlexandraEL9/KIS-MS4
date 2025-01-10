@@ -445,6 +445,42 @@ a:focus {
   }
 }
 
+/* Privacy Page */
+.privacy-page {
+  font-family: "Poppins", sans-serif; /* Default font for the page */
+}
+
+.privacy-page h1,
+.privacy-page h2,
+.privacy-page h3,
+.privacy-page h4,
+.privacy-page h5,
+.privacy-page h6 {
+  font-family: "Oleo Script", Arial, sans-serif; /* Keep headings in Oleo Script */
+  font-weight: 700; /* Ensure headings remain bold */
+  text-align: center;
+}
+
+/* Optional: Add spacing or line height adjustments for readability */
+.privacy-page p,
+.privacy-page ul,
+.privacy-page li {
+  line-height: 1.6; /* Adjust line height for better readability */
+  color: #333; /* Subtle text color for paragraphs */
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: normal;
+}
+.privacy-page p {
+  margin-bottom: 1.25rem; /* Add space between paragraphs */
+}
+
+.privacy-page ul {
+  margin-left: 1.5rem; /* Indent unordered lists */
+}
+.privacy-page li {
+  font-weight: bold;
+}
+
 
 /* General Overlay */
 .overlay {
