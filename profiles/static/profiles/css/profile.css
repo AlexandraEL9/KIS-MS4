@@ -7,6 +7,20 @@
     color: #000;
 }
 
+#id_default_country {
+    color: #000; /* Ensure the text color is visible */
+    background-color: #fff; /* Consistent background */
+    border: 1px solid #000; /* Add a border */
+    border-radius: 5px; /* Smooth edges */
+    padding: 8px; /* Add padding for consistent height */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 1rem; /* Ensure the font size matches other inputs */
+    line-height: 1.5; /* Proper line height for visibility */
+    height: auto; /* Let the browser calculate appropriate height */
+    display: block; /* Ensure it behaves like a block-level element */
+}
+
 #profile-update-form input::placeholder {
     color: #aab7c4;
 }
