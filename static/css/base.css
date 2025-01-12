@@ -5,8 +5,7 @@ body {
 }
 
 body {
-  background: url("/media/homepage-background2.jpg") no-repeat center center
-    fixed;
+  background: url("/media/homepage-background2.jpg") no-repeat center center fixed;
   background-size: cover;
   height: calc(100vh - 164px);
   color: black;
@@ -62,7 +61,6 @@ h6,
   padding-top: 164px;
 }
 
-/* Adjust padding for mobile */
 @media (max-width: 991px) {
   .header-container {
     padding-top: 116px;
@@ -73,36 +71,17 @@ h6,
   }
 }
 
-/* from Bulma */
-.icon {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-.main-logo-link {
-  width: fit-content;
-}
-
-.shop-now-button {
+/* Buttons */
+.shop-now-button,
+.btn-black {
   background: black;
   color: white;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.shop-now-button:hover {
-  background: #ff6348;
-}
-
-.btn-black {
-  background: black;
-  color: white;
-}
-
-.btn-black:hover,
 .shop-now-button:hover,
+.btn-black:hover,
 .btn-black:focus,
 .shop-now-button:focus {
   background: #222;
@@ -113,6 +92,49 @@ h6,
 .btn-outline-black:focus {
   background: black;
   color: white !important;
+}
+
+.btn-edit {
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.4rem 0.9rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.btn-edit:hover,
+.btn-edit:focus {
+  background-color: white;
+  color: black;
+  border-color: black;
+}
+
+.btn-delete {
+  background-color: #ff5678;
+  color: black;
+  border: 2px solid black;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 0.4rem 0.9rem;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.btn-delete:hover,
+.btn-delete:focus {
+  background-color: #ff4500;
+  color: white;
+  border-color: #ff4500;
+}
+
+.btn {
+  margin: 0.2rem;
+  cursor: pointer;
 }
 
 /* Forms */
@@ -135,60 +157,59 @@ input[name="q"]::placeholder {
   cursor: pointer;
 }
 
-/* Scroll button */
+/* Scroll Button */
 .btt-button {
-    height: 50px; /* Adjust the size */
-    width: 50px; /* Make it slightly larger */
-    position: fixed;
-    bottom: 20px; /* Space it slightly more from the bottom */
-    right: 20px; /* Space it slightly more from the right */
-    background-color: #ff7eb3; /* Match your site's theme */
-    border: none;
-    border-radius: 50%; /* Make it circular */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow for better visibility */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Ensure it stays on top */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Smooth hover effect */
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff7eb3;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btt-button:hover {
-    background-color: #ff5678; /* Darker shade on hover */
-    transform: scale(1.1); /* Slightly enlarge on hover */
+  background-color: #ff5678;
+  transform: scale(1.1);
 }
 
 .btt-button i {
-    color: white; /* Make the arrow white for contrast */
-    font-size: 1.5rem; /* Adjust arrow size */
+  color: white;
+  font-size: 1.5rem;
 }
 
-/* Add accessibility focus styles */
 .btt-button:focus {
-    outline: 2px solid #ff4500; /* Highlight the button on focus */
-    box-shadow: 0 0 0 4px rgba(255, 120, 180, 0.5); /* Add a glow effect */
+  outline: 2px solid #ff4500;
+  box-shadow: 0 0 0 4px rgba(255, 120, 180, 0.5);
 }
 
 /* Product Page */
 .product-image {
-  width: 100%; /* Fill the width of the card */
-  height: 300px; /* Set a consistent height */
-  object-fit: cover; /* Maintain aspect ratio and crop excess */
-  border-radius: 8px; /* Optional: Add rounded corners for aesthetics */
-  display: block; /* Ensures proper layout */
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
 }
 
 .card-body p {
-  font-size: 1.5rem; /* Increase font size */
-  font-weight: bold; /* Make the text bold */
-  color: Black; /* Add a distinctive color */
-  text-align: center; /* Center-align the text */
-  margin-bottom: 0.5rem; /* Add spacing below the product name */
-  font-family: 'Oleo Script', Arial, sans-serif; /* Optional: Match heading font */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: 'Oleo Script', Arial, sans-serif;
 }
 
-/* Product Form Checkbox */
+/* Checkbox */
 .custom-checkbox .custom-control-label::before {
   border-radius: 0;
   border-color: #dc3545;
@@ -219,54 +240,154 @@ a:focus {
 
 .footer-link:hover {
   color: #ff4500;
+  text-decoration: underline;
 }
 
-/* Cards */
-.card {
-  background-color: #f8f9fa;
-  color: #212529;
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer h4 {
+  font-family: 'Oleo Script', Arial, sans-serif;
+  font-weight: bold;
+  color: #ff7eb3;
+}
+
+.footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .row > div {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Reviews */
+.add-review-btn {
+  background-color: #ff7795;
+  color: black;
+  border-color: black;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.add-review-btn:hover {
+  background-color: #ff5678;
+  border-color: black;
+  color: #fff;
+}
+
+.card .review-content {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
 }
 
 /* Shopping Bag */
-.shopping-bag {
-  color: black;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
 }
 
-/* Bag Section Styles */
+.update-link,
+.remove-item {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.update-link:hover,
+.remove-item:hover {
+  text-decoration: underline;
+  font-size: 1.1rem;
+  transform: scale(1.5);
+}
+
 @media (max-width: 576px) {
-  .qty_input,
-  .decrement-qty,
-  .increment-qty {
-      width: 100%; /* Full width for stacking */
-      height: auto; /* Let the height adjust naturally */
-      margin-bottom: 5px; /* Add spacing between elements */
+  .links-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .links-container a {
+    width: 100%;
+    text-align: center;
   }
 
   .input-group {
-      flex-direction: column; /* Stack the input and buttons vertically */
-      align-items: stretch; /* Ensure elements take full width */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+
+  .decrement-qty,
+  .increment-qty,
+  .qty_input {
+    width: 100%;
+    text-align: center;
   }
 
   .update-link,
   .remove-item {
-      display: inline-block; /* Ensure buttons stay accessible */
-      width: auto;
-      margin: 5px 0; /* Add some spacing */
+    display: block;
+    margin-top: 5px;
+    text-align: left;
   }
 }
 
-/* Remove any conflicting pre-defined widths */
-.qty_input,
-.decrement-qty,
-.increment-qty {
-  width: auto; /* Remove fixed widths */
-  height: auto; /* Remove fixed heights */
+/* Privacy Page */
+.privacy-page {
+  font-family: "Poppins", sans-serif;
 }
 
-/* ------------------------------- bootstrap toasts */
+.privacy-page h1,
+.privacy-page h2,
+.privacy-page h3,
+.privacy-page h4,
+.privacy-page h5,
+.privacy-page h6 {
+  font-family: "Oleo Script", Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
 
+.privacy-page p,
+.privacy-page ul,
+.privacy-page li {
+  line-height: 1.6;
+  color: #333;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+.privacy-page p {
+  margin-bottom: 1.25rem;
+}
+
+.privacy-page ul {
+  margin-left: 1.5rem;
+}
+
+.privacy-page li {
+  font-weight: bold;
+}
+
+/* Toasts */
 .message-container {
   position: fixed;
   top: 72px;
@@ -281,212 +402,6 @@ a:focus {
 .toast-capper {
   height: 2px;
 }
-
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-  width: 0; 
-  height: 0; 
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent; 
-  border-bottom: 10px solid black;
-  position: absolute;
-  top: -10px;
-  right: 36px;
-}
-
-/* Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-  border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-  border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-  border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-  border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-  border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-  border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-  border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-  border-bottom-color: #343a40 !important;
-}
-
-.bag-notification-wrapper {
-  height: 100px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-.footer {
-    background-color: black;
-    color: white;
-    padding: 2rem 0; /* Adjust padding for spacing */
-}
-
-.footer h4 {
-    font-family: 'Oleo Script', Arial, sans-serif; /* Match headings font */
-    font-weight: bold;
-    color: #ff7eb3; /* Accent color */
-}
-
-.footer p {
-    margin: 0.5rem 0; /* Add some spacing between lines */
-    font-size: 0.9rem; /* Adjust font size for readability */
-}
-
-.footer-link {
-    color: #ff7eb3; /* Accent color for links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-link:hover {
-    color: #ff4500; /* Darker shade on hover */
-    text-decoration: underline;
-}
-
-/* Ensure footer spacing on smaller devices */
-@media (max-width: 768px) {
-    .footer {
-        text-align: center;
-    }
-
-    .footer .row > div {
-        margin-bottom: 1rem;
-    }
-}
-
-/* Reviews Page */
-.add-review-btn {
-  background-color: #ff7795;
-  color: black;
-  border-color: black;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.add-review-btn:hover {
-  background-color: #ff5678;
-  border-color: black;
-  color: #fff;
-}
-
-/* Bag Page */
-.links-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space links evenly across the row */
-  align-items: center; /* Vertically center the links */
-  margin-top: 5px; /* Add some spacing above the links */
-}
-
-.update-link,
-.remove-item {
-    display: inline-block; /* Keep them inline */
-    margin-right: 10px; /* Add spacing between them */
-    font-size: 1.1rem; /* Adjust font size to be consistent */
-    font-weight: bold; /* Make the text bolder */
-    text-decoration: none; /* Remove underline by default */
-    cursor: pointer; /* Set cursor to pointer */
-    transition: all 0.3s ease; /* Smooth hover effect */
-}
-
-.update-link:hover,
-.remove-item:hover {
-  text-decoration: underline; /* Add underline on hover */
-  font-size: 1.1rem; /* Slightly increase font size */
-  transform: scale(1.5); /* Slightly enlarge on hover */
-}
-
-
-/* Quantity Section Styles */
-@media (max-width: 576px) {
-  .links-container {
-    flex-direction: column; /* Stack links vertically */
-    align-items: flex-start; /* Align links to the left */
-    gap: 5px; /* Add spacing between the links */
-  }
-
-  .links-container a {
-    width: 100%; /* Make links take full width */
-    text-align: center; /* Center align the text */
-  }
-  .input-group {
-    flex-direction: column; /* Stack the elements vertically */
-    align-items: stretch; /* Stretch to the container width */
-    gap: 5px; /* Add spacing between buttons and input */
-  }
-
-  .decrement-qty,
-  .increment-qty {
-    width: 100%; /* Full width for buttons */
-    height: auto; /* Let height adjust naturally */
-  }
-
-  .qty_input {
-    text-align: center; /* Center align the quantity */
-    width: 100%; /* Full width for input */
-    height: auto; /* Let height adjust naturally */
-  }
-
-  .update-link,
-  .remove-item {
-    display: block; /* Stack links vertically */
-    margin-top: 5px; /* Add spacing between links */
-    text-align: left; /* Align text left */
-  }
-}
-
-/* Privacy Page */
-.privacy-page {
-  font-family: "Poppins", sans-serif; /* Default font for the page */
-}
-
-.privacy-page h1,
-.privacy-page h2,
-.privacy-page h3,
-.privacy-page h4,
-.privacy-page h5,
-.privacy-page h6 {
-  font-family: "Oleo Script", Arial, sans-serif; /* Keep headings in Oleo Script */
-  font-weight: 700; /* Ensure headings remain bold */
-  text-align: center;
-}
-
-/* Optional: Add spacing or line height adjustments for readability */
-.privacy-page p,
-.privacy-page ul,
-.privacy-page li {
-  line-height: 1.6; /* Adjust line height for better readability */
-  color: #333; /* Subtle text color for paragraphs */
-  font-family: "Poppins", Arial, sans-serif;
-  font-weight: normal;
-}
-.privacy-page p {
-  margin-bottom: 1.25rem; /* Add space between paragraphs */
-}
-
-.privacy-page ul {
-  margin-left: 1.5rem; /* Indent unordered lists */
-}
-.privacy-page li {
-  font-weight: bold;
-}
-
 
 /* General Overlay */
 .overlay {
