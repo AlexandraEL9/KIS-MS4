@@ -222,15 +222,13 @@ input[name="q"]::placeholder {
 
 /* Links */
 a {
-  color: #0056b3;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  color: #0056b3; /* Ensure a high-contrast color */
+  text-decoration: underline; /* Add an underline for better accessibility */
 }
 
-a:hover,
-a:focus {
-  color: #003d80;
-  font-weight: bolder;
+a:hover, a:focus {
+  color: #003d80; /* Darker shade for hover state */
+  text-decoration: underline; /* Keep the underline on hover */
 }
 
 .footer-link {
