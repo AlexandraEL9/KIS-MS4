@@ -220,7 +220,7 @@ input[name="q"]::placeholder {
   border-color: #dc3545;
 }
 
-/* Links */
+/* General Links */
 a {
   color: #0056b3; /* Ensure a high-contrast color */
   text-decoration: underline; /* Add an underline for better accessibility */
@@ -230,6 +230,19 @@ a:hover, a:focus {
   color: #003d80; /* Darker shade for hover state */
   text-decoration: underline; /* Keep the underline on hover */
 }
+
+/* Links in dropdown menus */
+.dropdown-menu a {
+  text-decoration: none; /* Remove underline in dropdown links */
+  color: black !important; /* Match the styling for dropdown links */
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  color: black !important; /* Keep styling consistent on hover */
+  text-decoration: none; /* Ensure no underline on hover for dropdown links */
+}
+
 
 .footer-link {
   color: #ff7eb3;
