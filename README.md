@@ -422,7 +422,7 @@ These admin features ensure efficient and secure management of the product catal
 
 - **Admin Management**:
   - Subscription records are saved in the admin area for easy management.
-  - Details such as **Name**, **Email Address**, **Date Subscribed**, and **Subscription Status** are recorded and accessible by admin users.
+  - Details such as **Name**, **Email Address**, **Date Subscribed**,  are recorded and accessible by admin users.
 
 This app enables seamless management of the mailing list and provides users with an efficient way to stay updated on the latest products and offers from Keep It Sweet.
 
@@ -515,27 +515,32 @@ The **Reviews App** adds a layer of community interaction to the **Keep It Sweet
 1. [GitHub:](https://github.com/)
     - GitHub was used to store the projects code after being pushed from Git.
 
+## Credits
 ### Code
+* Credit to [Code Institute's](https://codeinstitute.net/) Boutique Ado walkthrough, from which this project got its start.
+* Credit to [Very Academy YouTube Channel](https://www.youtube.com/c/veryacademy) for the very detailed insights on database models.
+* Credit to [Joy Zadan's 'Shop K-Beauty'](https://github.com/JoyZadan/shop-kbeauty/tree/main). Her e-commerce gave me some help with the 'Favourites' app and the structure of my README.md.
+* Credit to [Rachael Furlong's 'Nutritionist'](https://github.com/RachelFurlong-dev/nutritionist-m4/tree/main). Her e-commerce gave me some help with the 'Options' element- thinking creatively about how to have options without creating issues with price!.
+* Credit to [The Django Project- Documentation](https://docs.djangoproject.com/en/5.1/). This was used numerous times throughout the project to fix errors or enhance functionality.
+* Credit to [Coders Camp](https://www.thecoderscamp.com/) who had a number of articles about migrating and databases which helped me with some errors along the way.
+* Credit to the gang at tutor Support- Thomas, Roman and Osin who have the patience of saints and have helped with a number of niggles including dependency related issues and lost environment variables.
 
--   [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
-- Tutorial by [DjangoCentral](https://djangocentral.com/building-a-blog-application-with-django/) for help with blog development.
-
-- Tutorial by [Python Lessons](https://www.youtube.com/watch?v=wl4Yxo5_Cgw) for help with newsletter sign up development.
-
-- Code Institute Boutique Ado tutorial code used as a basis for project except for custom app development (Blog, Newsletter, Stockists & Reviews).
 
 ### Content
 
--   All content was written by the developer.
+-   Product names were made up by the developer. I used chatgpt to author 'Product Descriptions' for all products.
 
 ### Media
 
--   homepage-background   https://unsplash.com/photos/assorted-color-candies--vgLTTWPesg
-
+-   All images of products are sourced from UnSplash https://unsplash.com/
 
 
 ### Acknowledgements
 
--   My Mentor Tim Nelson for continuous helpful feedback.
+-   My Mentor Excellence Illesami for continuous helpful feedback.
 
--   Martin at Code Institute Tutor Support for help with coding errors.
+-   All the gang at  at Code Institute Tutor Support for help with coding errors.
+
+-   Rachel Furlong @EKC group for her guidance and support throughout the project.
+
+-   My partner Roman Taylor. He has supported me throughout the course, allowing me to focus, offering feedback and picking me up when I've felt less than resilliant. 
