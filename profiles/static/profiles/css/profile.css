@@ -1,3 +1,7 @@
+h2{
+    color: white !important;
+}
+
 .order-history {
     max-height: 416px;
     overflow-y: auto;
