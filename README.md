@@ -531,6 +531,8 @@ The **Reviews App** adds a layer of community interaction to the **Keep It Sweet
 
 -   Product names were made up by the developer. I used chatgpt to author 'Product Descriptions' for all products.
 
+-   [Lucid Chart](https://www.lucidchart.com/pages/) Was used to create the Entity Relationship Daigram and the Screen Shots in my User Stories and Features testing.
+
 ### Media
 
 -   All images of products are sourced from UnSplash https://unsplash.com/
