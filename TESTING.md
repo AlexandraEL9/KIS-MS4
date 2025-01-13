@@ -215,9 +215,9 @@ With regards to the 'Best Practices' scoring, issues center on the use of cookie
 ## Manual Testing
 ### Testing User Stories
 ### **User Stories**
-| **USER STORY #** | **As a/an**                | **I want to be able to...**                                          | **So that I can...**                                                     | **How Was This Achieved?**                                                | **Evidence**                                                         |
-|-------------------|----------------------------|----------------------------------------------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| **VIEWING & NAVIGATION**                                                                                                                                                                                                       |
+| **USER STORY #** | **As a/an** | **I want to be able to...** | **So that I can...**| **How Was This Achieved** |  **Evidence**  |
+|-----|-----|----|----|----|----|
+| **VIEWING & NAVIGATION**    |
 | 1                 | Customer           | Navigate around the site                                             | View a list of products available                                                  | Added clear navigation links and categories in the navbar.               | [user-story-1](./docs/testing/user-stories/user-story-1.png)                          |
 | 2                 | Customer           | Easily and quickly understand the main purpose and products of 'Keep it Sweet' | Be sure I am in the right place for my needs                             | Created a welcoming homepage with a tagline and themed imagery.       | [user-story-2](./docs/testing/user-stories/user-story-2.png)       |
 | 3                 | Customer           | View and search specific categories of products                      | Quickly access a range of products I may be interested in.               | Added a category menu and a search bar with filtering functionality.      | [user-story-3](./docs/testing/user-stories/user-story-3.png)                       |

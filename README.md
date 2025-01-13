@@ -127,36 +127,37 @@ This approach to typography ensures a visually appealing and accessible interfac
 ### Colour Scheme
 
 The **Keep It Sweet** project features a vibrant and playful colour scheme designed to evoke a sense of fun and excitement, perfectly aligning with the theme of an online sweet shop.
+![Checkout Success Page Wireframe](./docs/colour-pallet.png)
 
 #### Primary Colours
-1. **Pink** <span style="background-color:#ff7eb3; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#ff7eb3</span>  
+1. **Pink** `#ff7eb3`
    - Used as the primary brand colour to convey a cheerful and inviting tone.
    - Prominent in navigation bars, buttons, and interactive elements.
 
-2. **Black** <span style="background-color:#000000; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#000000</span>  
+2. **Black** `#000000`
    - Provides contrast and a sleek, modern look.
    - Commonly used in text, buttons, and banners for readability and emphasis.
 
-3. **White** <span style="background-color:#ffffff; color:black; padding:0.2rem 0.5rem; border-radius:4px; border:1px solid #ccc;">#ffffff</span>  
+3. **White** `#ffffff`
    - Ensures a clean and simple background for sections and text.
    - Maintains a balance with the bold and vibrant colours.
 
 4. **Red Shades**  
-   - **Light Red** <span style="background-color:#ff5678; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#ff5678</span>  
-   - **Dark Red** <span style="background-color:#ff4500; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#ff4500</span>  
+   - **Light Red** `#ff5678`  
+   - **Dark Red** `#ff4500`  
    - Used for delete buttons and warnings to grab user attention.
    - Highlights important actions or states in the interface.
 
 #### Secondary Colours
 - **Blue Shades**  
-   - **Link Blue** <span style="background-color:#0056b3; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#0056b3</span>  
-   - **Hover Blue** <span style="background-color:#003d80; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#003d80</span>  
+   - **Link Blue** `#0056b3`  
+   - **Hover Blue** `#003d80`  
    - Applied to general links for better visibility and accessibility.
    - Hover states use darker shades for an interactive feel.
 
 - **Gray Shades**  
-   - **Placeholder Gray** <span style="background-color:#aab7c4; color:black; padding:0.2rem 0.5rem; border-radius:4px;">#aab7c4</span>  
-   - **Text Gray** <span style="background-color:#333; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#333</span>  
+   - **Placeholder Gray** `#aab7c4`  
+   - **Text Gray** `#333`  
    - Used for placeholder text and supporting content.
    - Ensures secondary text is legible without overpowering primary elements.
 
