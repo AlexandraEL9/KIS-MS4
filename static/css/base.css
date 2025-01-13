@@ -54,7 +54,7 @@ h6,
 /* Header and Delivery Banner */
 #delivery-banner {
   background-color: black;
-  color: white;
+  color: white !important;
 }
 
 .header-container {
