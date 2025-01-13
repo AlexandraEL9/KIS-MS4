@@ -1,13 +1,8 @@
 # **Keep It Sweet**
 
-![amiresponsive mock-ups of Keep It Sweet](./documentation/responsiveness/.png)
+![amiresponsive mock-ups of Keep It Sweet](./docs/mockup-1.png)
 
-**[Link to the Deployed Site](#)**
-
-![GitHub last commit](https://img.shields.io/github/last-commit/#?color=fuschia&style=for-the-badge)- models
-![GitHub contributors](https://img.shields.io/github/contributors/#?color=purple&style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/#?color=blue&style=for-the-badge)
-![GitHub top language](https://img.shields.io/github/languages/top/ *JoyZadan/shop-kbeauty?* color=yellow&style=for-the-badge)
+**[Link to the Deployed Site](https://keep-it-sweet-2ecaa2229785.herokuapp.com/)**
 
 # Project Overview
 
@@ -96,9 +91,78 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
 ## Design:
 
 ### Typography
- The Poppins font via [Google Fonts:](https://fonts.google.com/) is the main font used throughout the website with Sans Serif as the fallback font in case for any reason the font cannot be displayed in a browser correctly.
 
-### Color Scheme:
+The **Keep It Sweet** project uses carefully chosen fonts to enhance the visual appeal and readability of the website. Here's a breakdown of the typography used:
+
+#### Fonts
+1. **Poppins** (Default Font)
+   - Applied across most body text for a clean and modern appearance.
+   - Ensures high readability and a professional look.
+
+2. **Oleo Script** (Heading and Emphasized Text)
+   - Used for headings, emphasized text, and decorative elements.
+   - Provides a playful and elegant feel that complements the shop's theme.
+
+#### Font Weights
+- **700 (Bold)**: Used for headings, emphasized text, and key elements like prices and totals, ensuring important information stands out.
+
+#### Usage
+- **Headings and Decorative Elements**:
+  - All headings (`h1` to `h6`), `.grand-total`, `.price`, and `.card-body p` use the `Oleo Script` font to create a sense of fun and excitement.
+- **Body Text**:
+  - General body text and paragraphs (`p`) use the `Poppins` font for readability and simplicity.
+- **Buttons and Reviews**:
+  - Buttons (`.btn`, `.add-review-btn`) and review content (`.review-content`) also leverage `Poppins` for uniformity and clarity.
+
+#### Fallback Fonts
+Both fonts are paired with fallback options (`Arial`, `sans-serif`) to ensure compatibility across devices and browsers.
+
+#### Accessibility
+- High-contrast font colors ensure readability for users with visual impairments.
+- Larger font sizes and bold weights are used for important elements to improve visibility and user experience.
+
+This approach to typography ensures a visually appealing and accessible interface for all users.
+
+
+### Colour Scheme
+
+The **Keep It Sweet** project features a vibrant and playful colour scheme designed to evoke a sense of fun and excitement, perfectly aligning with the theme of an online sweet shop.
+
+#### Primary Colours
+1. **Pink** <span style="background-color:#ff7eb3; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#ff7eb3</span>  
+   - Used as the primary brand colour to convey a cheerful and inviting tone.
+   - Prominent in navigation bars, buttons, and interactive elements.
+
+2. **Black** <span style="background-color:#000000; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#000000</span>  
+   - Provides contrast and a sleek, modern look.
+   - Commonly used in text, buttons, and banners for readability and emphasis.
+
+3. **White** <span style="background-color:#ffffff; color:black; padding:0.2rem 0.5rem; border-radius:4px; border:1px solid #ccc;">#ffffff</span>  
+   - Ensures a clean and simple background for sections and text.
+   - Maintains a balance with the bold and vibrant colours.
+
+4. **Red Shades**  
+   - **Light Red** <span style="background-color:#ff5678; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#ff5678</span>  
+   - **Dark Red** <span style="background-color:#ff4500; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#ff4500</span>  
+   - Used for delete buttons and warnings to grab user attention.
+   - Highlights important actions or states in the interface.
+
+#### Secondary Colours
+- **Blue Shades**  
+   - **Link Blue** <span style="background-color:#0056b3; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#0056b3</span>  
+   - **Hover Blue** <span style="background-color:#003d80; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#003d80</span>  
+   - Applied to general links for better visibility and accessibility.
+   - Hover states use darker shades for an interactive feel.
+
+- **Gray Shades**  
+   - **Placeholder Gray** <span style="background-color:#aab7c4; color:black; padding:0.2rem 0.5rem; border-radius:4px;">#aab7c4</span>  
+   - **Text Gray** <span style="background-color:#333; color:white; padding:0.2rem 0.5rem; border-radius:4px;">#333</span>  
+   - Used for placeholder text and supporting content.
+   - Ensures secondary text is legible without overpowering primary elements.
+
+This vibrant and accessible colour scheme creates an engaging user experience, reinforcing the sweet and joyful theme of the shop.
+
+
 
 ### **Wireframes**
 The wireframes were created using [Balsamiq](https://balsamiq.cloud/).
@@ -183,69 +247,234 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 
 ## Features
 
-#### Main site features
-- Clear navigation for user to select relevant page.
-- A strapline promoting some form of special offer over an indicated amount.
-- Bag modal with bag contents and total on product pages. 
-- (Allauth utilised for profile account features, allowing to  save address information and  order history.)
-- Responsive on all device sizes.
-- A footer has been added to selected pages, with company social links to social media sites. The footer will be developed in the future to include additional navigation  links to internal pages.
+#### Main Site Features
+
+- **Clear Navigation**: Intuitive navigation allows users to easily browse through different pages, including product categories, the shopping bag, and their profile.
+- **Special Offers**: A prominently displayed strapline highlights special offers, in this case,free delivery on orders over a certain amount.
+- **Bag Modal**: Users can view their shopping bag contents and total directly on product pages through a modal, streamlining the shopping experience.
+- **User Profiles**: Leveraging Django Allauth, registered users can create and manage their accounts, save address information, and view their order history for a personalized experience.
+- **Responsive Design**: Fully optimized for a range of device sizes, ensuring a seamless shopping experience on desktops, tablets, and smartphones.
+- **Footer with Social Links**: Selected pages feature a footer with links to Keep It Sweet's social media profiles. Future updates will expand the footer to include additional navigation links to internal pages. A current example being the 'Privacy Policy' page.
+- **Newsletter Subscription**: Users can subscribe to the Keep It Sweet newsletter to receive updates on the latest products, special offers, and seasonal promotions.
+- **Favourites App**: Logged-in users can save their favourite products to a personalized favourites list, making it easy to find and purchase their preferred sweets.
+- **Reviews App**: Users can view reviews left by other customers on product pages. Registered users can write, edit, and delete their own reviews to share their experiences with others.
+- **Staff Product Management**: Staff users with superuser privileges can add new products, edit existing product details, and manage product information directly within the site through a secure admin interface.
+
 
 #### Home App
-The navigation allows users to select products, blog, checkout and profile pages. Navigation also has a Search bar and Menu dropdowns to sort products into price, category or by rating.
-Hero image and main strapline provides information about the brand and its purpose.
-Footer with social icons to the brand’s Pinterest and Instagram pages and copyright statement. The footer will be developed into a section containing links to all pages, terms and conditions and cookies statement.
+- **Navigation**: Users can easily access product categories, the shopping bag, their profile, Newsletter Subscription and their favourites page. The navigation also includes a **Search Bar** for quick product searches.
+
+![Screenshot of Main Navigation](./docs/navigation-1.png)  
+  <div align="center">
+    <img src="./docs/navigation-2.png" alt="My Account Dropdowns Screenshot" width="32%">
+    <img src="./docs/navigation-3.png" alt="Products Dropdown Screenshot" width="32%">
+    <img src="./docs/navigation-4.png" alt="Categories Dropdown Screenshot" width="32%">
+  </div>
+
+
+- **Hero Image and Strapline**: A vibrant hero image and a main strapline welcome users to Keep It Sweet, showcasing the brand's fun and joyful identity. Special offers or promotions are highlighted here.
+
+![Screenshot of Main Navigation](./docs/hero.png)  
+
+- **Footer**: Includes links to Keep It Sweet’s social media profiles, such as Instagram and Facebook, as well as an email link, along with a copyright statement. There is currently a link to a 'Privacy Policy'. Future updates will expand the footer to include links to all pages, terms and conditions.
+![Screenshot of Main Navigation](./docs/footer.png)
 
 #### Product App
-Item_list [CRUD]
-Select products of in a specific category (Nuts, seeds, mixes fruits & berries or coated fruit.
-Sort the products by price, rating or category and add products to the bag - view the total cost of item in the modal box.
-Products page layout shows the images of the various products, name, price, category and star rating.
-Product detail pages allow the user to find out more about the product, add a product to the bag and increase or decrease the number of products selected. Users can redirect to the shopping page to view additional products to buy. Additional JavaScript code ensures that the decrement button is disabled from going below one item.
-On adding the item to the bag, a user sees an automated popup with a Toast message providing feedback to the user confirming the action was successful and how many of that product were added to the bag. The user can also see a list of previous products if they have already been added to the bag, together with an image, description, total price, and a button to go to the checkout page for payment.
+- **Product Display**: Users can browse a wide selection of sweets, each displayed with an image, name, price, and star rating. Products are grouped into clear categories, such as "Hard," "Chewy," and "Chocolate," making it easy to find specific treats.
+![Screenshot of Main Navigation](./docs/product-1.png)
+- **Search, Filter, and Sorting**: The app includes a **Search Bar** and options to:
+  - Filter products by category.
+  - Sort products by price, rating, or category for a customized browsing experience.
+- **Product Detail Pages**: Each product has its own detailed page featuring:
+  - A larger product image.
+  - Full product description, including dietary options.
+  - Add-to-bag functionality, including the ability to increase or decrease the quantity.
+  - JavaScript ensures the decrement button cannot go below one item.
+  - A redirection option to continue shopping for more products.
+  ![Screenshot of Main Navigation](./docs/product-detail-1.png)
+
+- **Bag Modal**: Users can view a modal with:
+  - A list of products added to their bag, including images, descriptions, and total price.
+  - A button to proceed to checkout.
+  - The total cost of all items in the bag dynamically calculated.
+  ![Screenshot of Main Navigation](./docs/bag-1.png)
+
+- **Toast Messages**: Upon adding items to the bag, an automated popup with a Toast message confirms the action was successful and displays the number of items added.
+![Screenshot of Main Navigation](./docs/toast-1.png)
+
+- **Favourites Integration**: Logged-in users can save products to their favourites list directly from the product detail page for quick access later.
+
+<div align="center">
+    <img src="./docs/faves-1.png" alt="My Account Dropdowns Screenshot" width="32%">
+    <img src="./docs/faves-2.png" alt="Products Dropdown Screenshot" width="32%">
+    <img src="./docs/faves-3.png" alt="Categories Dropdown Screenshot" width="32%">
+  </div>
+
+- **CRUD Functionality for Staff**: Staff users can:
+  - Add, edit, and delete products through the admin interface.
+  - Manage product information and ensure the catalog is up-to-date.
+  <div align="center">
+    <img src="./docs/staff-1.png" alt="My Account Dropdowns Screenshot" width="32%">
+    <img src="./docs/staff-2.png" alt="Products Dropdown Screenshot" width="32%">
+    <img src="./docs/staff-3.png" alt="Categories Dropdown Screenshot" width="32%">
+  </div>
+
+- **Responsive Design**: The product pages are fully optimized for all device sizes, ensuring a smooth user experience on mobile, tablet, and desktop screens.
+    ![Screenshot of Main Navigation](./docs/products-responsive-1.png)
 
 #### Bag App
-The product summary page provides a list of products selected for purchase with options to increase or decrease the number of items in the bag, or to delete if required via a remove link.
-Users can view delivery costs at this point and are advised of how much more spend is required to reach the minimum spend for free delivery as well as delivery costs if the user does not want to increase spend. 
-User can proceed to complete purchase via a button stating ‘secure checkout’
+
+- **Product Summary Page**: Displays a detailed list of products selected for purchase, including:
+  - Product images, names, and prices.
+  - Options to increase or decrease the quantity of each item.
+  - A **Remove Link** to delete items from the bag if needed.
+- **Delivery Costs and Free Delivery Threshold**:
+  - Users can view the delivery costs based on their current total.
+  - A notification advises how much more needs to be spent to qualify for free delivery.
+  - If the minimum spend for free delivery is not reached, the applicable delivery costs are clearly displayed.
+- **Secure Checkout**: A **Secure Checkout** button allows users to proceed directly to the checkout page to complete their purchase.
+- **Bag Modal Integration**: The app integrates seamlessly with the bag modal, dynamically updating the total cost and items in real-time as changes are made on the product summary page.
+- **Responsive Design**: Fully optimized for all device sizes, ensuring users can manage their bag easily on mobile, tablet, and desktop screens.
+![Screenshot of Main Navigation](./docs/bag-2.png)
+
 
 #### Checkout App
-- To complete the purchase, users complete the form with their delivery and payment details, and click the ‘complete order’ button to finalise. (The user, right to the final action still has the opportunity to adjust the bag contents. If users go ahead with the purchase they are informed for the total amount that will be charged to their card in advance.
-- Payments are made via the Stripe payment solution integrated with the app..
-A bag session is stored in the database with order details added to the order table 
-- Users can save their order details, so then the database is updated with their profile linked to their order. Users on subsequent logins can view their previous orders in order history on their profile page.
-- Users receive an email to their inbox to confirm their order and are provided with  the order number. 
+
+- **Order Completion**: Users finalize their purchase by:
+  - Filling out a form with delivery and payment details.
+  - Clicking the **Complete Order** button to confirm the order.
+  - Having the ability to adjust the bag contents right up until the final action.
+  - Being informed of the total amount to be charged to their card before finalizing the purchase.
+
+- **Payment Integration**: The app integrates with the **Stripe** payment solution to securely process payments.
+
+- **Order Management**:
+  - A bag session is stored in the database, with order details added to the order table for record-keeping.
+  - Users can save their delivery and order details, which are linked to their profile.
+
+- **Order History**: 
+  - Registered users can view their previous orders in the **Order History** section of their profile.
+  - This feature allows users to track past purchases and easily reorder items if needed.
+
+- **Email Confirmation**:
+  - Users receive an order confirmation email in their inbox, including:
+    - The order number for reference.
+    - A summary of their purchase.
+  - This provides assurance and a record of the transaction.
+
+- **Responsive Design**: The checkout process is fully optimized for all device sizes, ensuring users can complete their orders seamlessly on mobile, tablet, and desktop screens.
+![Screenshot of Main Navigation](./docs/checkout-1.png)
+
 
 #### Sign-up/Login
-- The sign-in page allows users to log into their account by filling a username and a password field correctly. If the user has forgotten their password there is a link to the reset password page as well as links to return to the Home page if required.
-- Annonymous users can sign up for an account by adding their email address and setting their passwords in the relevant fields. Toasts keep users informed if thier login has been successful. 
-- New customers receive an email to their inbox requesting them to click a link to verify their account to complete sign-up.
 
-#### Admin features:
-CRUD functionality
-Django @login_required decorator provides protection against anonymous users or users without superuser permissions accessing the data store. Superusers are permitted to Add, Edit and Delete products on the Product Management page on login. 
+- **Sign-in Page**:
+  - Allows existing users to log into their account by entering their username and password.
+  - Includes a link to the **Reset Password** page for users who have forgotten their password.
+  - Provides links to return to the **Home Page** for easy navigation if needed.
 
-#### Add Product
-There is a form on the product management allowing staff to complete the necessary fields. Category, Sku, Name, Description, Options, Price, rating and Image url. Some fields are optional as indicated by an asterisk next to their name. If no image is selected then a default image is used instead.
+- **Sign-up for New Users**:
+  - Anonymous users can create an account by entering their email address and setting a secure password in the relevant fields.
+  - **Toast Messages** notify users of the status of their login or sign-up process, providing immediate feedback on success or errors.
 
-#### Edit Product 
-Admin superusers can go to an existing product on the product page and use the edit link to provide access to the edit product functionality. There is a Toast feedback modal to alert supersuers to the fact they are editing a product. The details of a product can be amended as required and then updated or removed.
+- **Account Verification**:
+  - New customers receive an email with a verification link.
+  - Users must click the link to confirm their email address and complete the sign-up process, ensuring account security.
 
-#### Delete Product
-Admin superusers can go to an existing product on the product page and use the delete link which on click removes a product immediately, with a feedback popup (Toast) to confirm deletion was successful.
+- **Responsive Design**:
+  - The sign-up and login pages are fully optimized for all device sizes, ensuring users can access and manage their accounts easily on mobile, tablet, and desktop screens.
 
-#### Blog App
-**Blog Archive page / Blog detail page:**
-Posts display an image, an excerpt and a button, and the posts are sorted in date order so the latest published blog is at the top. A button takes the user to the post detail page where all the text and an image are displayed. There is also a button to return the user to the blog archive page.
+
+#### Admin Features
+
+- **Secure Access**:
+  - CRUD functionality is protected by the Django `@login_required` decorator, ensuring only logged-in users with superuser permissions can access product management features.
+  - Anonymous users or users without superuser privileges cannot access or modify the data store.
+
+- **Add Product**:
+  - Superusers can add new products via a dedicated **Product Management Form**.
+  - The form includes fields for **Category**, **SKU**, **Name**, **Description**, **Options**, **Price**, **Rating**, and **Image URL**.
+  - Optional fields are clearly marked with an asterisk (`*`).
+  - If no image is provided, a default image is automatically applied.
+
+- **Edit Product**:
+  - Superusers can edit existing products by using the **Edit Link** on the product page, which opens the product's details in an editable form.
+  - A **Toast Feedback Modal** informs superusers that they are in edit mode.
+  - Product details can be updated and saved with immediate effect, ensuring the catalog remains accurate and up-to-date.
+
+- **Delete Product**:
+  - Superusers can delete a product by clicking the **Delete Link** on the product page.
+  - Upon deletion, a **Toast Notification** confirms that the product was successfully removed.
+  - Deletion is immediate, streamlining the process of managing outdated or incorrect products.
+
+These admin features ensure efficient and secure management of the product catalog, empowering superusers to maintain the integrity and quality of the online store.
 
 #### Subscribe App
-Unregistered and registered users can sign up to be added to The Nutritionist mailing list. The user signs up and sees a success message if the sign up is successful. The records are saved in the admin area with name, date and date subscribed listed.There are messages that warn the user if the email is invalid or a field is missing.
+
+- **Subscription Features**:
+  - Both unregistered and registered users can sign up to join the **Keep It Sweet** mailing list.
+  - Users are required to provide their email address to subscribe.
+  - Upon successful sign-up, a **Success Message** is displayed to confirm the action.
+
+- **Validation and Error Handling**:
+  - The app validates user input to ensure the email address is valid and all required fields are completed.
+  - Users are shown **Warning Messages** if the email is invalid or a required field is missing.
+
+- **Admin Management**:
+  - Subscription records are saved in the admin area for easy management.
+  - Details such as **Name**, **Email Address**, **Date Subscribed**, and **Subscription Status** are recorded and accessible by admin users.
+
+This app enables seamless management of the mailing list and provides users with an efficient way to stay updated on the latest products and offers from Keep It Sweet.
+
+#### Favourites App
+
+- **Save Favourite Products**:
+  - Registered users can add products to their favourites list by clicking the **Add to Favourites** button on product pages.
+  - The favourites feature allows users to easily revisit and purchase their preferred sweets without needing to search for them again.
+
+- **Manage Favourites**:
+  - Users can view their saved favourites in a dedicated **Favourites Page**, which displays:
+    - Product images.
+    - Names and prices of their saved products.
+  - Products can be removed from the favourites list with a single click.
+
+- **Personalized Experience**:
+  - Each user's favourites list is unique to their account, ensuring a personalized experience.
+  - The favourites list is accessible after logging in and persists across sessions.
+
+- **Responsive Design**:
+  - The favourites functionality is fully optimized for all device sizes, allowing users to manage their favourites on mobile, tablet, and desktop screens.
+
+This app provides users with a convenient way to save and organize their favourite products, enhancing the overall shopping experience on **Keep It Sweet**.
+
+#### Reviews App
+
+- **View Reviews**:
+  - All users, whether registered or not, can view product reviews on product detail pages.
+  - Reviews provide insights into the experiences of other customers, helping users make informed decisions.
+
+- **Write Reviews**:
+  - Registered users can submit reviews for products they have purchased.
+  - Reviews include a title, content, and a star rating to give detailed feedback.
+
+- **Manage Reviews**:
+  - Registered users can manage their reviews with the following features:
+    - **Edit Reviews**: Users can update their existing reviews to correct or change their feedback.
+    - **Delete Reviews**: Users can remove their reviews if they choose to.
+
+- **Feedback and Validation**:
+  - Forms include validation to ensure required fields are completed before submission.
+  - Toast messages provide users with immediate feedback when their reviews are successfully submitted, updated, or deleted.
+
+- **Responsive Design**:
+  - The reviews functionality is fully optimized for mobile, tablet, and desktop devices, ensuring a seamless experience across all platforms.
+
+The **Reviews App** adds a layer of community interaction to the **Keep It Sweet** site, fostering trust and engagement through customer feedback.
 
 #### Future Features
-- A reviews app is currently in development so that customers will be able to addd reviews to individual  products.
-- A Favourites app allowing users to bookmark their favourite products.
 - A rewards app where purchases make points for freebies and spcial offers.
-- Additional content on the home page with featured or new products promoted beneath the hero section.
+- A 'Special Offers' / 'Bundle Builder' app where users can bundle an number of products together and get a discount.
+- Additional content on the home page with featured or new/ seasonal products promoted beneath the hero section.
 
 ## Technologies Used
 
