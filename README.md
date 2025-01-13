@@ -1,6 +1,6 @@
 # **Keep It Sweet**
 
-![amiresponsive mock-ups of Keep It Sweet](./docs/mockup-1.png)
+![amiresponsive mock-ups of Keep It Sweet](/docs/mockup-1.png)
 
 **[Link to the Deployed Site](https://keep-it-sweet-2ecaa2229785.herokuapp.com/)**
 
