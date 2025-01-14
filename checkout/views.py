@@ -92,7 +92,8 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            messages.error(request, "There's nothing in your bag at the moment")
+            messages.error(
+                request, "There's nothing in your bag at the moment")
             return redirect(reverse('products'))
 
         current_bag = bag_contents(request)
@@ -106,8 +107,12 @@ def checkout(request):
             currency=settings.STRIPE_CURRENCY,
             metadata={
                 'bag': json.dumps(bag),  # Serialize the bag to JSON
-                'username': request.user.username if request.user.is_authenticated else 'AnonymousUser',
-                'save_info': request.session.get('save_info', False),  # Include save info from session
+                'username':
+                    request.user.username
+                    if request.user.is_authenticated
+                    else 'AnonymousUser',
+                'save_info':
+                    request.session.get('save_info', False),
             }
         )
 
@@ -163,6 +168,8 @@ def cache_checkout_data(request):
         return HttpResponse(content=f'Error: {e}', status=400)
 
 # checkout success
+
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
@@ -204,4 +211,3 @@ def checkout_success(request, order_number):
     }
 
     return render(request, template, context)
-
