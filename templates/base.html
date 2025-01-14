@@ -32,7 +32,7 @@
 
   <body class="{% block body_class %}{% endblock %}">
     <div class="page-container d-flex flex-column min-vh-100">
-      <header class="container-fluid fixed-top" role="banner">
+      <header class="container-fluid fixed-top">
         <!-- Header content -->
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
@@ -121,8 +121,8 @@
       {% endif %}
 
       {% block page_header %}{% endblock %}
-      <main role="main" class="flex-fill">{% block content %}{% endblock %}</main>
-      <footer class="footer bg-black text-white py-4 mt-5" role="contentinfo">
+      <main class="flex-fill">{% block content %}{% endblock %}</main>
+      <footer class="footer bg-black text-white py-4 mt-5">
         {% include 'includes/footer.html' %}
       </footer>
     </div>
@@ -140,4 +140,3 @@
     {% endblock %}
   </body>
 </html>
-
