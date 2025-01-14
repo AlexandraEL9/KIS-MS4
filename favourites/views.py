@@ -11,7 +11,7 @@ from products.models import Product
 @login_required
 def favourites(request):
     """
-    View the user's favourites list
+    View the user's favourites list.
     """
     favourites = Favourite.objects.filter(user=request.user)
     return render(
@@ -24,7 +24,7 @@ def favourites(request):
 @login_required
 def add_to_favourites(request, product_id):
     """
-    Add a product to the favourites list
+    Add a product to the favourites list.
     """
     product = get_object_or_404(Product, pk=product_id)
     favourite, created = Favourite.objects.get_or_create(
@@ -32,13 +32,14 @@ def add_to_favourites(request, product_id):
         product=product
     )
 
-    favourites_url = reverse('favourites')  # Dynamically get the favourites URL
+    favourites_url = reverse('favourites')
 
     if created:
         messages.success(
             request,
             format_html(
-                "Added {} to your favourites. <a href='{}' class='alert-link'>View Favourites</a>",
+                "Added {} to your favourites. "
+                "<a href='{}' class='alert-link'>View Favourites</a>",
                 product.name,
                 favourites_url
             )
@@ -47,7 +48,8 @@ def add_to_favourites(request, product_id):
         messages.info(
             request,
             format_html(
-                "{} is already in your favourites. <a href='{}' class='alert-link'>View Favourites</a>",
+                "{} is already in your favourites. "
+                "<a href='{}' class='alert-link'>View Favourites</a>",
                 product.name,
                 favourites_url
             )
@@ -59,7 +61,7 @@ def add_to_favourites(request, product_id):
 @login_required
 def remove_from_favourites(request, product_id):
     """
-    Remove a product from the favourites list
+    Remove a product from the favourites list.
     """
     product = get_object_or_404(Product, pk=product_id)
 
@@ -69,7 +71,8 @@ def remove_from_favourites(request, product_id):
         messages.success(
             request,
             format_html(
-                "Removed {} from your favourites. <a href='{}' class='alert-link'>View Favourites</a>",
+                "Removed {} from your favourites. "
+                "<a href='{}' class='alert-link'>View Favourites</a>",
                 product.name,
                 reverse('favourites')
             )
@@ -78,7 +81,8 @@ def remove_from_favourites(request, product_id):
         messages.error(
             request,
             format_html(
-                "{} was not found in your favourites. <a href='{}' class='alert-link'>View Favourites</a>",
+                "{} was not found in your favourites. "
+                "<a href='{}' class='alert-link'>View Favourites</a>",
                 product.name,
                 reverse('favourites')
             )
