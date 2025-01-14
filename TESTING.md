@@ -52,7 +52,7 @@ I used [W3C Markup Validation Service](https://validator.w3.org/) to validate al
 | Page | Result | Validation Details & Screenshots |
 | ---- | :-: | -------------------------- |
 | home/index.html | Pass | [Homepage](./docs/testing/html-validation/homepage.png) |
-| bag.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/bag-warnings.png) These were to do with an unnecessary use of 'type'. I founsd all files using this outdated info and deleted the 'type' attribute. Result here. [Bag](./docs/testing/html-validation/bag.png)  |
+| bag.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/bag-warnings.png) These were to do with an unnecessary use of 'type'. I found all files using this outdated info and deleted the 'type' attribute. Result here. [Bag](./docs/testing/html-validation/bag.png)  |
 | checkout.html | Pass | Validator came up with 1 warning- [Warnings](./docs/testing/html-validation/checkout-warning.png) To do with an h1 element having no content. I decided to change this h1 elemnt into a div. While this made the spinner a bit smaller, the function worked perfectly fine. Result here. [Checkout](./docs/testing/html-validation/checkout.png)  |
 | checkout_success.html | Pass | [Checkout_success](./docs/testing/html-validation/checkout-success.png)  |
 | favourites.html | Pass | [Favourites](./docs/testing/html-validation/favourites.png)  |
@@ -65,7 +65,7 @@ I used [W3C Markup Validation Service](https://validator.w3.org/) to validate al
 | add_review.html | Pass | [Add Review](./docs/testing/html-validation/add-review.png)  |
 | edit_review.html | Pass | [Edit Review](./docs/testing/html-validation/edit-review.png)  |
 | subscribe.html | Pass | [Subscribe](./docs/testing/html-validation/subscribe.png)  |
-| privacy_policy.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/privacy-policy-warning.png) The error indicates the p tags in the original template have invalid syntax because they include nested ul tags, which is not allowed. In HTML, a p tag cannot contain block-level elements like ul.With this in mind, I moved the ul tags outside of the p tags and adjusted the structure of the page. Results: [Product Reviews](./docs/testing/html-validation/privacy-policy.png)  |
+| privacy_policy.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/privacy-policy-warning.png) The error indicates the p tags in the original template have invalid syntax because they include nested ul tags, which is not allowed. In HTML, a p tag cannot contain block-level elements like ul.With this in mind, I moved the ul tags outside of the p tags and adjusted the structure of the page. Results: [Privacy Policy](./docs/testing/html-validation/privacy-policy.png)  |
 
 ### CSS Validation
 I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate all CSS files by direct input.
@@ -80,32 +80,29 @@ I used [JSHint](https://jshint.com/) to validate all JavaScript and JQuery files
 | Function | Result | Validation Details & Screenshots |
 | :-- | :-: | -------------------------- |
 | **bag.html** |  |  |
-| bag/templates/bag/bag.html (Update quantity on click) | All clear, no errors found | [bag.update-quantity](./docs/testing/jshint/bag-update-quantity.png) |
-| bag/templates/bag/bag.html (Remove item and reload on click) | All clear, no errors found | [bag.remove-reload](./docs/testing/jshint/bag-remove-reload.png) |
-| Complete section | All clear, no errors found | [bag.full-section](./docs/testing/jshint/bag-full-section.png) |
+| bag/templates/bag/bag.html (Update quantity on click) | All clear, no errors found | [bag](./docs/testing/jshint/bag-js.png) |
 | **checkout app** |  |  |
-| checkout/static/checkout/js/stript_elements.js (Stripe elements) | Added Stripe as a global variable- no errors- all clear. | [checkout.static.checkout.js.stripe_elements.js](./docs/testing/jshint/bag-update-quantity.png) |
+| checkout/static/checkout/js/stript_elements.js (Stripe elements) | Added Stripe as a global variable- no errors- all clear. | [checkout.static.checkout.js.stripe_elements.js](./docs/testing/jshint/checkout-stripe-elements.png) |
 | **products app** |  |  |
-| products/templates/products/products.html (sort selector) | no errors- all clear. | [products.html- sort-selector](./docs/testing/jshint/products-sort-selector.png) |
-| products/templates/products/products.html (scroll button) | no errors- all clear. | [products.html- scroll button](./docs/testing/jshint/products-scroll.png) |
-| products/templates/products/edit_product.html (edit product- image) | no errors- all clear. | [edit products](./docs/testing/jshint/products-edit-image.png) |
-| products/templates/products/add_product.html(add product- image) | no errors- all clear. | [add products](./docs/testing/jshint/products-add-image.png) |
+| products/templates/products/products.html (sort selector) | no errors- all clear. | [products.html- sort-selector](./docs/testing/jshint/products-sort-selector-js.png) |
+| products/templates/products/products.html (scroll button) | no errors- all clear. | [products.html- scroll button](./docs/testing/jshint/products-scroll-js.png) |
+| products/templates/products/edit_product.html (edit product- image) | no errors- all clear. | [edit products](./docs/testing/jshint/products-edit-image-js.png) |
+| products/templates/products/add_product.html(add product- image) | no errors- all clear. | [add products](./docs/testing/jshint/products-add-image-js.png) |
 | products/templates/products/includes/quantity_input_script.html| no errors- all clear. | [products.includes/quantity_input_script](./docs/testing/jshint/products-quantity-input-script.png) |
 | **profiles app** |  |  |
 | profiles/static/profiles/js/countryfield.js| no errors- all clear. | [profiles-countryfield.js](./docs/testing/jshint/profiles-countryfield.png) |
 | **reviews app** |  |  |
-| reviews/templates/reviews/product_reviews.html| no errors- all clear. | [reviews- modal](./docs/testing/jshint/reviews-product-reviews-modal.png) |
+| reviews/templates/reviews/product_reviews.html| no errors- all clear. | [reviews- modal](./docs/testing/jshint/reviews-product-reviews-modal-js.png) |
 | **templates** |  |  |
 | templates/base.html- 'show toasts'| no errors- all clear. | [templates.base.toasts](./docs/testing/jshint/templates-base-toasts.png) |
-
-
 
 ### Python Validation
 I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint my Python code.
 | File | Result | Validation Details & Screenshots |
 | :-- | :-: | -------------------------- |
 | manage.py | All clear, no errors found | [manage.py](./docs/testing/python-linter/managepy.png)|
-| custom_storages.py | All clear, no errors found | [custom_storages.py](./docs/testing/python-linter/custom_storages.png)|
+| custom_storages.py | All clear, no errors found | [custom_storages.py](./docs/testing/python-linter/env-py.png)|
+| env.py | All clear, no errors found | [env.py](./docs/testing/python-linter/custom_storages.png)|
 | **Keep_it_sweet** |  |  |
 | keep_it_sweet/wsgi.py | All clear, no errors found | [keep_it_sweet.wsgi.py validation](./docs/testing/python-linter/kis-wsgi.png) |
 | keep_it_sweet/urls.py | All clear, no errors found | [keep_it_sweet.urls.py validation](./docs/testing/python-linter/kis-urls.png) |
@@ -176,7 +173,7 @@ With regards to the 'Best Practices' scoring, issues center on the use of cookie
 #### Desktop
 | Page | Performance (%) | Accessibility (%) | Best Practices (%) | SEO (%) | If score is below 90% |
 | :-- | :-: | :-: | :-: | :-: | :-- |
-| [' Current index.html'](/docs/testing/lighthouse-testing/homepage-desktop-4.png) | 81 | 98 | 96 | 90 | New scores are now all above 90%, withthe exception of 'Performance' (see above). Initial test results found here:['index.html'](/docs/testing/lighthouse-testing/homepage-desktop.png) |
+| [' Current index.html'](/docs/testing/lighthouse-testing/homepage-desktop-5.png) | 81 | 98 | 96 | 90 | New scores are now all above 90%, withthe exception of 'Performance' (see above). Initial test results found here:['index.html'](/docs/testing/lighthouse-testing/homepage-desktop.png) |
 | ['Current subscribe.html' (Newsletter)](/docs/testing/lighthouse-testing/subscribe-desktop-5.png) | 86 | 98 | 100 | 90 | New scores are now all above 90%, with the exception of 'Performance' (see above). Initial test results found here: [subscribe.html'](/docs/testing/lighthouse-testing/subscribe-desktop1.png)|
 | ['Current privacy-policy.html'](/docs/testing/lighthouse-testing/privacy-policy-desktop-5.png) | 96 | 100 | 100 | 90 | New scores are now all above 90%. Initial test results found here:['privacy-policy.html'](/docs/testing/lighthouse-testing/privacy-policy-desktop1.png) |
 | ['Current signup.html'](/docs/testing/lighthouse-testing/signup-desktop-6.png) | 80 | 98 | 100 | 90 | New scores are now all above 90 with the exception of 'Performance'. Initial test results found here:['signup.html'](/docs/testing/lighthouse-testing/signup-desktop1.png)  |
