@@ -1,17 +1,23 @@
-{% extends "base.html" %} {% load static %} {% block page_header %} <div class="container header-container">
+{% extends "base.html" %} {% load static %} {% block page_header %} 
+<div class="container header-container">
   <div class="row">
     <div class="col"></div>
   </div>
-</div> {% endblock %} {% block content %} <div class="container h-100">
-  <div class="row h-100">
-    <div class="col-7 col-md-6 my-auto"> 
-      <h1 class="display-4 logo-font text-black mt-5"> NEW! <br >Dietary friendly products now in stock!
+</div> 
+{% endblock %} 
+{% block content %} 
+<div class="container h-100">
+  <div class="row h-100 align-items-center">
+    <div class="col-6 col-md-5 offset-1 text-start content-box">
+      <h1 class="display-4 logo-font text-black mb-4">
+        NEW! <br> Dietary friendly products now in stock!
       </h1>
-      <div class="my-5">
-        <h4>
-          <a href="{% url 'products' %}?category=special_diet" class="shop-now-button btn btn-lg rounded-o text-uppercase py-3">Shop Now!</a>
-        </h4>
-      </div>
+      <a href="{% url 'products' %}?category=special_diet" class="shop-now-button btn btn-lg rounded-o text-uppercase py-3 px-4">
+        Shop Now!
+      </a>
     </div>
   </div>
-</div> {% endblock %}
+</div>
+
+
+{% endblock %}
