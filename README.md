@@ -31,6 +31,8 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
     * [Front End Technologies](#front-end-technologies)
     * [Back End Technologies](#back-end-technologies)
     * [Additional Technologies](#additional-technologies)
+* [Testing](#testing)
+* [Deployment](#deployment)
 * [Credits](#credits)
     * [Code](#code) 
     * [Content](#content)
@@ -265,63 +267,39 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 #### Home App
 - **Navigation**: Users can easily access product categories, the shopping bag, their profile, Newsletter Subscription and their favourites page. The navigation also includes a **Search Bar** for quick product searches.
 
-![Screenshot of Main Navigation](./docs/navigation-1.png)  
-  <div align="center">
-    <img src="./docs/navigation-2.png" alt="My Account Dropdowns Screenshot" width="32%">
-    <img src="./docs/navigation-3.png" alt="Products Dropdown Screenshot" width="32%">
-    <img src="./docs/navigation-4.png" alt="Categories Dropdown Screenshot" width="32%">
-  </div>
-
-
-- **Hero Image and Strapline**: A vibrant hero image and a main strapline welcome users to Keep It Sweet, showcasing the brand's fun and joyful identity. Special offers or promotions are highlighted here.
-
-![Screenshot of Main Navigation](./docs/hero.png)  
+- **Hero Image and Strapline**: A vibrant hero image and a main strapline welcome users to Keep It Sweet, showcasing the brand's fun and joyful identity. Special offers or promotions are highlighted here. 
 
 - **Footer**: Includes links to Keep It Sweet’s social media profiles, such as Instagram and Facebook, as well as an email link, along with a copyright statement. There is currently a link to a 'Privacy Policy'. Future updates will expand the footer to include links to all pages, terms and conditions.
 ![Screenshot of Main Navigation](./docs/footer.png)
 
 #### Product App
 - **Product Display**: Users can browse a wide selection of sweets, each displayed with an image, name, price, and star rating. Products are grouped into clear categories, such as "Hard," "Chewy," and "Chocolate," making it easy to find specific treats.
-![Screenshot of Main Navigation](./docs/product-1.png)
+
 - **Search, Filter, and Sorting**: The app includes a **Search Bar** and options to:
   - Filter products by category.
   - Sort products by price, rating, or category for a customized browsing experience.
+
 - **Product Detail Pages**: Each product has its own detailed page featuring:
   - A larger product image.
   - Full product description, including dietary options.
   - Add-to-bag functionality, including the ability to increase or decrease the quantity.
   - JavaScript ensures the decrement button cannot go below one item.
   - A redirection option to continue shopping for more products.
-  ![Screenshot of Main Navigation](./docs/product-detail-1.png)
 
 - **Bag Modal**: Users can view a modal with:
   - A list of products added to their bag, including images, descriptions, and total price.
   - A button to proceed to checkout.
   - The total cost of all items in the bag dynamically calculated.
-  ![Screenshot of Main Navigation](./docs/bag-1.png)
 
 - **Toast Messages**: Upon adding items to the bag, an automated popup with a Toast message confirms the action was successful and displays the number of items added.
-![Screenshot of Main Navigation](./docs/toast-1.png)
 
 - **Favourites Integration**: Logged-in users can save products to their favourites list directly from the product detail page for quick access later.
-
-<div align="center">
-    <img src="./docs/faves-1.png" alt="My Account Dropdowns Screenshot" width="32%">
-    <img src="./docs/faves-2.png" alt="Products Dropdown Screenshot" width="32%">
-    <img src="./docs/faves-3.png" alt="Categories Dropdown Screenshot" width="32%">
-  </div>
 
 - **CRUD Functionality for Staff**: Staff users can:
   - Add, edit, and delete products through the admin interface.
   - Manage product information and ensure the catalog is up-to-date.
-  <div align="center">
-    <img src="./docs/staff-1.png" alt="My Account Dropdowns Screenshot" width="32%">
-    <img src="./docs/staff-2.png" alt="Products Dropdown Screenshot" width="32%">
-    <img src="./docs/staff-3.png" alt="Categories Dropdown Screenshot" width="32%">
-  </div>
 
 - **Responsive Design**: The product pages are fully optimized for all device sizes, ensuring a smooth user experience on mobile, tablet, and desktop screens.
-    ![Screenshot of Main Navigation](./docs/products-responsive-1.png)
 
 #### Bag App
 
@@ -336,8 +314,6 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 - **Secure Checkout**: A **Secure Checkout** button allows users to proceed directly to the checkout page to complete their purchase.
 - **Bag Modal Integration**: The app integrates seamlessly with the bag modal, dynamically updating the total cost and items in real-time as changes are made on the product summary page.
 - **Responsive Design**: Fully optimized for all device sizes, ensuring users can manage their bag easily on mobile, tablet, and desktop screens.
-![Screenshot of Main Navigation](./docs/bag-2.png)
-
 
 #### Checkout App
 
@@ -364,8 +340,6 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
   - This provides assurance and a record of the transaction.
 
 - **Responsive Design**: The checkout process is fully optimized for all device sizes, ensuring users can complete their orders seamlessly on mobile, tablet, and desktop screens.
-![Screenshot of Main Navigation](./docs/checkout-1.png)
-
 
 #### Sign-up/Login
 
@@ -516,20 +490,34 @@ The **Reviews App** adds a layer of community interaction to the **Keep It Sweet
 1. [GitHub:](https://github.com/)
     - GitHub was used to store the projects code after being pushed from Git.
 
+## Testing
+Please refer to the [TESTING.md](./TESTING.md) file for full testing and results for:
+* Automated Testing and Validation.
+* Manual Testing including 'User Stories' Testing and 'Full Feature' testing.
+* Fixed Bugs from throughout the development and testing phases.
+* Known Bugs.
+
+## Deployment
+Please refer to th3[DEPLOYMENT.md](./DEPLOYMENT.md) file for a full description and process for:
+* Creating a production database, ready for deployment.
+* Deploying the project to Heroku.
+* Setting up and using *AmazonS3* for hosting the static and media files.
+
 ## Credits
 ### Code
 * Credit to [Code Institute's](https://codeinstitute.net/) Boutique Ado walkthrough, from which this project got its start.
 * Credit to [Very Academy YouTube Channel](https://www.youtube.com/c/veryacademy) for the very detailed insights on database models.
 * Credit to [Joy Zadan's 'Shop K-Beauty'](https://github.com/JoyZadan/shop-kbeauty/tree/main). Her e-commerce gave me some help with the 'Favourites' app and the structure of my README.md.
-* Credit to [Rachael Furlong's 'Nutritionist'](https://github.com/RachelFurlong-dev/nutritionist-m4/tree/main). Her e-commerce gave me some help with the 'Options' element- thinking creatively about how to have options without creating issues with price!.
+* Credit to [Rachael Furlong's 'Nutritionist'](https://github.com/RachelFurlong-dev/nutritionist-m4/tree/main). Her e-commerce gave me some help with the 'Newsletter' subscribe app and how to tackle the 'Options' element- thinking creatively about how to have options without creating issues with price!.
 * Credit to [The Django Project- Documentation](https://docs.djangoproject.com/en/5.1/). This was used numerous times throughout the project to fix errors or enhance functionality.
+* Credit to [Page Speed Checklist *.com*](https://pagespeedchecklist.com/). This was used numerous times throughout the project to fix errors or enhance functionality particularly around 'Performance' and 'Best Practices' in relation to Lighthouse testing.
 * Credit to [Coders Camp](https://www.thecoderscamp.com/) who had a number of articles about migrating and databases which helped me with some errors along the way.
 * Credit to the gang at tutor Support- Thomas, Roman and Osin who have the patience of saints and have helped with a number of niggles including dependency related issues and lost environment variables.
 
 
 ### Content
 
--   Product names were made up by the developer. I used chatgpt to author 'Product Descriptions' for all products.
+-   Product names were made up by the developer. I used chatgpt to author 'Product Descriptions' for all products and a generic 'Stripe Cookies' Policy.
 
 -   [Lucid Chart](https://www.lucidchart.com/pages/) Was used to create the Entity Relationship Daigram and the Screen Shots in my User Stories and Features testing.
 
@@ -540,10 +528,10 @@ The **Reviews App** adds a layer of community interaction to the **Keep It Sweet
 
 ### Acknowledgements
 
--   My Mentor Excellence Illesami for continuous helpful feedback.
-
--   All the gang at  at Code Institute Tutor Support for help with coding errors.
+-   All the gang at  at Code Institute Tutor Support for help with errors.
 
 -   Rachel Furlong @EKC group for her guidance and support throughout the project.
+
+-   My Mentor Excellence Illesami for helpful feedback.
 
 -   My partner Roman Taylor. He has supported me throughout the course, allowing me to focus, offering feedback and picking me up when I've felt less than resilliant. 
