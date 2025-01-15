@@ -338,6 +338,9 @@ With regards to the 'Best Practices' scoring, issues center on the use of cookie
 | 62 |  Register New Users: Context- Successful Registration- email Confirm/Verify | Users revieve an email with a link to verify their details, this navigates them to the site to verify, finally recieving confirmation of verified details. | As Expected | Pass | [62 Results](./docs/testing/full-feature/feature-test-62.png) |
 | **Sign In** |  |  |  |  |  |
 | 63 |  Login | Registered users are able to login in to the site and their successful sign in be evident. | As Expected | Pass | [63 Results](./docs/testing/full-feature/feature-test-63.png) |
+| **Product Options** |  |  |  |  |  |
+| 64 |  Product Options | All users able to access view a range of products which have the options of being varied for different dietary requirements. | As Expected | Pass | [64 Results](./docs/testing/full-feature/feature-test-64.png) |
+| 65 |  Product Options | From the range of 'Special Diet' products, users are able to choose between 'NO LACTOSE, PLANT BASED, LOW SUGAR options. These choices are reflected in the 'Bag' and 'Checkout' sections of the site. | As Expected | Pass | [65 Results](./docs/testing/full-feature/feature-test-65.png) |
 
 
 ## Responsivity Testing
