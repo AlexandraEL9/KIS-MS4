@@ -1,10 +1,10 @@
 # **Keep it Sweet Testing Results**
 
-![amiresponsive mock-ups of Keep it Sweet!](./docs/.png)
+![amiresponsive mock-ups of Keep it Sweet!](./docs/mockup-1.png)
 
 <br/>
 
-**[Link to the Deployed Site](#)**
+**[Link to the Deployed Site](https://keep-it-sweet-2ecaa2229785.herokuapp.com/)**
 
 ---
 ## TABLE OF CONTENTS
@@ -167,7 +167,7 @@ I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint m
 During the first round of testing I saw some disappointing scores for 'Performance' and 'Best Practices'. <br> <br  >
 For the purposes of this project, I focused on getting the scores for 'Accessibility' and 'Best Practices' as high as possible as those scores are within the remit and scope of the course. I did many rounds of research and testing to get these scores as high as possible. The details of these fixes can be found in the 'Fixed Bugs' section of this testing file. <br   >
 With regards to 'Performance', A further step I hope to make in the future would be to upgrade images to 'next gen' formats like AVIF or Webp. I believe this would make a big step in bettering the performance. <br> <br  >
-With regards to the 'Best Practices' scoring, issues center on the use of cookies by 'Stripe'. Stripe is integral to the working of this project. Example of evidence of this:['bag.html- dev tools- lighthouse screenshot'](/docs/testing/lighthouse-testing/bag-lighthouse-screenshot.png) I have found a fix for this issue- details of which can be found in the 'Bug Fixes' section, which put the Stripe script within a conditional block to ensure it only runs on the 'checkout' pages it is needed on. This has inproved scores accross the site.
+With regards to the 'Best Practices' scoring, issues center on the use of cookies by 'Stripe'. Stripe is integral to the working of this project. Example of evidence of this:['bag.html- dev tools- lighthouse screenshot'](/docs/testing/lighthouse-testing/bag-lighthouse-screenshot.png) I have found a fix for this issue- details of which can be found in the 'Bug Fixes' section, which put the Stripe script within a conditional block to ensure it only runs on the 'checkout' pages it is needed on. This has improved scores accross the site.
 
 
 #### Desktop
@@ -291,53 +291,53 @@ With regards to the 'Best Practices' scoring, issues center on the use of cookie
 | 22 | Submit button |  Success message when correct form submitted   | As Expected | Pass | [22 Results](./docs/testing/full-feature/feature-test-22.png)   |
 | 23 | Record Stored |  Subscription appears in admin panel   | As Expected | Pass | [Blank form](./docs/testing/full-feature/feature-test-23.png)   |
 | **Bag** |  |  |  |  |   |
-| 24 | Bag page displays prices |  Price, Subtotal, Bag total, Delivery, Grand Total listed accurately | As Expected | [24 Results](./docs/testing/full-feature/feature-test-24.png) |
-| 25 | Bag page displays message if total under free delivery rate |  Message evident with clear signposting as to how much more to spend to qualify for free delivery. | As Expected | [25 Results](./docs/testing/full-feature/feature-test-25.png) |
-| 26 | Bag page displays quantity of products required |  Current quantity amount evident. | As Expected | [26 Results](./docs/testing/full-feature/feature-test-26.png) |
-| 27 | Bag quantity adjustment |  Users can increase or decrease product quantities. | As Expected | [27 Results](./docs/testing/full-feature/feature-test-27.png) |
+| 24 | Bag page displays prices |  Price, Subtotal, Bag total, Delivery, Grand Total listed accurately | As Expected | Pass | [24 Results](./docs/testing/full-feature/feature-test-24.png) |
+| 25 | Bag page displays message if total under free delivery rate |  Message evident with clear signposting as to how much more to spend to qualify for free delivery. | As Expected | Pass | [25 Results](./docs/testing/full-feature/feature-test-25.png) |
+| 26 | Bag page displays quantity of products required |  Current quantity amount evident. | As Expected | Pass | [26 Results](./docs/testing/full-feature/feature-test-26.png) |
+| 27 | Bag quantity adjustment |  Users can increase or decrease product quantities. | As Expected | Pass | [27 Results](./docs/testing/full-feature/feature-test-27.png) |
 | 28 | Bag product removal |  Users can remove a product from the bag | As Expected | [28 Results](./docs/testing/full-feature/feature-test-28.png) |
-| 29 | Bag page shows product options |  Product options selected by user, displayed on relevant products | As Expected | [29 Results](./docs/testing/full-feature/feature-test-29.png)  |
-| 30 | Secure checkout button |  Secure checkout button navigates user to checkout page | As Expected | N/A |
-| 31 | Keep shopping button |  Keep shopping button navigates user to products page | As Expected | N/A |
-| 32 | Empty Bag |  Bag page is rendered even with no products in it. | As Expected | [32 Results](./docs/testing/full-feature/feature-test-32.png) |
+| 29 | Bag page shows product options |  Product options selected by user, displayed on relevant products | As Expected | Pass  | [29 Results](./docs/testing/full-feature/feature-test-29.png) |
+| 30 | Secure checkout button |  Secure checkout button navigates user to checkout page | As Expected | Pass | N/A |
+| 31 | Keep shopping button |  Keep shopping button navigates user to products page | As Expected | Pass | N/A |
+| 32 | Empty Bag |  Bag page is rendered even with no products in it. | As Expected | Pass | [32 Results](./docs/testing/full-feature/feature-test-32.png) |
 | **Favourites App** |  |  |  |  |   |
-| 33 | No logged in user. |  Users not logged in can browse site, but, should not be able to add favourites. | As Expected | [33 Results](./docs/testing/full-feature/feature-test-33.png) |
-| 34 | Add products to Favourites: Logged in user. |   Registered, logged in users able to add products to a favourites list. | As Expected | [34 Results](./docs/testing/full-feature/feature-test-34.png) |
-| 35 | View Favourites list |   Registered, logged in users able to view their favourites list. | As Expected | [35 Results](./docs/testing/full-feature/feature-test-35.png) |
-| 36 | Remove from Favourites list |   Registered, logged in users able to delete products from their favourites list. | As Expected | [36 Results](./docs/testing/full-feature/feature-test-36.png) |
-| 37 | View empty favourites list |   Registered, logged in users able to access an empty list page. | As Expected | [37 Results](./docs/testing/full-feature/feature-test-37.png) |
+| 33 | No logged in user. |  Users not logged in can browse site, but, should not be able to add favourites. | As Expected | Pass | [33 Results](./docs/testing/full-feature/feature-test-33.png) |
+| 34 | Add products to Favourites: Logged in user. |   Registered, logged in users able to add products to a favourites list. | As Expected | Pass | [34 Results](./docs/testing/full-feature/feature-test-34.png) |
+| 35 | View Favourites list |   Registered, logged in users able to view their favourites list. | As Expected | Pass | [35 Results](./docs/testing/full-feature/feature-test-35.png) |
+| 36 | Remove from Favourites list |   Registered, logged in users able to delete products from their favourites list. | As Expected | Pass | [36 Results](./docs/testing/full-feature/feature-test-36.png) |
+| 37 | View empty favourites list |   Registered, logged in users able to access an empty list page. | As Expected | Pass | [37 Results](./docs/testing/full-feature/feature-test-37.png) |
 | **Reviews App** |  |  |  |  |   |
-| 38 | View Reviews- No review- All users. |  All users, both logged in and not, users should be able to view a page with no reviews for a product. | As Expected | [38 Results](./docs/testing/full-feature/feature-test-38.png) |
-| 39 | View Reviews-All users. |  All users, both logged in and not, should be able to view reviews for a product. | As Expected | [39 Results](./docs/testing/full-feature/feature-test-39.png) |
-| 40 | Add Review. |  Users able to add reviews for a product. | As Expected | [40 Results](./docs/testing/full-feature/feature-test-40.png) |
-| 41 | Edit Review: (Context: Not the user's review) |  Users should not be able to edit or delete other user's reviews. No buttons to Edit or Delete review. | As Expected | [41 Results](./docs/testing/full-feature/feature-test-41.png) |
-| 42 | Edit Review: (Context: User CAN edit own review) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | [42 Results](./docs/testing/full-feature/feature-test-42.png) |
-| 43 | Delete Review (Context: User CAN'T delete reviews which are not their own) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | [43 Results](./docs/testing/full-feature/feature-test-41.png) |
-| 44 | Delete Review: (Context: User CAN delete own review) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | [44 Results](./docs/testing/full-feature/feature-test-44.png) |
+| 38 | View Reviews- No review- All users. |  All users, both logged in and not, users should be able to view a page with no reviews for a product. | As Expected | Pass | [38 Results](./docs/testing/full-feature/feature-test-38.png) |
+| 39 | View Reviews-All users. |  All users, both logged in and not, should be able to view reviews for a product. | As Expected | Pass | [39 Results](./docs/testing/full-feature/feature-test-39.png) |
+| 40 | Add Review. |  Users able to add reviews for a product. | As Expected | Pass | [40 Results](./docs/testing/full-feature/feature-test-40.png) |
+| 41 | Edit Review: (Context: Not the user's review) |  Users should not be able to edit or delete other user's reviews. No buttons to Edit or Delete review. | As Expected | Pass | [41 Results](./docs/testing/full-feature/feature-test-41.png) |
+| 42 | Edit Review: (Context: User CAN edit own review) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | Pass | [42 Results](./docs/testing/full-feature/feature-test-42.png) |
+| 43 | Delete Review (Context: User CAN'T delete reviews which are not their own) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | Pass | [43 Results](./docs/testing/full-feature/feature-test-41.png) |
+| 44 | Delete Review: (Context: User CAN delete own review) |  Users should be able to edit or delete their reviews. Reviews have buttons for Edit and Delete. | As Expected | Pass | [44 Results](./docs/testing/full-feature/feature-test-44.png) |
 | **CHECKOUT & PAYMENT** |  |  |  |  |  |
-| 45 | Checkout Form: (Form Validation- incomplete form) |  Form should not submit if mandatory fields are not populated. | As Expected | [45 Results](./docs/testing/full-feature/feature-test-45.png) |
-| 46 | Adjust bag link|  User is taken back to bag page | As Expected | N/A |
-| 47 | Payment Success- user feedback|  After pressing 'Complete Order' and a successful payment, the user is given in page feedback that the order has been submitted in the form of a 'Thank You' page with all order details and a 'Success' toast message. | As Expected | [47 Results](./docs/testing/full-feature/feature-test-47.png) |
-| 48 | Completed order can be viewed in profile section|  Order information is listed on Checkout Success page and information provided to user that a confirmation email has been sent to their email account | As Expected | [48 Results](./docs/testing/full-feature/feature-test-48.png) |
-| 49 | Confirmation email works correctly| Confirmation email has been received and contains correct information | As Expected | [49 Results](./docs/testing/full-feature/feature-test-49.png) |
-| 50 | Order history is correct| The order can be seen in Order History on user profile page | As Expected | [50 Results](./docs/testing/full-feature/feature-test-48.png) |
-| 51 | Test link to order detail on Profile Page| Link takes user to order detail on Order History page in User Profile | As Expected | [51 Results](./docs/testing/full-feature/feature-test-51.png) |
+| 45 | Checkout Form: (Form Validation- incomplete form) |  Form should not submit if mandatory fields are not populated. | As Expected | Pass | [45 Results](./docs/testing/full-feature/feature-test-45.png) |
+| 46 | Adjust bag link|  User is taken back to bag page | As Expected | Pass | N/A |
+| 47 | Payment Success- user feedback|  After pressing 'Complete Order' and a successful payment, the user is given in page feedback that the order has been submitted in the form of a 'Thank You' page with all order details and a 'Success' toast message. | As Expected | Pass | [47 Results](./docs/testing/full-feature/feature-test-47.png) |
+| 48 | Completed order can be viewed in profile section|  Order information is listed on Checkout Success page and information provided to user that a confirmation email has been sent to their email account | As Expected | Pass | [48 Results](./docs/testing/full-feature/feature-test-48.png) |
+| 49 | Confirmation email works correctly| Confirmation email has been received and contains correct information | As Expected | Pass | [49 Results](./docs/testing/full-feature/feature-test-49.png) |
+| 50 | Order history is correct| The order can be seen in Order History on user profile page | As Expected | Pass | [50 Results](./docs/testing/full-feature/feature-test-48.png) |
+| 51 | Test link to order detail on Profile Page| Link takes user to order detail on Order History page in User Profile | As Expected | Pass | [51 Results](./docs/testing/full-feature/feature-test-51.png) |
 | **Products** |  |  |  |  |  |
-| 52 | View Products- Non logged in user | Non logged in users are able to view product details but have no options to 'Add to Favourites' or edit/ delete products details. | [52 Results](./docs/testing/full-feature/feature-test-52.png) |
-| 53 | View Products- logged in user- Customer | Customers are able to view product details and have the option to 'Add to Favourites' or but have no options toedit/ delete products details. | [53 Results](./docs/testing/full-feature/feature-test-53.png) |
-| 54 | View Products- logged in user- Staff/ superuser | Staff. admin are able to view product details and have the option to 'Add to Favourites' and to edit/ delete products details. | [54 Results](./docs/testing/full-feature/feature-test-54.png) |
-| 55 | CRUD- Add Products- Non logged in user | Non logged in users are not able to access 'Product Management' options which are accessed through the 'My Accounts' menu option. Options should only be 'Register' or 'Login'. | [55 Results](./docs/testing/full-feature/feature-test-55.png) |
-| 56 | View Products- logged in user- Customer | Customers are not able to access 'Product Management' options which are accessed through the 'My Accounts' menu option. Options should only be 'My Profile', 'Favourites' and 'Logout'. | [56 Results](./docs/testing/full-feature/feature-test-56.png) |
-| 57 | CRUD- Add Products- logged in user- Staff/ superuser | Staff/admin are able to access the 'Product Management' option found in 'My Accounts' | [57 Results](./docs/testing/full-feature/feature-test-57.png) |
-| 58 | CRUD- Add Products- logged in user- Staff/ superuser | Staff/admin are able to access the Product Management pages and use the form to add products to the database/ site. | [58 Results](./docs/testing/full-feature/feature-test-58.png) |
-| 59 | CRUD- Edit Products- logged in user- Staff/ superuser | Staff/admin are able to access the Product Management pages and use the form to add products to the database/ site. | [59 Results](./docs/testing/full-feature/feature-test-59.png) |
-| 60 | CRUD- Delete Products- logged in user- Staff/ superuser | Staff/admin are able to delete products to the database/ site. | [60 Results](./docs/testing/full-feature/feature-test-60.png) |
+| 52 | View Products- Non logged in user | Non logged in users are able to view product details but have no options to 'Add to Favourites' or edit/ delete products details. | As Expected | Pass | [52 Results](./docs/testing/full-feature/feature-test-52.png) |
+| 53 | View Products- logged in user- Customer | Customers are able to view product details and have the option to 'Add to Favourites' or but have no options toedit/ delete products details. | As Expected | Pass | [53 Results](./docs/testing/full-feature/feature-test-53.png) |
+| 54 | View Products- logged in user- Staff/ superuser | Staff. admin are able to view product details and have the option to 'Add to Favourites' and to edit/ delete products details. | As Expected | Pass | [54 Results](./docs/testing/full-feature/feature-test-54.png) |
+| 55 | CRUD- Add Products- Non logged in user | Non logged in users are not able to access 'Product Management' options which are accessed through the 'My Accounts' menu option. Options should only be 'Register' or 'Login'. | As Expected | Pass | [55 Results](./docs/testing/full-feature/feature-test-55.png) |
+| 56 | View Products- logged in user- Customer | Customers are not able to access 'Product Management' options which are accessed through the 'My Accounts' menu option. Options should only be 'My Profile', 'Favourites' and 'Logout'. | As Expected | Pass | [56 Results](./docs/testing/full-feature/feature-test-56.png) |
+| 57 | CRUD- Add Products- logged in user- Staff/ superuser | Staff/admin are able to access the 'Product Management' option found in 'My Accounts' | As Expected | Pass | [57 Results](./docs/testing/full-feature/feature-test-57.png) |
+| 58 | CRUD- Add Products- logged in user- Staff/ superuser | Staff/admin are able to access the Product Management pages and use the form to add products to the database/ site. | As Expected | Pass | [58 Results](./docs/testing/full-feature/feature-test-58.png) |
+| 59 | CRUD- Edit Products- logged in user- Staff/ superuser | Staff/admin are able to access the Product Management pages and use the form to add products to the database/ site. | As Expected | Pass | [59 Results](./docs/testing/full-feature/feature-test-59.png) |
+| 60 | CRUD- Delete Products- logged in user- Staff/ superuser | Staff/admin are able to delete products to the database/ site. | As Expected | Pass | [60 Results](./docs/testing/full-feature/feature-test-60.png) |
 | **Register** |  |  |  |  |  |
-| 60 |  Register New Users: Context- incorrect form submission. | Form does not submit if mandatory information not entered or entered incorrectly | [60 No Email](./docs/testing/full-feature/feature-test-60-no-email.png), [60 No Username](./docs/testing/full-feature/feature-test-60-no-username.png), [60 Mismatch Passwords](./docs/testing/full-feature/feature-test-60-password-mismatch.png) | 
-| 61 |  Register New Users: Context- Successful Registration. | on successful form submission user is alerted to email sent for verification | [61 Results](./docs/testing/full-feature/feature-test-61.png) |
-| 62 |  Register New Users: Context- Successful Registration- email Confirm/Verify | Users revieve an email with a link to verify their details, this navigates them to the site to verify, finally recieving confirmation of verified details. | [62 Results](./docs/testing/full-feature/feature-test-62.png) |
+| 60 |  Register New Users: Context- incorrect form submission. | Form does not submit if mandatory information not entered or entered incorrectly | As Expected | Pass | [60 No Email](./docs/testing/full-feature/feature-test-60-no-email.png), [60 No Username](./docs/testing/full-feature/feature-test-60-no-username.png), [60 Mismatch Passwords](./docs/testing/full-feature/feature-test-60-password-mismatch.png) | 
+| 61 |  Register New Users: Context- Successful Registration. | on successful form submission user is alerted to email sent for verification | As Expected | Pass | [61 Results](./docs/testing/full-feature/feature-test-61.png) |
+| 62 |  Register New Users: Context- Successful Registration- email Confirm/Verify | Users revieve an email with a link to verify their details, this navigates them to the site to verify, finally recieving confirmation of verified details. | As Expected | Pass | [62 Results](./docs/testing/full-feature/feature-test-62.png) |
 | **Sign In** |  |  |  |  |  |
-| 63 |  Login | Registered users are able to login in to the site and their successful sign in be evident. | [63 Results](./docs/testing/full-feature/feature-test-63.png) |
+| 63 |  Login | Registered users are able to login in to the site and their successful sign in be evident. | As Expected | Pass | [63 Results](./docs/testing/full-feature/feature-test-63.png) |
 
 
 
