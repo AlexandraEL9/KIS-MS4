@@ -270,7 +270,6 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 - **Hero Image and Strapline**: A vibrant hero image and a main strapline welcome users to Keep It Sweet, showcasing the brand's fun and joyful identity. Special offers or promotions are highlighted here. 
 
 - **Footer**: Includes links to Keep It Sweet’s social media profiles, such as Instagram and Facebook, as well as an email link, along with a copyright statement. There is currently a link to a 'Privacy Policy'. Future updates will expand the footer to include links to all pages, terms and conditions.
-![Screenshot of Main Navigation](./docs/footer.png)
 
 #### Product App
 - **Product Display**: Users can browse a wide selection of sweets, each displayed with an image, name, price, and star rating. Products are grouped into clear categories, such as "Hard," "Chewy," and "Chocolate," making it easy to find specific treats.
@@ -498,7 +497,7 @@ Please refer to the [TESTING.md](./TESTING.md) file for full testing and results
 * Known Bugs.
 
 ## Deployment
-Please refer to th3[DEPLOYMENT.md](./DEPLOYMENT.md) file for a full description and process for:
+Please refer to the [DEPLOYMENT.md](./DEPLOYMENT.md) file for a full description and process for:
 * Creating a production database, ready for deployment.
 * Deploying the project to Heroku.
 * Setting up and using *AmazonS3* for hosting the static and media files.
