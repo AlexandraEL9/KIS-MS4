@@ -1,9 +1,21 @@
-{% extends "base.html" %} {% load static %} {% load bag_tools %} {% block extra_css %}
-<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}"> {% endblock %} {% block page_header %} <div class="container header-container">
+{% extends "base.html" %} 
+{% load static %} 
+{% load bag_tools %} 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}"> 
+{% endblock %} 
+
+{% block page_header %} 
+<div class="container header-container">
   <div class="row">
     <div class="col"></div>
   </div>
-</div> {% endblock %} {% block content %} <div class="overlay"></div>
+</div> 
+{% endblock %} 
+
+{% block content %} 
+<div class="overlay"></div>
+<!--Checkout Page Specific Content-->
 <div class="container">
   <div class="row">
     <div class="col">
@@ -22,7 +34,9 @@
         <div class="col-3 text-right">
           <p class="mb-1 mt-0 small text-muted">Subtotal</p>
         </div>
-      </div> {% for item in bag_items %} <div class="row">
+      </div> 
+      {% for item in bag_items %} 
+      <div class="row">
         <div class="col-2 mb-1">
           <a href="{% url 'product_detail' item.product.id %}">
             {% if item.product.image %}
@@ -30,8 +44,7 @@
             {% else %}
                 <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" loading="lazy">
             {% endif %}
-          </a> 
-              
+          </a>           
         </div>
         <div class="col-7">
           <p class="my-0">
@@ -43,7 +56,8 @@
         <div class="col-3 text-right">
           <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
         </div>
-      </div> {% endfor %}
+      </div> 
+      {% endfor %}
       <hr class="my-0">
       <div class="row text-black text-right">
         <div class="col-7 offset-2">
@@ -60,6 +74,7 @@
         </div>
       </div>
     </div>
+    <!--Checkout Form-->
     <div class="col-12 col-lg-6">
       <p class="text-muted">Please fill out the form below to complete your order</p>
       <form action="{% url 'checkout' %}" method="POST" id="payment-form"> {% csrf_token %} <fieldset class="rounded px-3 mb-5">
@@ -94,6 +109,7 @@
           <!-- Pass the client secret to the view so we can get the payment intent id -->
           <input type="hidden" value="{{ client_secret }}" name="client_secret">
         </fieldset>
+        <!--Buttons to Submit etc-->
         <div class="submit-button text-right mt-5 mb-2">
           <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded-0">
             <span class="icon">
@@ -125,7 +141,11 @@
         <i class="fas fa-3x fa-sync-alt fa-spin"></i>
     </span>
   </div>  
-</div> {% endblock %} {% block postloadjs %} {{ block.super }}
+</div> 
+{% endblock %} 
+{% block postloadjs %} 
+{{ block.super }}
 {{ stripe_public_key|json_script:"id_stripe_public_key" }}
 {{ client_secret|json_script:"id_client_secret" }}
-<script src="{% static 'checkout/js/stripe_elements.js' %}"></script> {% endblock %}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script> 
+{% endblock %}

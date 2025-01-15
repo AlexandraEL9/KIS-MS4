@@ -55,6 +55,7 @@
               </div>
             </form>
           </div>
+          <!--My Account and Bag-->
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <ul class="list-inline list-unstyled text-center text-lg-right my-0">
               <li class="list-inline-item dropdown">
@@ -86,6 +87,7 @@
             </ul>
           </div>
         </div>
+        <!--Toggler-->
         <div class="row bg-white">
           <nav class="navbar navbar-expand-lg navbar-light w-100" aria-label="Main navigation">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,13 +97,14 @@
             {% include 'includes/main-nav.html' %}
           </nav>
         </div>
+        <!--Delivery Banner-->
         <div id="delivery-banner" class="row text-center mb-5">
           <div class="col">
             <h2 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h2>
           </div>
         </div>
       </header>
-
+      <!--Toast Messages-->
       {% if messages %}
       <div class="message-container">
         {% for message in messages %}
@@ -120,20 +123,28 @@
       </div>
       {% endif %}
 
-      {% block page_header %}{% endblock %}
-      <main class="flex-fill">{% block content %}{% endblock %}</main>
+      {% block page_header %}
+      {% endblock %}
+      <!--Main- Page Specific Content-->
+      <main class="flex-fill">
+        {% block content %}
+        {% endblock %}
+      </main>
+      <!--Footer-->
       <footer class="footer bg-black text-white py-4 mt-5">
         {% include 'includes/footer.html' %}
       </footer>
     </div>
-
+    <!--JavaScript and jQuery-->
     {% block postloadjs %}
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script>
+      //Toast 
       $('.toast').toast('show');
     </script>
+    <!--Only run Stripe on Checkout Pages-->
     {% if request.resolver_match.url_name == "checkout" %}
     <script src="https://js.stripe.com/v3/"></script>
     {% endif %}
