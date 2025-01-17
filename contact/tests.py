@@ -9,4 +9,4 @@ class ContactModelTests(TestCase):
             email="test@example.com",
             message="This is a test."
         )
-        self.assertEqual(str(messge), "Message from Test User - test@example.com")
+        self.assertEqual(str(message), "Message from Test User - test@example.com")
