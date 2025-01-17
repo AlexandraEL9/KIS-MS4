@@ -130,6 +130,9 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
+# lines 136-143 adapted from learning
+# from django docs, sqldocs and implemented
+# with the help of chatgpt
 import sys
 if 'test' in sys.argv:
     DATABASES = {
