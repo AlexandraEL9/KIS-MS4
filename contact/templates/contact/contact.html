@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <!-- Header Section -->
+    <div class="row">
+        <div class="col text-center mt-3 mx-5">
+            <hr>
+            <h2 class="logo-font mb-4">Contact the Team at Keep it Sweet</h2>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="row">
+        <div class="col my-4">
+            <div class="card">
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn btn-dark text-uppercase" type="submit">Send Message!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
