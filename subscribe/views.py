@@ -17,4 +17,3 @@ def subscribe(request):
         'subscribe_form': form,
     }
     return render(request, 'subscribe/subscribe.html', context)
-  

@@ -509,6 +509,7 @@ Please refer to the [DEPLOYMENT.md](./DEPLOYMENT.md) file for a full description
 * Credit to [Joy Zadan's 'Shop K-Beauty'](https://github.com/JoyZadan/shop-kbeauty/tree/main). Her e-commerce gave me some help with the 'Favourites' app and the structure of my README.md.
 * Credit to [Rachael Furlong's 'Nutritionist'](https://github.com/RachelFurlong-dev/nutritionist-m4/tree/main). Her e-commerce gave me some help with the 'Newsletter' subscribe app and how to tackle the 'Options' element- thinking creatively about how to have options without creating issues with price!.
 * Credit to [The Django Project- Documentation](https://docs.djangoproject.com/en/5.1/). This was used numerous times throughout the project to fix errors or enhance functionality.
+* Credit to [sqldocs.org- The Complete SQL Documentation](https://sqldocs.org/). This was used during the development of the contact app to find a way to test the database.
 * Credit to [Page Speed Checklist *.com*](https://pagespeedchecklist.com/). This was used numerous times throughout the project to fix errors or enhance functionality particularly around 'Performance' and 'Best Practices' in relation to Lighthouse testing.
 * Credit to [Coders Camp](https://www.thecoderscamp.com/) who had a number of articles about migrating and databases which helped me with some errors along the way.
 * Credit to the gang at tutor Support- Thomas, Roman and Osin who have the patience of saints and have helped with a number of niggles including dependency related issues and lost environment variables.

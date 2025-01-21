@@ -486,20 +486,43 @@ a:hover, a:focus {
 }
 
 /* Toasts */
+.toast-capper {
+  height: 2px;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  position: absolute;
+  top: -8px;
+  left: 20px;
+}
+
+.arrow-info {
+  border-bottom: 8px solid #17a2b8; /* Info color */
+}
+
+.arrow-danger {
+  border-bottom: 8px solid #dc3545; /* Error color */
+}
+
+.arrow-success {
+  border-bottom: 8px solid #28a745; /* Success color */
+}
+
+.arrow-warning {
+  border-bottom: 8px solid #ffc107; /* Warning color */
+}
+
 .message-container {
   position: fixed;
   top: 72px;
   right: 15px;
-  z-index: 99999999999;
+  z-index: 9999;
 }
 
-.custom-toast {
-  overflow: visible;
-}
-
-.toast-capper {
-  height: 2px;
-}
 
 /* General Overlay */
 .overlay {
