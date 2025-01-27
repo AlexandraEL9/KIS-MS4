@@ -17,6 +17,10 @@
         <div class="col-12 col-md-6 text-center">
             <h2 class="logo-font mb-4 mt-5">Reviews</h2>
             <h3>Here's what people think of {{ product.name }}</h3>
+             <!-- Add Review Button -->
+            <div class="text-center mt-4">
+                <a href="{% url 'add_review' product.id %}" class="btn btn-primary add-review-btn">Add Review</a>
+            </div>
         </div>
         <div class="col-12 col-md-6 text-center mt-2">
             <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid rounded shadow-sm" style="max-height: 250px;" loading="lazy">
@@ -25,29 +29,33 @@
 
     <!-- Reviews Section -->
     {% if reviews %}
-    <div class="mt-4">
-        {% for review in reviews %}
-        <div class="card my-3">
-            <div class="card-body">
-                <h5 class="card-title">{{ review.title }}</h5>
-                <h6 class="card-subtitle mb-2">Rating: {{ review.rating }}/5</h6>
-                <p class="card-text review-content">{{ review.content }}</p>
-                {% if review.user == request.user %}
-                <div class="d-flex justify-content-between">
-                    <a href="{% url 'edit_review' review.id %}" class="btn btn-edit">Edit</a>
-                    <button class="btn btn-delete" data-toggle="modal" data-target="#confirmDeleteModal" 
-                        data-form-action="{% url 'delete_review' review.id %}" 
-                        data-review-title="{{ review.title }}" 
-                        data-review-content="{{ review.content }}" 
-                        data-review-rating="{{ review.rating }}" 
-                        data-product-name="{{ product.name }}">
-                        Delete
-                    </button>
-                </div>                
-                {% endif %}
+    <div class="container mt-4">
+        <div class="row">
+            {% for review in reviews %}
+            <div class="col-12 col-md-6"> <!-- 12 columns on mobile, 6 columns (2 items per row) on tablet and larger -->
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ review.title }}</h5>
+                        <h6 class="card-subtitle mb-2">Rating: {{ review.rating }}/5</h6>
+                        <p class="card-text review-content">{{ review.content }}</p>
+                        {% if review.user == request.user %}
+                        <div class="d-flex justify-content-between">
+                            <a href="{% url 'edit_review' review.id %}" class="btn btn-edit">Edit</a>
+                            <button class="btn btn-delete" data-toggle="modal" data-target="#confirmDeleteModal" 
+                                data-form-action="{% url 'delete_review' review.id %}" 
+                                data-review-title="{{ review.title }}" 
+                                data-review-content="{{ review.content }}" 
+                                data-review-rating="{{ review.rating }}" 
+                                data-product-name="{{ product.name }}">
+                                Delete
+                            </button>
+                        </div>                
+                        {% endif %}
+                    </div>
+                </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
     {% else %}
     <div class="mt-4">
@@ -55,11 +63,6 @@
     </div>
     {% endif %}
 
-    <!-- Add Review Button -->
-    <div class="text-center mt-4">
-        <a href="{% url 'add_review' product.id %}" class="btn btn-primary add-review-btn">Add Review</a>
-    </div>
-</div>
 
 <!-- Delete Confirmation Modal -->
 <div class="modal fade" id="confirmDeleteModal" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
