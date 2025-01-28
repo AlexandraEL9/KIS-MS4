@@ -87,6 +87,11 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
 | **USER FAVOURITES LIST** |   |   |
 | 31 | Returning/ frequent user | Add favourite products to a 'Faves -list' | Access quickly in the future for speedier purchase |
 | 32 | Returning/ frequent user | Remove favourite products to a 'Faves -list' | Keep products I really like and personalise my list to my own tastes |
+| **Customer Contact App** |   |   |
+| 33 | Customer | Contact the store via a form | Easily ask questions or get support without needing to call. |
+| 34 | Customer | Receive a confirmation that my message was sent | Ensure my query has been received and will be responded to. |
+| 35 | Customer | Provide my name, email, and message in the form | Ensure my message is personalized and that I receive a response. |
+| 36 | Store Owner | Receive customer inquiries through the contact form | Provide customer support and answer any queries. |
 
 ---
 
@@ -220,7 +225,7 @@ The wireframes were created using [Balsamiq](https://balsamiq.cloud/).
 ### Entity Relationship Diagram
 As illustrated in the ERD, each model corresponds to a database table, and each field corresponds to a column in that table.
 
-<img src="./docs/erd.png">
+<img src="./docs/erd-updated.png">
 
 ## Models
 ### Table Description and Relationships
@@ -245,7 +250,8 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 |                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
 | **Favourite**           | Allows users to mark products as favourites.                                | - **Many-to-One** with `User` (foreign key: `user_id`).                                                   |
 |                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
-| **Newsletter Subscriber** | Stores email subscriptions for newsletters, including date of subscription. | - Optionally can be **linked** to a `User` for registered users (if a user is specified).                 |
+| **Newsletter Subscriber** | Stores email subscriptions for newsletters, including date of subscription. | - No direct relationships (can be submitted by both registered and unregistered users).   |
+| **ContactMessage** | Stores user-submitted messages from the contact form. | - No direct relationships (can be submitted by both registered and unregistered users).                 |
 
 
 ## Features
