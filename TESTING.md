@@ -120,6 +120,12 @@ I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint m
 | keep_it_sweet/wsgi.py | All clear, no errors found | [keep_it_sweet.wsgi.py validation](./docs/testing/python-linter/kis-wsgi.png) |
 | keep_it_sweet/urls.py | All clear, no errors found | [keep_it_sweet.urls.py validation](./docs/testing/python-linter/kis-urls.png) |
 | keep_it_sweet/settings.py | All clear, no errors found | [keep_it_sweet.settings.py validation](./docs/testing/python-linter/kis-settings.png) |
+| **Bag app** |  |  |
+| bag/views.py | All clear, no errors found | [bag.views.py validation](./docs/testing/python-linter/bag-views-updated.png) |
+| bag/urls.py | All clear, no errors found | [bag.urls.py validation](./docs/testing/python-linter/bag-urls.png) |
+| bag/contexts.py | All clear, no errors found | [bag.contexts.py validation](./docs/testing/python-linter/bag-contexts.png) |
+| bag/apps.py | All clear, no errors found | [bag.apps.py validation](./docs/testing/python-linter/bag-apps.png) |
+| bag/templatetags/bag_tools.py | All clear, no errors found | [bag.bag_tools.py validation](./docs/testing/python-linter/bag-bag-tools.png) |
 | **Checkout app** |  |  |
 | checkout/webhooks.py | All clear, no errors found | [checkout/webhooks.py validation](./docs/testing/python-linter/checkout-webhooks.png) |
 | checkout/webhook_handler.py | All clear, no errors found | [checkout/webhook_handler.py validation](./docs/testing/python-linter/checkout-webhook-handler.png) |
@@ -180,7 +186,6 @@ I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint m
 | contact/admin.py | All clear, no errors found | [contact.admin.py validation](./docs/testing/python-linter/contact-admin.png) |
 
 
-
 ### Lighthouse Report
 [Chrome DevTools' Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to test the performance, accessibility, best practices and SEO of the site.
 
@@ -209,6 +214,7 @@ With regards to the 'Best Practices' scoring, issues center on the use of cookie
 | ['Current profile.html'](/docs/testing/lighthouse-testing/profile-desktop-3.png) | 74 | 100 | 100 | 90 | All scores above 90%, with the exception of 'Performance' (see above).S Initial scores here: ['profile.html'](/docs/testing/lighthouse-testing/profile-desktop.png)  |
 | ['Current product_reviews.html'](/docs/testing/lighthouse-testing/product-reviews-desktop-3.png) | 40 | 98 | 100 | 91 |  All scores above 90%, with the exception of 'Performance' (see above). Initial scores here: ['product_reviews.html'](/docs/testing/lighthouse-testing/product-reviews-desktop.png)|
 | ['Current add_review.html'](/docs/testing/lighthouse-testing/add-review-desktop-3.png) | 89 | 98 | 100 | 90 |  All scores above 90%, with the exception of 'Performance', (see above). Initial scores here:['add_review.html'](/docs/testing/lighthouse-testing/add_review-desktop.png) |
+| ['Current contact.html'](/docs/testing/lighthouse-testing/contact-desktop-1.png) | 25 | 98 | 100 | 90 |  All scores above 90%, with the exception of 'Performance', (see above).  |
 
 #### Mobile
 | Page | Performance (%) | Accessibility (%) | Best Practices (%) | SEO (%) | If score is below 90% |
@@ -228,7 +234,7 @@ With regards to the 'Best Practices' scoring, issues center on the use of cookie
 | ['Current profile.html'](/docs/testing/lighthouse-testing/profile-mobile-4.png) | 45 | 100 | 100 | 90 | Scores are above 90% on average, with the exception of 'Performance' (see above). Initial test results found here:  ['profile.html'](/docs/testing/lighthouse-testing/profile-mobile.png) |
 | ['Current product_reviews.html'](/docs/testing/lighthouse-testing/product-reviews-mobile-3.png) | 31 | 98 | 100 | 91 | All scores above 90%, with the exception of 'Performance' (see above). Initial scores here: ['product_reviews.html'](/docs/testing/lighthouse-testing/product-reviews-mobile.png) |
 | ['Current add_review.html'](/docs/testing/lighthouse-testing/add-review-mobile-3.png) | 68 | 98 | 100 | 90 | All scores above 90%, with the exception of 'Performance', (see above). Initial scores here: ['add_review.html'](/docs/testing/lighthouse-testing/add-review-mobile.png) |
-
+| ['Current contact.html'](/docs/testing/lighthouse-testing/contact-mobile-1.png) | 25 | 98 | 100 | 90 |  All scores above 90%, with the exception of 'Performance', (see above).  |
 
 ## Manual Testing
 ### Testing User Stories
@@ -275,6 +281,11 @@ With regards to the 'Best Practices' scoring, issues center on the use of cookie
 | **USER FAVOURITES LIST**                                                                                                                                                                                                      |
 | 31                | Returning Customer            | Add favourite products to a 'Faves-list'                             | Access quickly in the future for speedier purchase                       | Built a 'Favourites' feature allowing users to save products.             | [user-story-31](./docs/testing/user-stories/user-story-31.png)    |
 | 32                | Returning Customer            | Remove favourite products from a 'Faves-list'                        | Personalise my list to my own tastes                                     | Added a 'Remove from Favourites' button.                                  | [user-story-32](./docs/testing/user-stories/user-story-32.png)                           |
+| **CUSTOMER CONTACT APP** |   |   |   |   |   |
+| 33 | Customer | Contact the store via a form | Easily ask questions or get support without needing to call. | Implemented a contact form accessible from the **Contact Us!** link in the *Connect* section of the footer. Customers can submit inquiries directly. | [user-story-33](./docs/testing/user-stories/user-story-33.png) |
+| 34 | Customer | Receive a confirmation that my message was sent | Ensure my query has been received and will be responded to. | Added a toast message confirmation upon form submission. | [user-story-34](./docs/testing/user-stories/user-story-34.png) |
+| 35 | Customer | Provide my name, email, and message in the form | Ensure my message is personalized and that I receive a response. | The form includes fields for name, email, and message, ensuring all necessary details are collected. | [user-story-35](./docs/testing/user-stories/user-story-35.png) |
+| 36 | Store Owner | Receive customer inquiries through the contact form | Provide customer support and answer any queries. | Implemented Django backend to store form submissions, allowing store owners to retrieve and respond to messages. Currently, site admin are able to view the messages in the Django administration panel- A next step will be to work on giving the owner/ site admin the ability to respond to messages| [user-story-36](./docs/testing/user-stories/user-story-36.png) |
 
 
 ### Full Feature Testing
@@ -305,7 +316,8 @@ With regards to the 'Best Practices' scoring, issues center on the use of cookie
 | **Footer and Links** |  |  |  |  |   |
 | 17 | Facebook Link |  When selecting the 'Facebook' link, user is directed to the standard facebook site which opens in a new tab. (As this is for ed purposes only, there is no 'Keep it Sweet' page.)   | As Expected | Pass | N/A   |
 | 18 | Instagram Link |  When selecting the 'Instagram' link, user is directed to the standard Instagram site which opens in a new tab. (As this is for ed purposes only, there is no 'Keep it Sweet' page.)   | As Expected | Pass | N/A   |
-| 19 | Support Link: (support@keepitsweet.com) |  When selecting the 'support@keepitsweet.com' link, user is directed to the standard Google sign in site which opens in a new tab. (As this is for ed purposes only, there is no 'Keep it Sweet' page.)   | As Expected | Pass | N/A   |
+| 19 | Support Link: (support@keepitsweet.com) |  When selecting the 'support@keepitsweet.com' link, user is directed to the standard Google sign in site which opens in a new tab. (As this is for ed purposes only, there is no 'Keep it Sweet' page.)  **This feature has since been updated- see below**  | As Expected | Pass | N/A   |
+| 19a | Contact Us Link |  When selecting the *Contact Us* link, the user is directed to the contact page of the site which opens in a new tab. This page includes a form for users to fill in and submit   | As Expected | Pass | [19a results](./docs/testing/full-feature/feature-test-19a.png)    |
 | 20 | Privacy Policy Link |  When selecting the 'Privacy Policy' link, user is directed to the site's 'Stripe Cookies Privacy Policy' page.   | As Expected | Pass | N/A   |
 | **Newsletter Signup** |  |  |  |  |   |
 | 21 | Sign up button: Empty/ incorrect form fields |  leaving fields blank or incorrectly filled in, form validation stops the form from submitting.   | As Expected | Pass | [Blank form](./docs/testing/full-feature/feature-test-21-blank-form.png), [Incorrect email field](./docs/testing/full-feature/feature-test-21-incorrect-email-field.png)   |
@@ -362,6 +374,10 @@ With regards to the 'Best Practices' scoring, issues center on the use of cookie
 | **Product Options** |  |  |  |  |  |
 | 64 |  Product Options | All users able to access view a range of products which have the options of being varied for different dietary requirements. | As Expected | Pass | [64 Results](./docs/testing/full-feature/feature-test-64.png) |
 | 65 |  Product Options | From the range of 'Special Diet' products, users are able to choose between 'NO LACTOSE, PLANT BASED, LOW SUGAR options. These choices are reflected in the 'Bag' and 'Checkout' sections of the site. | As Expected | Pass | [65 Results](./docs/testing/full-feature/feature-test-65.png) |
+| **Contact Message** |  |  |  |  |   |
+| 66 | Form Submission: Empty/incorrect fields | Leaving fields blank or incorrectly filled in should prevent form submission and show validation messages. | As Expected | Pass | [Blank Form](./docs/testing/full-feature/feature-test-66-blank-form.png), [Incorrect Email](./docs/testing/full-feature/feature-test-66-incorrect-email.png), [Blank Message](./docs/testing/full-feature/feature-test-66-blank-message.png) |  
+| 67 | Submit button | Success message should be displayed after correctly filling in the form and submitting. | As Expected | Pass | [Feature-test-67](./docs/testing/full-feature/feature-test-67.png) |  
+| 68 | Record Stored | Submitted messages should appear in the admin panel under Contact Messages. | As Expected | Pass | [Feature-test-68](./docs/testing/full-feature/feature-test-68.png) |
 
 
 ## Responsivity Testing
@@ -381,12 +397,13 @@ While most testing was done across these 3 specific devices, other testing was d
 | add_product.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/add-product-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/add-product-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/add-product-mobile.png)  |
 | edit_product.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/edit-product-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/edit-product-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/edit-product-mobile.png)  |
 | profile.html | Site content resizes and layout adapts. Header and footer as above. On desktop, site uses a 2 column layout, moving to a 1 column layout on other device types. | Pass | [Nest Hub](/docs/testing/responsivity-testing/user-profile-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/user-profile-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/user-profile-mobile.png)  |
-| reviews.html| Site content resizes and layout adapts. Header and footer as above. On desktop and mobile, site uses a 2 column layout, moving to a 1 column layout on mobile. | Pass | [Nest Hub](/docs/testing/responsivity-testing/read-reviews-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/read-reviews-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/read-reviews-mobile.png)  |
+| reviews.html| Site content resizes and layout adapts. Header and footer as above. On desktop and mobile, site uses a 2 column layout, moving to a 1 column layout on mobile. | Pass | [Nest Hub](/docs/testing/responsivity-testing/read-reviews-desktop-2.png), [iPad Mini ](./docs/testing/responsivity-testing/read-reviews-tablet-2.png), [iPhone 14](./docs/testing/responsivity-testing/read-reviews-mobile-2.png)  |
 | add_review.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/add-a-review-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/add-a-review-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/add-a-review-mobile.png)  |
 | edit_review.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/edit-a-review-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/edit-a-review-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/edit-a-review-mobile.png)  |
 | bag.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/bag-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/bag-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/bag-mobile.png)  |
 | checkout.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/checkout-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/checkout-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/checkout-mobile.png)  |
 | checkout_success.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/checkout-success-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/checkout-success-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/checkout-success-mobile.png)  |
+| contact.html | Site content resizes and layout adapts. Header and footer as above. | Pass | [Nest Hub](/docs/testing/responsivity-testing/contact-desktop.png), [iPad Mini ](./docs/testing/responsivity-testing/contact-tablet.png), [iPhone 14](./docs/testing/responsivity-testing/contact-mobile.png)  |
 
 
 ## Bugs found during testing and development phase
