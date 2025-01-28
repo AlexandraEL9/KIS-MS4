@@ -445,6 +445,34 @@ This app provides users with a convenient way to save and organize their favouri
 
 The **Reviews App** adds a layer of community interaction to the **Keep It Sweet** site, fostering trust and engagement through customer feedback.
 
+### NEW FEATURE!
+#### Contact App
+
+- **Contact the Team**:
+  - All users can use the contact form to send inquiries, feedback, or requests to the **Keep It Sweet** team.
+  - The contact form includes fields for the user's name, email address, and a detailed message.
+
+- **Form Validation**:
+  - The contact form ensures all required fields are completed before submission.
+  - Users are notified of any errors or omissions with clear, accessible messages.
+
+- **Feedback**:
+  - Success and error toast messages provide immediate feedback to users:
+    - **Success Toast**: Notifies users when their message has been successfully sent.
+    - **Error Toast**: Informs users of missing or invalid fields to correct before resubmitting.
+
+- **Responsive Design**:
+  - The contact form is fully optimized for mobile, tablet, and desktop devices.
+  - It ensures a seamless and user-friendly experience across all platforms.
+
+- **Accessibility**:
+  - Designed with accessibility in mind, including:
+    - Clear form labels for screen readers.
+    - ARIA attributes for improved usability.
+    - High contrast and easy-to-read fonts.
+
+The **Contact App** enhances the **Keep It Sweet** site by providing a reliable and user-friendly communication channel for customers to connect with the team, ensuring feedback and inquiries are managed effectively.
+
 #### Future Features
 - A rewards app where purchases make points for freebies and spcial offers.
 - A 'Special Offers' / 'Bundle Builder' app where users can bundle an number of products together and get a discount.
@@ -452,42 +480,51 @@ The **Reviews App** adds a layer of community interaction to the **Keep It Sweet
 
 ## Technologies Used
 
-### Front-End Technologies
+### **Languages Used**
+- [**HTML5**](https://en.wikipedia.org/wiki/HTML5) – Used for the structure and semantic content of the site.
+- [**CSS3**](https://en.wikipedia.org/wiki/CSS#CSS_3) – Applied for styling, layout, and responsive design.
+- [**JavaScript**](https://en.wikipedia.org/wiki/JavaScript) – Used to enhance interactivity and dynamic content.
+- [**Python**](https://www.python.org/) – The core programming language for the backend.
 
-- ![HTML5](https://img.shields.io/static/v1?label=HTML&message=5&color=E34F26&logo=html5&logoColor=ffffff)
-    - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - Used as the base for markup text.
-- ![CSS3](https://img.shields.io/static/v1?label=CSS&message=3&color=1572B6&logo=css3&logoColor=ffffff)
-    - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - Used as the base for cascading styles.
-- ![jQuery 3.4.1](https://img.shields.io/static/v1?label=jQuery&message=3.4.1&color=0769AD&logo=jquery&logoColor=ffffff)
-    - [jQuery 3.4.1](https://code.jquery.com/jquery/) - Used as the primary JavaScript functionality.
-- ![Bootstrap 4.6](https://img.shields.io/static/v1?label=Bootstrap&message=4.6&color=ee6e73)
-    - [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Used as the front-end framework for layout and design.
-- ![Stripe API](https://img.shields.io/static/v1?label=Stripe&message=API&color=008CDD&logo=stripe&logoColor=ffffff)
-    - [Stripe API](https://stripe.com/docs/api?lang=python) - Used to make secured payments on *The Nutritionist*.
-- ![Amazon AWS S3](https://img.shields.io/static/v1?label=Amazon%20AWS&message=S3&color=232F3E&logo=amazon%20aws)
-    - [Amazon AWS S3](https://aws.amazon.com/) - Used to store *staticfiles* and *media* folders and files.
+### **Frameworks Used**
+- [**Django 3.2**](https://docs.djangoproject.com/en/3.2/releases/3.2/) – A high-level Python web framework that follows the Model-View-Template (MVT) pattern and enables rapid development with a clean and pragmatic design.
+- [**Bootstrap 4.4.1**](https://getbootstrap.com/docs/4.4.1/getting-started/introduction/) – A responsive front-end framework that helps structure layouts and components efficiently.
 
-### Back-End Technologies
+### **Databases Used**
+- [**SQLite3**](https://docs.djangoproject.com/en/3.2/ref/databases/#sqlite-notes) – Used as the development database.
+- Postgresql from Code Institute – A cloud-hosted relational database used for the live deployment.
 
-- ![Python](https://img.shields.io/static/v1?label=Python&message=3.6.7&color=blue&logo=python&logoColor=ffffff)
-    - [Python 3.6.7](https://www.python.org/) - Used as the back-end programming language.
-- ![Django](https://img.shields.io/static/v1?label=Django&message=2.2.16&color=092E20&logo=django)
-    - [Django 2.2.16](https://docs.djangoproject.com/en/2.2/) - Used as my Python web framework.
-- ![Heroku](https://img.shields.io/static/v1?label=Heroku&message=PaaS&color=430098&logo=heroku)
-    - [Heroku](https://www.heroku.com) - Used for *"Platform as a Service"* (PaaS) for app hosting.
-- ![PostgreSQL 11.4](https://img.shields.io/static/v1?label=PostgreSQL&message=11.4&color=336791&logo=postgresql)
-    - [PostgreSQL 11.4](https://www.postgresql.org/) - Used as relational SQL database via [ElephantSQL](https://www.elephantsql.com/).
+### **Libraries and Packages Used**
+- [**Django Allauth**](https://django-allauth.readthedocs.io/en/latest/) – Manages user authentication, including social logins and account verification.
+- [**JQuery 3.4.1**](https://jquery.com/) – A lightweight JavaScript library for DOM manipulation and event handling.
+- [**Font Awesome**](https://fontawesome.com/) – Provides scalable vector icons for enhanced UI design.
+- [**Django Countries 7.2.1**](https://pypi.org/project/django-countries/7.2.1/) – Enables country selection for user forms and models.
+- [**Django Crispy Forms 1.14.0**](https://pypi.org/project/django-crispy-forms/) – Enhances the styling and functionality of Django forms.
+- [**Gunicorn 23.0.0**](https://gunicorn.org/) – A Python WSGI HTTP server used to serve the application in production.
+- [**Pillow 11.0.0**](https://pypi.org/project/Pillow/) – A Python imaging library required for handling image uploads.
+- [**Psycopg2 2.9.10**](https://pypi.org/project/psycopg2/) – A PostgreSQL database adapter for Django.
+- [**Boto3 1.35.74**](https://pypi.org/project/boto3/) – The Amazon Web Services (AWS) SDK for Python, used for handling S3 storage.
+- [**Django Storages 1.14.4**](https://django-storages.readthedocs.io/en/latest/) – A custom storage backend for handling media and static files in AWS S3.
+- [**Stripe 11.2.0**](https://stripe.com/) – Integrated for payment processing in the e-commerce functionality.
 
-### Additional Technologies
+### **Tools and Platforms Used**
+- [**Git**](https://git-scm.com/) – Used for version control and managing project commits.
+- [**GitHub**](https://github.com/) – Hosts the project repository and manages collaborative development.
+- [**Google Chrome DevTools**](https://developer.chrome.com/docs/devtools/) – Utilized for debugging, performance audits, and responsive testing.
+- [**Lucidchart**](https://www.lucidchart.com/pages/) – Used for designing database schemas and user flow diagrams.
 
-1. [Google Fonts:](https://fonts.google.com/)
-    - Google fonts were used to import the 'Poppins' font used on all pages throughout the project.
-1. [Font Awesome:](https://fontawesome.com/)
-    - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
-1. [Git](https://git-scm.com/)
-    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-1. [GitHub:](https://github.com/)
-    - GitHub was used to store the projects code after being pushed from Git.
+### **Hosting and Deployment**
+- [**Heroku**](https://devcenter.heroku.com/) – A cloud platform used to deploy and manage the live version of **Keep It Sweet**.
+- [**AWS S3**](https://aws.amazon.com/s3/) – Used for storing static and media files efficiently.
+
+### **Payment Processing**
+- [**Stripe**](https://stripe.com/gb) – Integrated to handle secure online payments for the sweet shop.
+
+### **Stripe Test Cards**
+| **Card Number** | **Expiration (MM/YY)** | **CVC** | **Result** |
+|---|---|---|---|
+| 4242 4242 4242 4242 | Any future date | Any 3-digit CVC | Successful transaction |
+| 4000 0000 0000 0002 | Any future date | Any 3-digit CVC | Declined transaction |
 
 ## Testing
 Please refer to the [TESTING.md](./TESTING.md) file for full testing and results for:
@@ -535,4 +572,4 @@ Please refer to the [DEPLOYMENT.md](./DEPLOYMENT.md) file for a full description
 
 -   My Mentor Excellence Illesami for helpful feedback.
 
--   My partner Roman Taylor. He has supported me throughout the course, allowing me to focus, offering feedback and picking me up when I've felt less than resilliant. 
+-   My partner Roman Taylor. He has supported me throughout the course, allowing me to focus, offering feedback and picking me up when I've felt less than resilliant.
