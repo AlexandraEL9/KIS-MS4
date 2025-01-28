@@ -3,6 +3,8 @@ from .forms import ContactForm
 from django.contrib import messages
 
 # Create your views here.
+
+
 def contact_view(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)

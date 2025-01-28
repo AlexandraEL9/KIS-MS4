@@ -5,6 +5,7 @@ from .models import ContactMessage
 
 # contact model
 
+
 @admin.register(ContactMessage)
 class ContactMessageAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'submitted_at')

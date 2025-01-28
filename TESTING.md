@@ -40,8 +40,8 @@ I implemented automated testing on **Python forms** using Django's `SimpleTestCa
 
 ### Testing Results  
 
-| **Test Name**               | **Test Type**                | **Description**                                                               | **Result** | **Screenshot**                                      |
-|-----------------------------|------------------------------|-------------------------------------------------------------------------------|------------|----------------------------------------------------|
+| **Test Name** | **Test Type**  | **Description**  | **Result** | **Screenshot**  |
+|-----|-----|----|-----|-----|
 | **ReviewForm Validation**   | Django - SimpleTestCase      | Uses 4 tests to ensure the functionality and validation of the `ReviewForm` in the reviews app: Valid Data Test, Missing Title Test, Missing Content Test, Invalid Rating Test.       | ✅ Pass    | ![Screenshot](/docs/testing/automated-testing/review-forms-testing.png)   |
 | **CheckoutForm Validation** | Django - SimpleTestCase      | Uses 4 tests to ensure the functionality and validation of the `orderForm` in the checkout app: Valid Data Test, Missing Required Fields Test, Optional Fields Test, Invalid Email Test. | ✅ Pass    | ![Screenshot](/docs/testing/automated-testing/checkout-form-testing.png) |
 | **UserProfilesForm Validation** | Django - SimpleTestCase      | Uses 2 tests to ensure the functionality and validation of the `UserProfileForm` in the checkout app: Correct Fields Test, Labels Removed Test | ✅ Pass    | ![Screenshot](/docs/testing/automated-testing/profile-form-testing.png) |
@@ -78,6 +78,7 @@ I used [W3C Markup Validation Service](https://validator.w3.org/) to validate al
 | edit_review.html | Pass | [Edit Review](./docs/testing/html-validation/edit-review.png)  |
 | subscribe.html | Pass | [Subscribe](./docs/testing/html-validation/subscribe.png)  |
 | privacy_policy.html | Pass | Validator came up with 2 warnings- [Warnings](./docs/testing/html-validation/privacy-policy-warning.png) The error indicates the p tags in the original template have invalid syntax because they include nested ul tags, which is not allowed. In HTML, a p tag cannot contain block-level elements like ul.With this in mind, I moved the ul tags outside of the p tags and adjusted the structure of the page. Results: [Privacy Policy](./docs/testing/html-validation/privacy-policy.png)  |
+| contact.html | Pass | [Contact](./docs/testing/html-validation/contact.png)  |
 
 ### CSS Validation
 I used [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate all CSS files by direct input.
@@ -169,6 +170,14 @@ I used [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) to lint m
 | subscribe/forms.py | All clear, no errors found | [subscribe.forms.py validation](./docs/testing/python-linter/subscribe-forms.png) |
 | subscribe/apps.py | All clear, no errors found | [subscribe.apps.py validation](./docs/testing/python-linter/subscribe-apps.png) |
 | subscribe/admin.py | All clear, no errors found | [subscribe.admin.py validation](./docs/testing/python-linter/subscribe-admin.png) |
+| **Contact app** |  |  |
+| contact/views.py | All clear, no errors found | [contact.views.py validation](./docs/testing/python-linter/contact-views.png) |
+| contact/urls.py | All clear, no errors found | [contact.urls.py validation](./docs/testing/python-linter/contact-urls.png) |
+| contact/tests.py | All clear, no errors found | [contact.tests.py validation](./docs/testing/python-linter/contact-tests.png) |
+| contact/models.py | All clear, no errors found | [contact.models.py validation](./docs/testing/python-linter/contact-models.png) |
+| contact/forms.py | All clear, no errors found | [contact.forms.py validation](./docs/testing/python-linter/contact-forms.png) |
+| contact/apps.py | All clear, no errors found | [contact.apps.py validation](./docs/testing/python-linter/contact-apps.png) |
+| contact/admin.py | All clear, no errors found | [contact.admin.py validation](./docs/testing/python-linter/contact-admin.png) |
 
 
 
