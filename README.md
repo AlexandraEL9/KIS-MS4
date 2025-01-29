@@ -245,12 +245,6 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 |                         |                                                                             | - **One-to-Many** with `OrderLineItem` (an order can contain multiple products).                          |
 | **OrderLineItem**       | Represents individual items within an order, including quantity and options. | - **Many-to-One** with `Order` (foreign key: `order_id`).                                                 |
 |                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
-| **Review**              | Stores user-generated reviews for products, including title, content, and ratings. | - **Many-to-One** with `User` (foreign key: `user_id`).                                                   |
-|                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
-| **Favourite**           | Allows users to mark products as favourites.                                | - **Many-to-One** with `User` (foreign key: `user_id`).                                                   |
-|                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
-| **Newsletter Subscriber** | Stores email subscriptions for newsletters, including date of subscription. | - No direct relationships (can be submitted by both registered and unregistered users).   |
-| **ContactMessage** | Stores user-submitted messages from the contact form. | - No direct relationships (can be submitted by both registered and unregistered users).                 |
 
 ### Custom Models
 
@@ -270,10 +264,9 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 
 - **Clear Navigation**: Intuitive navigation allows users to easily browse through different pages, including product categories, the shopping bag, and their profile.
 - **Special Offers**: A prominently displayed strapline highlights special offers, in this case,free delivery on orders over a certain amount.
-- **Bag Modal**: Users can view their shopping bag contents and total directly on product pages through a modal, streamlining the shopping experience.
 - **User Profiles**: Leveraging Django Allauth, registered users can create and manage their accounts, save address information, and view their order history for a personalized experience.
 - **Responsive Design**: Fully optimized for a range of device sizes, ensuring a seamless shopping experience on desktops, tablets, and smartphones.
-- **Footer with Social Links**: Selected pages feature a footer with links to Keep It Sweet's social media profiles. Future updates will expand the footer to include additional navigation links to internal pages. A current example being the 'Privacy Policy' page.
+- **Footer with Social Links**: Selected pages feature a footer with links to Keep It Sweet's social media profiles and access to a means of contacting the company directly through a contact form. Future updates will expand the footer to include additional navigation links to internal pages. A current example being the 'Privacy Policy' page.
 - **Newsletter Subscription**: Users can subscribe to the Keep It Sweet newsletter to receive updates on the latest products, special offers, and seasonal promotions.
 - **Favourites App**: Logged-in users can save their favourite products to a personalized favourites list, making it easy to find and purchase their preferred sweets.
 - **Reviews App**: Users can view reviews left by other customers on product pages. Registered users can write, edit, and delete their own reviews to share their experiences with others.
@@ -300,11 +293,6 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
   - Add-to-bag functionality, including the ability to increase or decrease the quantity.
   - JavaScript ensures the decrement button cannot go below one item.
   - A redirection option to continue shopping for more products.
-
-- **Bag Modal**: Users can view a modal with:
-  - A list of products added to their bag, including images, descriptions, and total price.
-  - A button to proceed to checkout.
-  - The total cost of all items in the bag dynamically calculated.
 
 - **Toast Messages**: Upon adding items to the bag, an automated popup with a Toast message confirms the action was successful and displays the number of items added.
 
@@ -493,6 +481,7 @@ The **Contact App** enhances the **Keep It Sweet** site by providing a reliable 
 - A rewards app where purchases make points for freebies and spcial offers.
 - A 'Special Offers' / 'Bundle Builder' app where users can bundle an number of products together and get a discount.
 - Additional content on the home page with featured or new/ seasonal products promoted beneath the hero section.
+- Continued development of the Contact app allowing site admin to respond to messages from customer inquiries.
 
 ## Technologies Used
 
@@ -503,7 +492,7 @@ The **Contact App** enhances the **Keep It Sweet** site by providing a reliable 
 - [**Python**](https://www.python.org/) – The core programming language for the backend.
 
 ### **Frameworks Used**
-- [**Django 3.2**](https://docs.djangoproject.com/en/3.2/releases/3.2/) – A high-level Python web framework that follows the Model-View-Template (MVT) pattern and enables rapid development with a clean and pragmatic design.
+- [**Django 3.2**](https://docs.djangoproject.com/en/3.2/releases/3.2/) – A high-level Python web framework.
 - [**Bootstrap 4.4.1**](https://getbootstrap.com/docs/4.4.1/getting-started/introduction/) – A responsive front-end framework that helps structure layouts and components efficiently.
 
 ### **Databases Used**
@@ -513,7 +502,7 @@ The **Contact App** enhances the **Keep It Sweet** site by providing a reliable 
 ### **Libraries and Packages Used**
 - [**Django Allauth**](https://django-allauth.readthedocs.io/en/latest/) – Manages user authentication, including social logins and account verification.
 - [**JQuery 3.4.1**](https://jquery.com/) – A lightweight JavaScript library for DOM manipulation and event handling.
-- [**Font Awesome**](https://fontawesome.com/) – Provides scalable vector icons for enhanced UI design.
+- [**Font Awesome**](https://fontawesome.com/) – Provides icons for enhanced UI design.
 - [**Django Countries 7.2.1**](https://pypi.org/project/django-countries/7.2.1/) – Enables country selection for user forms and models.
 - [**Django Crispy Forms 1.14.0**](https://pypi.org/project/django-crispy-forms/) – Enhances the styling and functionality of Django forms.
 - [**Gunicorn 23.0.0**](https://gunicorn.org/) – A Python WSGI HTTP server used to serve the application in production.
@@ -527,7 +516,8 @@ The **Contact App** enhances the **Keep It Sweet** site by providing a reliable 
 - [**Git**](https://git-scm.com/) – Used for version control and managing project commits.
 - [**GitHub**](https://github.com/) – Hosts the project repository and manages collaborative development.
 - [**Google Chrome DevTools**](https://developer.chrome.com/docs/devtools/) – Utilized for debugging, performance audits, and responsive testing.
-- [**Lucidchart**](https://www.lucidchart.com/pages/) – Used for designing database schemas and user flow diagrams.
+- [**Lucidchart**](https://www.lucidchart.com/pages/) – Used for designing database schemas.
+- [**Balsamiq**](https://balsamiq.cloud/#) – Used for designing the wireframes.
 
 ### **Hosting and Deployment**
 - [**Heroku**](https://devcenter.heroku.com/) – A cloud platform used to deploy and manage the live version of **Keep It Sweet**.
