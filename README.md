@@ -61,15 +61,15 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
 | 10 | Returning/ frequent user | Have a personalised user profile | Access my stored information, order history, order confirmations (and wishlist/ faves list) |
 | **SORTING & SEARCHING** |   |   |
 | 11 | First time user | Sort the list of available products | Easily identify categorically sorted products |
-| 12 | First time user | Search for a product or multiple products by name, ingredient or description | Find a specific product |
+| 12 | First time user | Search for a product or multiple products by name or description | Find a specific product |
 | 13 | First time user | View the search results | Identify products for more research or purchase |
 | **PURCHASING & CHECKOUT** |   |   |
 | 14 | First time user | Select the quantity of a product when purchasing | Ensure the correct quantity is purchased to meet customer need |
 | 15 | First time user | View notifications/ feedback when a product is added to the basket | recieve immediate feedback if action completed |
 | 16 | First time user | View items in my basket to be purchased | quickly see the total cost of items |
-| 17 | First time user | VEdit/ update the items in my basket and adjust quantities | Ensure my purchase is exactly what I want |
+| 17 | First time user | Edit/ update the items in my basket and adjust quantities | Ensure my purchase is exactly what I want |
 | 18 | First time user | Enter payment information | Checkout with minimal fuss. |
-| 19 | First time user | Recieve cnfirmation of my order | know my payment has gone through and that my order is in the system. |
+| 19 | First time user | Recieve confirmation of my order | know my payment has gone through and that my order is in the system. |
 | **SITE ADMIN** |   |   |
 | 20 | Store Owner | Add a product | Add new items to my store |
 | 21 | Store Owner | Edit/ update a product | Amend a product's information so site info is up to date |
@@ -128,12 +128,11 @@ Both fonts are paired with fallback options (`Arial`, `sans-serif`) to ensure co
 - High-contrast font colors ensure readability for users with visual impairments.
 - Larger font sizes and bold weights are used for important elements to improve visibility and user experience.
 
-This approach to typography ensures a visually appealing and accessible interface for all users.
-
 
 ### Colour Scheme
 
 The **Keep It Sweet** project features a vibrant and playful colour scheme designed to evoke a sense of fun and excitement, perfectly aligning with the theme of an online sweet shop.
+
 ![Checkout Success Page Wireframe](./docs/colour-pallet.png)
 
 #### Primary Colours
@@ -168,7 +167,7 @@ The **Keep It Sweet** project features a vibrant and playful colour scheme desig
    - Used for placeholder text and supporting content.
    - Ensures secondary text is legible without overpowering primary elements.
 
-This vibrant and accessible colour scheme creates an engaging user experience, reinforcing the sweet and joyful theme of the shop.
+This vibrant and accessible colour scheme creates an engaging user experience, reinforcing the sweet and playful theme of the shop.
 
 
 
@@ -228,7 +227,7 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 <img src="./docs/erd-updated.png">
 
 ## Models
-### Table Description and Relationships
+### Table - Description and Relationships
 
 | **Table Name**          | **Purpose**                                                                 | **Relationships**                                                                                          |
 |-------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
@@ -246,6 +245,17 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 |                         |                                                                             | - **One-to-Many** with `OrderLineItem` (an order can contain multiple products).                          |
 | **OrderLineItem**       | Represents individual items within an order, including quantity and options. | - **Many-to-One** with `Order` (foreign key: `order_id`).                                                 |
 |                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
+| **Review**              | Stores user-generated reviews for products, including title, content, and ratings. | - **Many-to-One** with `User` (foreign key: `user_id`).                                                   |
+|                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
+| **Favourite**           | Allows users to mark products as favourites.                                | - **Many-to-One** with `User` (foreign key: `user_id`).                                                   |
+|                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
+| **Newsletter Subscriber** | Stores email subscriptions for newsletters, including date of subscription. | - No direct relationships (can be submitted by both registered and unregistered users).   |
+| **ContactMessage** | Stores user-submitted messages from the contact form. | - No direct relationships (can be submitted by both registered and unregistered users).                 |
+
+### Custom Models
+
+| **Table Name**          | **Purpose**                                                                 | **Relationships**                                                                                          |
+|-------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
 | **Review**              | Stores user-generated reviews for products, including title, content, and ratings. | - **Many-to-One** with `User` (foreign key: `user_id`).                                                   |
 |                         |                                                                             | - **Many-to-One** with `Product` (foreign key: `product_id`).                                             |
 | **Favourite**           | Allows users to mark products as favourites.                                | - **Many-to-One** with `User` (foreign key: `user_id`).                                                   |
