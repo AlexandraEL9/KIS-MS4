@@ -271,7 +271,7 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
 - **Favourites App**: Logged-in users can save their favourite products to a personalized favourites list, making it easy to find and purchase their preferred sweets.
 - **Reviews App**: Users can view reviews left by other customers on product pages. Registered users can write, edit, and delete their own reviews to share their experiences with others.
 - **Staff Product Management**: Staff users with superuser privileges can add new products, edit existing product details, and manage product information directly within the site through a secure admin interface.
-
+- **Toast Messages**: The site utilises *Toast Messages* throughout the site to keep users informad as to the success/ or failure of user actions. For example, a success model with the bag details when adding items to the bag, success or error messages when adding reviews or products and info messages when appropriate, for example *You are now editing___*. The use of *toast messages* is key for users to be confident in the completion of actions on the site.
 
 #### Home App
 - **Navigation**: Users can easily access product categories, the shopping bag, their profile, Newsletter Subscription and their favourites page. The navigation also includes a **Search Bar** for quick product searches.
@@ -293,6 +293,8 @@ As illustrated in the ERD, each model corresponds to a database table, and each 
   - Add-to-bag functionality, including the ability to increase or decrease the quantity.
   - JavaScript ensures the decrement button cannot go below one item.
   - A redirection option to continue shopping for more products.
+
+- **Product Options**:For appropriate products, those in the *Special Diet* category, the product detail page has the addition of a dropdown with options including *Low Sugar*, *Lactose Free* and *Plant Based*.   This information is rendered throughout the purchase and payment process ensuring users are fully in control of what they are purchasing at every stage.
 
 - **Toast Messages**: Upon adding items to the bag, an automated popup with a Toast message confirms the action was successful and displays the number of items added.
 
