@@ -33,6 +33,7 @@ It has been produced as my fourth milestone project for Code Institute's Level 5
     * [Additional Technologies](#additional-technologies)
 * [Testing](#testing)
 * [Deployment](#deployment)
+* [Submission](#submission)
 * [Credits](#credits)
     * [Code](#code) 
     * [Content](#content)
@@ -546,6 +547,30 @@ Please refer to the [DEPLOYMENT.md](./DEPLOYMENT.md) file for a full description
 * Creating a production database, ready for deployment.
 * Deploying the project to Heroku.
 * Setting up and using *AmazonS3* for hosting the static and media files.
+
+## Submission
+### Ensuring `DEBUG=FALSE` in Production
+
+1. This is essential for  **Security Compliance**:
+    - Setting `DBUG=False` ensures that:
+      - Sensitive error details are not exposed to users.
+      - Django serves only the specifically set `ALLOWED_HOSTS` (in this case, those which are configured in Heroku).
+      - Static and media files are correctly handled via AWS S3 when `USE_AWS=True` (Also set in Heroku Config vars.)
+
+2. **Environment Based Debugging**:
+    - ![settings.py file screenshot](./docs/settings-debug-snip.png) 
+      - The line `DEBUG = 'DEVELOPMENT' in os.environ` means that `DEBUG` will only be `True` if an environment variable named `DEVELOPMENT` is present.
+      
+
+3. **No `DEVELOPMENT` Variable in Heroku**:
+    - ![Heroku config vars screenshot](./docs/heroku-config-vars.png) 
+      - In the **Heroku Config Vars** (as shown in the above image), there is no environment variable named `DEVELOPMENT`. 
+      - Since `'DEVELOPMENT' in os.environ` evaluates to `False`, the `DEBUG` value is `False` in production.
+      - I checked this by accessing and checking the settings in Heroku:
+        - I opened the console and typed `python manage.py shell,
+        - I then added `from django.conf import settings` and then `settings.DEBUG`.
+        - ![Terminal](./docs/heroku-console-debug-check.png)
+        - This confirms that DEBUG is set to False in the production site.
 
 ## Credits
 ### Code
