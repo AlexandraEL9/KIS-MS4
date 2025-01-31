@@ -10,18 +10,19 @@
       </div>
     </a>
     <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
-      <form class="form" method="GET" action="{% url 'products' %}">
-        <div class="input-group w-100">
-          <input class="form-control border border-black rounded-pill" type="text" name="q" placeholder="Search our site" style="border-radius: 25px;">
-          <div class="input-group-append">
-            <button class="form-control btn border border-black rounded-pill" type="submit" style="border-radius: 25px;">
-              <span class="icon">
-                <i class="fas fa-search"></i>
-              </span>
-            </button>
-          </div>
+      <form method="GET" action="/products" role="search" aria-label="Search our site">
+        <div class="input-group">
+            <label for="search-input" class="sr-only">Search</label>
+            <input id="search-input" type="text" name="q"
+                class="form-control border border-black"
+                placeholder="Search our site">
+            <div class="input-group-append">
+                <button class="btn search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
         </div>
-      </form>
+    </form>         
     </div>
   </li>
 

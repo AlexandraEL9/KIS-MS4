@@ -13,89 +13,88 @@ body {
 }
 
 /* hero section */
-/* Adjust layout for spacing */
 .content-box {
-  margin-top: 3rem; /* Moves the content further down */
-  margin-left: 2rem; /* Moves the content to the left */
+  margin-top: 3rem; 
+  margin-left: 2rem; 
 }
 
 /* Ensure alignment for wide screens */
 @media (min-width: 1200px) {
   .content-box {
-    margin-top: 6rem; /* Adds more vertical spacing for large screens */
-    margin-left: 1rem; /* Adds more horizontal spacing for large screens */
+    margin-top: 6rem; 
+    margin-left: 1rem; 
   }
 }
 
 /* Adjust text alignment */
 .text-start {
-  text-align: left; /* Ensures proper left alignment */
+  text-align: left; 
 }
 
 /* Improve button visibility and spacing */
 .shop-now-button {
-  margin-top: 1rem; /* Adds space between the text and the button */
+  margin-top: 1rem; 
 }
 
 /* Default styles for larger screens */
 .content-box {
-  margin-top: 3rem; /* General spacing for desktops */
-  margin-left: 2rem; /* Keep alignment for larger screens */
+  margin-top: 3rem; 
+  margin-left: 2rem; 
 }
 
 /* Adjust for tablets */
 @media (max-width: 768px) {
   .content-box {
-    margin-top: 10rem; /* Add more top margin for tablets */
-    margin-left: 1.5rem; /* Adjust horizontal margin */
+    margin-top: 10rem; 
+    margin-left: 1.5rem; 
   }
 
   .logo-font {
-    font-size: 2.2rem; /* Slightly reduce font size */
+    font-size: 2.2rem; 
     line-height: 1.3;
   }
 
   .shop-now-button {
-    padding: 0.8rem 1.5rem; /* Reduce button size */
-    font-size: 1rem; /* Match button text size for tablets */
+    padding: 0.8rem 1.5rem; 
+    font-size: 1rem; 
   }
 }
 
 /* Adjust for mobile devices */
 @media (max-width: 480px) {
   .content-box {
-    margin-top: 7rem; /* Adjust top margin for small screens */
-    margin-left: 1rem; /* Reduce left margin */
+    margin-top: 7rem; 
+    margin-left: 1rem; 
   }
 
   .logo-font {
-    font-size: 1.8rem; /* Further reduce font size for small devices */
-    line-height: 1.4; /* Increase readability for smaller text */
+    font-size: 1.8rem; 
+    line-height: 1.4; 
   }
 
   .shop-now-button {
-    padding: 0.6rem 1.2rem; /* Smaller button padding for mobile */
-    font-size: 0.9rem; /* Adjust text size */
+    padding: 0.6rem 1.2rem; 
+    font-size: 0.9rem; 
   }
 }
 
 /* Adjust for very narrow screens */
 @media (max-width: 400px) {
   .content-box {
-    margin-top: 10rem; /* Adjust top margin */
-    margin-left: 1rem; /* Reduce left margin */
-    margin-right: 1rem; /* Add right margin for padding */
+    margin-top: 10rem; 
+    margin-left: 1rem; 
+    margin-right: 1rem; 
   }
 
   .logo-font {
-    font-size: 1.5rem; /* Reduce font size further */
-    line-height: 1.2; /* Tighten line height */
-    word-break: break-word; /* Ensure words break within container */
+    font-size: 1.5rem; 
+    line-height: 1.2; 
+    word-break: break-word; 
   }
 
   .shop-now-button {
-    font-size: 0.8rem; /* Smaller button text size */
-    padding: 0.5rem 1rem; /* Adjust padding for button */
+    font-size: 0.8rem; 
+    padding: 0.5rem 1rem; 
   }
 }
 
@@ -155,6 +154,88 @@ h6,
 
   body {
     height: calc(100vh - 116px);
+  }
+}
+
+/* Search Bar Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 5px;
+  overflow: hidden; /* Ensures no misalignment */
+}
+
+/* Input Group: Ensures elements align perfectly */
+.input-group {
+  display: flex;
+  align-items: stretch; /* Forces elements to match height */
+  width: 100%;
+}
+
+/* Search Input: Removes border mismatch & fixes height */
+#search-input {
+  flex: 1;
+  height: 40px; /* Ensures same height as button */
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Search Button: Ensures it matches the input height */
+.input-group-append {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn {
+  height: 40px; /* Matches input height */
+  width: 40px; /* Square shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-btn i {
+  font-size: 1.2rem;
+}
+
+/* Accessibility Fix: Ensure `sr-only` doesn't affect layout */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Fix for Bootstrap Input Group Spacing Issues */
+.input-group > .form-control {
+  height: 40px; /* Match button height */
+  margin: 0;
+}
+
+.input-group > .input-group-append > .btn {
+  height: 40px;
+  margin: 0;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .search-container {
+    max-width: 100%;
   }
 }
 
@@ -251,6 +332,75 @@ input[name="q"]::placeholder {
   cursor: pointer;
 }
 
+/* Quantity Container - Ensures Alignment */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+  border: none;
+  overflow: hidden;
+}
+
+/* Input Group - Ensures Uniform Sizing */
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+/* Quantity Input */
+.qty_input {
+  width: 50px;
+  height: 40px; 
+  text-align: center;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  padding: 0;
+}
+
+/* Quantity Buttons */
+.decrement-qty,
+.increment-qty {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  border: none;
+}
+
+/* Minus Button */
+.decrement-qty {
+  background: #666;
+}
+
+/* Plus Button */
+.increment-qty {
+  background: black;
+}
+
+/* Hover Effects */
+.decrement-qty:hover {
+  background: #555;
+}
+
+.increment-qty:hover {
+  background: #222;
+}
+
+/* Fix Alignment for Bootstrap */
+.input-group-prepend,
+.input-group-append {
+  display: flex;
+  align-items: center;
+}
+
 /* Scroll Button */
 .btt-button {
   height: 50px;
@@ -286,7 +436,7 @@ input[name="q"]::placeholder {
 }
 
 .btn-dark-pink {
-  background-color: #f75676; /* Match with the delete button or another preferred pink */
+  background-color: #f75676; 
   color: black;
   border-radius: 8px;
   font-weight: bold;
@@ -298,7 +448,7 @@ input[name="q"]::placeholder {
 
 .btn-dark-pink:hover,
 .btn-dark-pink:focus {
-  background-color: #ff4500; /* A darker shade for hover */
+  background-color: #ff4500;
   color: white;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
@@ -338,25 +488,25 @@ input[name="q"]::placeholder {
 
 /* General Links */
 a {
-  color: #0056b3; /* Ensure a high-contrast color */
-  text-decoration: underline; /* Add an underline for better accessibility */
+  color: #0056b3; 
+  text-decoration: underline; 
 }
 
 a:hover, a:focus {
-  color: #003d80; /* Darker shade for hover state */
-  text-decoration: underline; /* Keep the underline on hover */
+  color: #003d80; 
+  text-decoration: underline;
 }
 
 /* Links in dropdown menus */
 .dropdown-menu a {
-  text-decoration: none; /* Remove underline in dropdown links */
-  color: black !important; /* Match the styling for dropdown links */
+  text-decoration: none; 
+  color: black !important;
 }
 
 .dropdown-menu a:hover,
 .dropdown-menu a:focus {
-  color: black !important; /* Keep styling consistent on hover */
-  text-decoration: none; /* Ensure no underline on hover for dropdown links */
+  color: black !important; 
+  text-decoration: none; 
 }
 
 
