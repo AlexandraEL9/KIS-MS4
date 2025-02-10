@@ -26,7 +26,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     'keep-it-sweet-2ecaa2229785.herokuapp.com',
-    '8000-alexandrael9-kisms4-wcsdgkb9jia.ws.codeinstitute-ide.net',
+    '127.0.0.1',
     'localhost',
 ]
 
